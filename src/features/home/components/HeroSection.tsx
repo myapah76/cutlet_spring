@@ -18,12 +18,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="lg:col-span-7 flex flex-col z-10">
             {/* Overline Badge */}
             <div className="flex flex-wrap items-center gap-2 mb-4">
-              <span className="inline-flex items-center gap-2 px-3 py-1 bg-[#eae8e5] rounded-full font-label-md text-xs uppercase tracking-widest text-[#af101a] font-bold">
-                <span className="w-2 h-2 rounded-full bg-[#af101a] animate-ping"></span>
-                Thảo Điền, Saigon
-              </span>
-              <span className="text-[#585757] hidden sm:inline">|</span>
-              <span className="font-label-md text-xs text-[#585757] tracking-wider uppercase font-semibold">
+              <span className="inline-flex items-center gap-2 px-3 py-1 bg-[#eae8e5] rounded-full font-label-md text-xs uppercase tracking-widest text-[#1b1c1a] font-bold">
+                <span className="w-2 h-2 rounded-full bg-[#af101a]"></span>
                 Established 2021
               </span>
             </div>

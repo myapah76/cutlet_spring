@@ -10,7 +10,7 @@ interface DishCardProps {
 export const DishCard: React.FC<DishCardProps> = ({ item, isFeatured }) => {
   return (
     <div
-      className={`bg-white rounded-2xl p-5 sm:p-6 shadow-xs hover:shadow-md transition-shadow border border-[#eae8e5] flex flex-col justify-between space-y-4 ${
+      className={`flex flex-col justify-between space-y-4 pb-4 ${
         isFeatured ? 'col-span-1 md:col-span-2' : ''
       }`}
     >
@@ -41,7 +41,7 @@ export const DishCard: React.FC<DishCardProps> = ({ item, isFeatured }) => {
           </div>
         )}
         {item.prepTimeMinutes && (
-          <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 rounded-md text-[11px] font-semibold text-[#1b1c1a] border border-[#eae8e5] flex items-center gap-1">
+          <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 rounded-md text-[11px] font-semibold text-[#1b1c1a] shadow-xs flex items-center gap-1">
             <span className="material-symbols-outlined text-[14px] text-[#835500]">schedule</span>
             <span>{item.prepTimeMinutes} min prep</span>
           </div>
@@ -49,7 +49,7 @@ export const DishCard: React.FC<DishCardProps> = ({ item, isFeatured }) => {
       </div>
 
       {/* Title, Subtitles, Portion, Big Red Price */}
-      <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 pb-3 border-b border-[#eae8e5]">
+      <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 pb-3 border-b border-[#eae8e5]/70">
         <div className="space-y-1">
           <h3 className={`font-menu-title ${isFeatured ? 'text-2xl sm:text-3xl' : 'text-xl sm:text-2xl'} text-[#1b1c1a] font-bold tracking-tight uppercase leading-snug`}>
             {item.nameEn}
@@ -81,7 +81,7 @@ export const DishCard: React.FC<DishCardProps> = ({ item, isFeatured }) => {
       </div>
 
       {/* 4-Language Description Columns without labels matching physical menu */}
-      <div className={`grid ${isFeatured ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6' : 'grid-cols-1 sm:grid-cols-2 gap-4'} text-xs leading-relaxed border-b border-[#eae8e5] pb-4 pt-1`}>
+      <div className={`grid ${isFeatured ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6' : 'grid-cols-1 sm:grid-cols-2 gap-4'} text-xs leading-relaxed pt-1`}>
         {/* Column 1: Korean */}
         <div className="font-kr-serif text-[#1b1c1a] text-xs leading-relaxed text-left">
           {item.descriptionKr}
@@ -101,14 +101,6 @@ export const DishCard: React.FC<DishCardProps> = ({ item, isFeatured }) => {
         <div className="font-jp-serif text-[#1b1c1a] text-xs leading-relaxed text-left">
           {item.descriptionJp || item.descriptionEn}
         </div>
-      </div>
-
-
-      {/* Card Footer: VAT note */}
-      <div className="flex items-center justify-between pt-1">
-        <span className="text-[11px] text-[#585757] italic">
-          Prices do not include VAT 8% • CUTLET SPRING MENU
-        </span>
       </div>
     </div>
   );

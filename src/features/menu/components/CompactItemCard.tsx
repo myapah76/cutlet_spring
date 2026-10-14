@@ -7,7 +7,7 @@ interface CompactItemCardProps {
 
 export const CompactItemCard: React.FC<CompactItemCardProps> = ({ item }) => {
   return (
-    <div className="bg-white rounded-2xl p-4 sm:p-5 shadow-xs hover:shadow-md transition-shadow border border-[#eae8e5] flex flex-col justify-between space-y-3 h-full">
+    <div className="flex flex-col justify-between space-y-3 h-full pb-2">
       {/* Top Image Frame */}
       <div className="relative w-full h-36 sm:h-44 rounded-xl overflow-hidden bg-[#efeeeb] group shrink-0">
         <img
@@ -28,7 +28,7 @@ export const CompactItemCard: React.FC<CompactItemCardProps> = ({ item }) => {
       </div>
 
       {/* Multilingual Titles (Names Only) */}
-      <div className="space-y-1.5 flex-1">
+      <div className="space-y-1 flex-1">
         {/* English Primary Title */}
         <h4 className="font-menu-title text-base sm:text-lg text-[#1b1c1a] font-bold tracking-tight uppercase leading-snug">
           {item.nameEn}
@@ -52,11 +52,8 @@ export const CompactItemCard: React.FC<CompactItemCardProps> = ({ item }) => {
         </div>
       </div>
 
-      {/* Card Footer: Price & VAT note */}
-      <div className="pt-2 border-t border-[#eae8e5] flex items-baseline justify-between gap-2">
-        <span className="text-[10px] text-[#8f6f6c] italic">
-          8% VAT Excluded
-        </span>
+      {/* Card Footer: Price */}
+      <div className="pt-1 flex items-baseline justify-end">
         <div className="text-right">
           <span className="font-price-numeral text-2xl sm:text-3xl text-[#af101a] font-black leading-none">
             {item.price}

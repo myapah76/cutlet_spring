@@ -38,9 +38,6 @@ export const Header: React.FC<HeaderProps> = ({
               CUTLET SPRING
             </span>
           </div>
-          <span className="text-[10px] uppercase tracking-wider text-[#585757] hidden sm:block">
-            Thảo Điền, Saigon
-          </span>
         </button>
 
         {/* Navigation Tabs */}

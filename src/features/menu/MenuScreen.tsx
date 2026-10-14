@@ -17,7 +17,6 @@ interface MenuScreenProps {
 
 export const MenuScreen: React.FC<MenuScreenProps> = () => {
   const [activeCategory, setActiveCategory] = useState<string>('cat-japanese');
-  const [searchQuery, setSearchQuery] = useState<string>('');
   const isClickScrolling = useRef(false);
 
   // Group items by category
@@ -99,24 +98,6 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Search filter across all 4 languages
-  const matchesFilter = (item: MenuItem): boolean => {
-    if (searchQuery.trim() !== '') {
-      const q = searchQuery.toLowerCase();
-      const match =
-        item.nameEn.toLowerCase().includes(q) ||
-        item.nameKr.toLowerCase().includes(q) ||
-        item.nameVi.toLowerCase().includes(q) ||
-        (item.nameJp && item.nameJp.toLowerCase().includes(q)) ||
-        item.descriptionEn.toLowerCase().includes(q) ||
-        item.descriptionKr.toLowerCase().includes(q) ||
-        (item.descriptionVi && item.descriptionVi.toLowerCase().includes(q)) ||
-        (item.descriptionJp && item.descriptionJp.toLowerCase().includes(q));
-      if (!match) return false;
-    }
-    return true;
-  };
-
   const scrollToCategory = (catId: string) => {
     setActiveCategory(catId);
     isClickScrolling.current = true;
@@ -147,8 +128,6 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           {/* LEFT SIDEBAR: Sticky Category Navigation */}
           <MenuSidebar
-            searchQuery={searchQuery}
-            onSearchChange={setSearchQuery}
             activeCategory={activeCategory}
             categories={categories}
             onSelectCategory={scrollToCategory}
@@ -164,7 +143,7 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
               note="All sets include cabbage, miso broth, pickles & pearl rice"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {japaneseItems.filter(matchesFilter).map((item) => (
+                {japaneseItems.map((item) => (
                   <DishCard
                     key={item.id}
                     item={item}
@@ -182,7 +161,7 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
               note="Served with homemade cream corn soup, rice & spicy kimchi"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {koreanItems.filter(matchesFilter).map((item) => (
+                {koreanItems.map((item) => (
                   <DishCard
                     key={item.id}
                     item={item}
@@ -198,7 +177,7 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
               subtitleKr="수제 카레라이스 • 48-hour slow-simmered caramelized onion Japanese spiced curry"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {curryItems.filter(matchesFilter).map((item) => (
+                {curryItems.map((item) => (
                   <DishCard
                     key={item.id}
                     item={item}
@@ -214,7 +193,7 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
               subtitleKr="면 요리 • Chilled buckwheat soba & Sanuki udon with savory bonito dashi broth"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {noodleItems.filter(matchesFilter).map((item) => (
+                {noodleItems.map((item) => (
                   <DishCard
                     key={item.id}
                     item={item}
@@ -230,7 +209,7 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
               subtitleKr="사이드 및 추가 메뉴 • Individual katsu pieces, artisan sauces & accompaniments"
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                {addonItems.filter(matchesFilter).map((item) => (
+                {addonItems.map((item) => (
                   <CompactItemCard
                     key={item.id}
                     item={item}
@@ -246,7 +225,7 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
               subtitleKr="음료 및 주류 • Craft beer, chilled sakes, Japanese sodas & mineral waters"
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                {drinkItems.filter(matchesFilter).map((item) => (
+                {drinkItems.map((item) => (
                   <CompactItemCard
                     key={item.id}
                     item={item}
