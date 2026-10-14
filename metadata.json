@@ -1,0 +1,6 @@
+{
+  "name": "Cutlet Spring - 봄돈까스",
+  "description": "Artisanal Japanese-Korean Tonkatsu Atelier crafting precision-fried golden cutlets with heritage culinary discipline in Thảo Điền.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

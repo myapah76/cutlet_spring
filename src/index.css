@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #af101a;
+  --color-primary-container: #d32f2f;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #fff2f0;
+  --color-primary-fixed: #ffdad6;
+  --color-primary-fixed-dim: #ffb3ac;
+  --color-on-primary-fixed: #410003;
+  --color-on-primary-fixed-variant: #930010;
+
+  --color-secondary: #835500;
+  --color-secondary-container: #feae2c;
+  --color-on-secondary-container: #6b4500;
+  --color-secondary-fixed: #ffddb4;
+  --color-secondary-fixed-dim: #ffb955;
+  --color-on-secondary-fixed: #291800;
+  --color-on-secondary-fixed-variant: #633f00;
+
+  --color-tertiary: #585757;
+  --color-tertiary-container: #706f6f;
+  --color-on-tertiary-container: #f7f4f3;
+  --color-tertiary-fixed: #e5e2e1;
+  --color-tertiary-fixed-dim: #c8c6c5;
+  --color-on-tertiary-fixed: #1c1b1b;
+  --color-on-tertiary-fixed-variant: #474746;
+
+  --color-surface: #fbf9f6;
+  --color-surface-dim: #dbdad7;
+  --color-surface-bright: #fbf9f6;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f5f3f0;
+  --color-surface-container: #efeeeb;
+  --color-surface-container-high: #eae8e5;
+  --color-surface-container-highest: #e4e2df;
+
+  --color-on-surface: #1b1c1a;
+  --color-on-surface-variant: #5b403d;
+  --color-inverse-surface: #30312f;
+  --color-inverse-on-surface: #f2f0ed;
+  --color-outline: #8f6f6c;
+  --color-outline-variant: #e4beba;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+
+  --font-serif: "Bodoni Moda", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-headline-lg: "Bodoni Moda", serif;
+  --font-body-md: "Plus Jakarta Sans", sans-serif;
+
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2.5rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-margin: 2rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Custom typography classes matching WhatTheFont spec */
+.font-headline-lg {
+  font-family: "Times New Roman", "Nimbus Roman No. 9", "Bodoni Moda", "Cormorant Garamond", serif;
+  letter-spacing: -0.01em;
+}
+
+.font-menu-title {
+  font-family: "Times New Roman", "Nimbus Roman No. 9", "Cormorant Garamond", "Bodoni Moda", serif;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+}
+
+.font-menu-bar {
+  font-family: "Times New Roman", "Nimbus Roman No. 9", "Cormorant Garamond", "Bodoni Moda", serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.font-kr-serif {
+  font-family: "Noto Serif KR", "Malgun Gothic", serif;
+}
+
+.font-jp-serif {
+  font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+}
+
+.font-headline-md {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+}
+
+.font-price-numeral {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.font-label-lg {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.font-label-md {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.font-title-lg {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+}
+
+.font-title-md {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+}
+
+.font-body-lg {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.font-body-md {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.font-body-sm {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
