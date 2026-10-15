@@ -14,16 +14,14 @@ export const MasterpieceSection: React.FC<MasterpieceSectionProps> = ({
     <section className="w-full bg-[#fbf9f6] py-16 lg:py-24 border-b border-[#eae8e5]" id="menu-signature">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Signature Bento Container */}
-        <div className="bg-white rounded-2xl shadow-sm border border-[#eae8e5] p-6 lg:p-10">
+        <div className="p-2 sm:p-4 lg:p-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Large Dish Feature Photography (7 Cols) */}
             <div className="lg:col-span-7 flex flex-col">
-              <div className="relative w-full h-[360px] sm:h-[420px] lg:h-[480px] rounded-xl overflow-hidden bg-[#efeeeb] shadow-inner group">
-                <img
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  alt="Editorial top-down angle of lavish Japanese Tonkatsu set meal served on blonde wood table"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoujYRTbKIjPmoUOycuPwt3PQdbJXhR11Z-Q1ra-9xnrsaXJFxFPYycLZVv8-NnQbYhdtUJOh9_dSc7B_vCTQdxjrrzmtFtbA-UX60gKbv4UCw8ZEFtSGyRl5NqM6aCxDLT2XFPCs93-So_f4-Jqd_91fjhb2e4JW2kaTiRoWRILUItX0jgBq2CJ-Xh7ambnCkA6bqMLGbDnKKbj2pRWfYVsnScaMgIe9pHxR0lPH9N0uVfFdLEjATsA"
-                />
+              <div className="relative w-full h-[360px] sm:h-[420px] lg:h-[480px] rounded-xl overflow-hidden bg-[#efeeeb] shadow-inner group flex items-center justify-center">
+                <div className="flex items-center justify-center text-[#c2bfb8] select-none">
+                  <span className="material-symbols-outlined text-5xl sm:text-6xl opacity-40">restaurant</span>
+                </div>
                 <div className="absolute top-4 left-4 bg-[#af101a] text-white px-3 py-1.5 rounded-full font-label-md text-xs tracking-wider uppercase flex items-center gap-1.5 shadow">
                   <span className="material-symbols-outlined text-[16px]">grade</span>
                   <span>ATELIER OMAKASE SELECTION</span>
@@ -36,12 +34,8 @@ export const MasterpieceSection: React.FC<MasterpieceSectionProps> = ({
               {/* Inset Miniature Dish Gallery (Sides & Components) */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4">
                 <div className="bg-[#f5f3f0] p-2.5 rounded-lg flex items-center gap-2 border border-[#eae8e5]">
-                  <div className="w-10 h-10 rounded-full bg-[#efeeeb] overflow-hidden shrink-0 border border-[#eae8e5]">
-                    <img
-                      className="w-full h-full object-cover"
-                      alt="Tonjiru Miso soup"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHamC3DKoGpCnH9yzLrLc3ZsDu3J7GiMIdJHQIox49LUbOnRaNnBhN9Tdz1szefwSLJO29oOCTL4X_yFWdB7IgqreBFFHERk0DCtgbe3iEe-bS5QtlB0723-bHJcvi00jkrtdYj0nFwI9xeFANAn7cvyvSsKS00otF1vF5vFRNn7xowAgh5GXLKmSJi8p92vnGvlkMiwffEia3sHKZtl1CANIJWPvND6BrJ2-X4Niwv8GbIbFNZ6AhPw"
-                    />
+                  <div className="w-10 h-10 rounded-full bg-[#efeeeb] overflow-hidden shrink-0 border border-[#eae8e5] flex items-center justify-center text-[#c2bfb8]">
+                    <span className="material-symbols-outlined text-[18px] opacity-40">soup_kitchen</span>
                   </div>
                   <div className="truncate">
                     <span className="font-label-md text-[10px] text-[#585757] block truncate">SOUP</span>
@@ -50,12 +44,8 @@ export const MasterpieceSection: React.FC<MasterpieceSectionProps> = ({
                 </div>
 
                 <div className="bg-[#f5f3f0] p-2.5 rounded-lg flex items-center gap-2 border border-[#eae8e5]">
-                  <div className="w-10 h-10 rounded-full bg-[#efeeeb] overflow-hidden shrink-0 border border-[#eae8e5]">
-                    <img
-                      className="w-full h-full object-cover"
-                      alt="Pearl Rice"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQZyseVh5rSv0ikNDOPcmHsjiq859ljgZGGdFKA-xlxu_UllgAdg_qci_N5kttQFQLZPys20hHfZQ32KPHm185sKo9sKGzLz76ZKfnkTMFLwhedHNGrFtkMlolS9EdsLVOfOrXvxYpUhYVfrVAQ86BrZEbp9x-GpYQuAWsG82VpSbww-gK7BoFnpP8QvMEf6CEmbHAiMew-MiJXT51ofpC_hDwJpmEO3JUXgvNceuOnsQbdGT6u1wpJQ"
-                    />
+                  <div className="w-10 h-10 rounded-full bg-[#efeeeb] overflow-hidden shrink-0 border border-[#eae8e5] flex items-center justify-center text-[#c2bfb8]">
+                    <span className="material-symbols-outlined text-[18px] opacity-40">rice_bowl</span>
                   </div>
                   <div className="truncate">
                     <span className="font-label-md text-[10px] text-[#585757] block truncate">GRAIN</span>
@@ -64,12 +54,8 @@ export const MasterpieceSection: React.FC<MasterpieceSectionProps> = ({
                 </div>
 
                 <div className="bg-[#f5f3f0] p-2.5 rounded-lg flex items-center gap-2 border border-[#eae8e5]">
-                  <div className="w-10 h-10 rounded-full bg-[#efeeeb] overflow-hidden shrink-0 border border-[#eae8e5]">
-                    <img
-                      className="w-full h-full object-cover"
-                      alt="Demi Glace sauce"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2RuDPR276Q7qeT6uI6vKTsBfNm-FJRJKBap87og95okoiYAHF9qwYsmGfEP2b1jJFh3z8xS2MuUXaOiQWxFXD1kRfq9d4gANlwTEHSTL5EZbvah254sFs3ngjEPVCWeoFfy9IUaSb7LXluyaIHOlR8lOzN9DWUwApVNCOfkmK2qOJ-Ou8d6sHPgcBiKH_FGQLIsWyXIYiz0xg_msb6fA7CRHHCDc1Lw0p53NqdTjpvhs7zPQfXDpPqg"
-                    />
+                  <div className="w-10 h-10 rounded-full bg-[#efeeeb] overflow-hidden shrink-0 border border-[#eae8e5] flex items-center justify-center text-[#c2bfb8]">
+                    <span className="material-symbols-outlined text-[18px] opacity-40">sauce</span>
                   </div>
                   <div className="truncate">
                     <span className="font-label-md text-[10px] text-[#585757] block truncate">SAUCE</span>
@@ -78,12 +64,8 @@ export const MasterpieceSection: React.FC<MasterpieceSectionProps> = ({
                 </div>
 
                 <div className="bg-[#f5f3f0] p-2.5 rounded-lg flex items-center gap-2 border border-[#eae8e5]">
-                  <div className="w-10 h-10 rounded-full bg-[#efeeeb] overflow-hidden shrink-0 border border-[#eae8e5]">
-                    <img
-                      className="w-full h-full object-cover"
-                      alt="Atelier Kimchi"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaDmZGxJ5xJEoosw3Dn9_9ma-haQBeLpEJxt4dlfatCZCmJaq2b7ysz5tJFpSLF0I8fPfpdA2joqe9XDNDaPVAeTexCBJtLZBSlub-OnqtKrr3oDyP9LCuhp7Pz0yNqMW6hPz9lHCp9JhwLIazs2odg8JZTEb8jD3Iq-NaGW7yYn4qaSpisJ5gQWKXYlHVsaMCXObEXA9kWjcsEnGZDCoyt-EKcIMK4i6U-034bIXwC-gar_fo20n6Ow"
-                    />
+                  <div className="w-10 h-10 rounded-full bg-[#efeeeb] overflow-hidden shrink-0 border border-[#eae8e5] flex items-center justify-center text-[#c2bfb8]">
+                    <span className="material-symbols-outlined text-[18px] opacity-40">eco</span>
                   </div>
                   <div className="truncate">
                     <span className="font-label-md text-[10px] text-[#585757] block truncate">BANCHAN</span>
@@ -99,7 +81,7 @@ export const MasterpieceSection: React.FC<MasterpieceSectionProps> = ({
                 <span className="px-2.5 py-1 bg-[#feae2c]/30 text-[#835500] font-label-md text-xs rounded uppercase font-bold tracking-wider">
                   CHEF'S SIGNATURE
                 </span>
-                <span className="text-[#585757] text-xs font-semibold">• NO. 01 RECOMMENDATION</span>
+                <span className="text-[#585757] text-xs font-semibold">NO. 01 RECOMMENDATION</span>
               </div>
 
               {/* Korean and English Titles */}

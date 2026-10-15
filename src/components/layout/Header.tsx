@@ -4,8 +4,8 @@ import { Language, PageView } from '@/types';
 interface HeaderProps {
   currentView: PageView;
   setCurrentView: (view: PageView) => void;
-  language: Language;
-  setLanguage: (lang: Language) => void;
+  language?: Language;
+  setLanguage?: (lang: Language) => void;
   cartItems?: any[];
   onOpenOrderPad?: () => void;
   onOpenReservation?: () => void;
@@ -14,8 +14,6 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({
   currentView,
   setCurrentView,
-  language,
-  setLanguage,
 }) => {
 
   return (
@@ -53,7 +51,7 @@ export const Header: React.FC<HeaderProps> = ({
                 : 'text-[#5b403d] hover:text-[#1b1c1a]'
             }`}
           >
-            {language === 'KR' ? '홈 (스토리)' : language === 'VI' ? 'Trang Chủ' : language === 'JP' ? 'ホーム' : 'Home'}
+            Home
           </button>
           <button
             onClick={() => {
@@ -66,64 +64,12 @@ export const Header: React.FC<HeaderProps> = ({
                 : 'text-[#5b403d] hover:text-[#1b1c1a]'
             }`}
           >
-            {language === 'KR' ? '메뉴' : language === 'VI' ? 'Thực Đơn' : language === 'JP' ? 'メニュー' : 'Menu'}
-          </button>
-          <button
-            onClick={() => {
-              setCurrentView('about-us');
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            className={`font-menu-bar text-xs md:text-sm uppercase tracking-wider transition-all cursor-pointer ${
-              currentView === 'about-us'
-                ? 'text-[#af101a] font-bold border-b-2 border-[#af101a] pb-1'
-                : 'text-[#5b403d] hover:text-[#1b1c1a]'
-            }`}
-          >
-            {language === 'KR' ? '철학 & 공간' : language === 'VI' ? 'Giới Thiệu' : language === 'JP' ? 'こだわり' : 'About Us'}
+            Menu
           </button>
         </nav>
 
         {/* Right Info & Actions */}
         <div className="flex items-center gap-3 md:gap-6">
-          {/* Language Switcher */}
-          <div className="flex items-center gap-1 text-[11px] font-bold text-[#585757] tracking-wider bg-[#eae8e5]/60 px-2.5 py-1 rounded-full">
-            <button
-              onClick={() => setLanguage('KR')}
-              className={`cursor-pointer transition-colors px-1 ${
-                language === 'KR' ? 'text-[#af101a] font-extrabold underline' : 'hover:text-[#1b1c1a]'
-              }`}
-            >
-              KR
-            </button>
-            <span>/</span>
-            <button
-              onClick={() => setLanguage('EN')}
-              className={`cursor-pointer transition-colors px-1 ${
-                language === 'EN' ? 'text-[#af101a] font-extrabold underline' : 'hover:text-[#1b1c1a]'
-              }`}
-            >
-              EN
-            </button>
-            <span>/</span>
-            <button
-              onClick={() => setLanguage('VI')}
-              className={`cursor-pointer transition-colors px-1 ${
-                language === 'VI' ? 'text-[#af101a] font-extrabold underline' : 'hover:text-[#1b1c1a]'
-              }`}
-            >
-              VI
-            </button>
-            <span>/</span>
-            <button
-              onClick={() => setLanguage('JP')}
-              className={`cursor-pointer transition-colors px-1 ${
-                language === 'JP' ? 'text-[#af101a] font-extrabold underline' : 'hover:text-[#1b1c1a]'
-              }`}
-            >
-              JP
-            </button>
-          </div>
-
           {/* Direct Line / Contact */}
           <a
             href="tel:0393762717"

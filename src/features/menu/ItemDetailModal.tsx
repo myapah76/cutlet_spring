@@ -91,35 +91,69 @@ export const ItemDetailModal: React.FC<ItemDetailModalProps> = ({
           <span className="material-symbols-outlined text-[20px]">close</span>
         </button>
 
-        {/* Modal Hero Image */}
-        <div className="relative w-full h-56 sm:h-64 bg-[#efeeeb] shrink-0">
-          <img
-            src={item.image}
-            alt={item.altText}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+        {/* Modal Hero Frame (Image hidden, layout frame preserved) */}
+        <div className="relative w-full h-56 sm:h-64 bg-[#efeeeb] shrink-0 flex items-center justify-center overflow-hidden">
+          <div className="flex items-center justify-center text-[#c2bfb8] select-none">
+            <span className="material-symbols-outlined text-4xl opacity-40">restaurant</span>
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent pointer-events-none"></div>
           <div className="absolute bottom-3 left-4 right-4 text-white">
             <span className="font-label-md text-[10px] tracking-widest uppercase bg-[#af101a] text-white px-2.5 py-0.5 rounded font-bold">
               {item.category.toUpperCase()} ATELIER
             </span>
-            <h3 className="font-menu-title text-2xl font-bold mt-1 text-white leading-tight tracking-wide uppercase">
-              {item.nameEn}
-            </h3>
-            <span className="font-kr-serif text-sm text-[#ffb955] font-semibold block mt-0.5">
-              {item.nameKr}
-            </span>
+            {/* 1. Korean */}
+            {item.nameKr && (
+              <div>
+                <h3 className="font-kr-serif text-2xl font-bold mt-1 text-white leading-tight tracking-wide">
+                  {item.nameKr}
+                </h3>
+                {item.nameKrSubtitle && (
+                  <div className="text-xs text-white/85 font-medium mt-0.5">
+                    {item.nameKrSubtitle}
+                  </div>
+                )}
+              </div>
+            )}
+            {/* 2. English */}
+            {item.nameEn && (
+              <span className="font-menu-title text-base text-white/90 font-semibold uppercase block mt-0.5">
+                {item.nameEn}
+              </span>
+            )}
+            {/* 3. Vietnamese & 4. Japanese */}
+            {(item.nameVi || item.nameJp) && (
+              <div className="space-y-0.5 mt-0.5">
+                {item.nameVi && (
+                  <div className="font-body-md text-xs text-[#ffb955] italic">
+                    {item.nameVi}
+                  </div>
+                )}
+                {item.nameJp && (
+                  <div className="font-jp-serif text-xs text-white/80">
+                    {item.nameJp}
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
 
         {/* Modal Body Content */}
         <div className="p-6 space-y-5">
-          {/* Multilingual 4-Language descriptions without labels */}
+          {/* Multilingual 4-Language descriptions: Hàn -> Anh -> Việt -> Nhật without fallback */}
           <div className="space-y-3 bg-[#fbf9f6] p-4 rounded-xl border border-[#eae8e5] text-xs">
-            <p className="font-kr-serif text-[#1b1c1a] leading-relaxed text-justify">{item.descriptionKr}</p>
-            <p className="font-body-md text-[#2b2b2b] leading-relaxed text-justify pt-2.5 border-t border-[#efeeeb]">{item.descriptionEn}</p>
-            <p className="font-body-md text-[#2b2b2b] leading-relaxed text-justify pt-2.5 border-t border-[#efeeeb]">{item.descriptionVi || item.descriptionEn}</p>
-            <p className="font-jp-serif text-[#1b1c1a] leading-relaxed text-justify pt-2.5 border-t border-[#efeeeb]">{item.descriptionJp || item.descriptionEn}</p>
+            {item.descriptionKr && (
+              <p className="font-kr-serif text-[#1b1c1a] leading-relaxed text-justify">{item.descriptionKr}</p>
+            )}
+            {item.descriptionEn && (
+              <p className="font-body-md text-[#2b2b2b] leading-relaxed text-justify pt-2.5 border-t border-[#efeeeb]">{item.descriptionEn}</p>
+            )}
+            {item.descriptionVi && (
+              <p className="font-body-md text-[#2b2b2b] leading-relaxed text-justify pt-2.5 border-t border-[#efeeeb]">{item.descriptionVi}</p>
+            )}
+            {item.descriptionJp && (
+              <p className="font-jp-serif text-[#1b1c1a] leading-relaxed text-justify pt-2.5 border-t border-[#efeeeb]">{item.descriptionJp}</p>
+            )}
           </div>
 
           {/* Sizing options if present */}

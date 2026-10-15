@@ -20,7 +20,7 @@ interface UIState {
 }
 
 export const useUIStore = create<UIState>((set) => ({
-  currentView: 'menu',
+  currentView: 'home',
   language: 'EN',
   isOrderPadOpen: false,
   isReservationOpen: false,

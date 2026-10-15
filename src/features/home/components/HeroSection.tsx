@@ -31,7 +31,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
             {/* Main Multilingual Headline */}
             <h1 className="font-headline-lg text-4xl sm:text-5xl lg:text-6xl text-[#1b1c1a] font-bold leading-[1.12] mb-5">
-              Nghệ Thuật Tonkatsu Thủ Công <br className="hidden sm:inline" />
+              Nghệ Thuật Tonkatsu <br />
+              <span className="inline-block">Thủ Công</span>
               <span className="italic font-normal text-[#5b403d] block mt-1">
                 The Art of Hand Crafted Cutlets
               </span>
@@ -93,16 +94,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <div className="absolute -inset-4 bg-gradient-to-tr from-[#feae2c]/20 via-[#ffdad6]/20 to-transparent rounded-full filter blur-3xl opacity-60 pointer-events-none"></div>
 
             {/* Hero Dish Visual Frame */}
-            <div className="relative w-full max-w-md bg-white p-4 rounded-2xl shadow-xl border border-[#eae8e5] overflow-hidden">
-              {/* Cutlet Hero Image */}
-              <div className="relative w-full h-[440px] sm:h-[480px] rounded-xl overflow-hidden bg-[#efeeeb] group">
-                <img
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  alt="Close-up macro photography of wooden chopsticks lifting a single thick piece of Japanese pork tenderloin katsu with rosy pink center and golden needle panko."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0JEY2qTMEv-dl-nKcCEZn9PCdFvqQbZ3CNgti1A4ZomzbQEWEl2wleYeF6RAslLG3UacZoG1e_KbttjTZQa0oCeHD-fJjtOW6gBK4_xBZfgxyX4246sAgQqd8B8y2cXUdwPtOBjF3Cv-cVtE5eHOKETrpGfreNxfSC3TKkqRLEIxMtrtpIRhgmw_7pJmp6GG-enmxHNpj25zOd6DxYGiwMosEX9q3ZS8DmFf4JmX6WbPO-16Z4crWMA"
-                />
-                {/* Subtle Image Scrim Bottom */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+            <div className="relative w-full max-w-md p-2 overflow-hidden">
+              {/* Cutlet Hero Frame (Image hidden, layout frame preserved) */}
+              <div className="relative w-full h-[440px] sm:h-[480px] rounded-xl overflow-hidden bg-[#efeeeb] group flex items-center justify-center">
+                <div className="flex items-center justify-center text-[#c2bfb8] select-none">
+                  <span className="material-symbols-outlined text-5xl sm:text-6xl opacity-40">restaurant</span>
+                </div>
 
                 {/* Overlaid Editorial Kanji/Hangul Stamp */}
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded shadow-sm border border-[#eae8e5]">
@@ -132,9 +129,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                       <span className="font-title-md text-xs font-bold text-[#1b1c1a] block">
                         Signature Hire Katsu Medallion
                       </span>
-                      <span className="font-body-sm text-[11px] text-[#585757] block">
-                        Natural Rosy Hue • 100% Fully Cooked
-                      </span>
+                      <div className="font-body-sm text-[11px] text-[#585757] leading-tight">
+                        <div>Natural Rosy Hue</div>
+                        <div className="text-[10px] text-[#835500] font-medium">100% Fully Cooked</div>
+                      </div>
                     </div>
                   </div>
                   <span className="px-2 py-0.5 bg-[#feae2c]/30 text-[#835500] font-label-md text-[10px] uppercase font-bold rounded">
@@ -144,10 +142,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </div>
 
               {/* Footnote Under Cutlet */}
-              <div className="mt-3 flex items-center justify-between px-1">
-                <span className="font-body-sm text-[#585757] text-[11px]">
-                  Plate Ref: 01 / Anshim Katsu
-                </span>
+              <div className="mt-3 flex items-center justify-end px-1">
                 <button
                   onClick={() => {
                     setCurrentView('menu');

@@ -63,18 +63,6 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentView, onOpenReservatio
               6A Đường số 9, Phường Thảo Điền,<br />
               TP. Thủ Đức, TP. Hồ Chí Minh
             </p>
-            <div className="pt-2 p-2.5 bg-[#eae8e5]/70 rounded-lg space-y-1">
-              <div className="flex items-center gap-1.5 text-[11px] font-bold text-[#1b1c1a]">
-                <span className="material-symbols-outlined text-[14px] text-[#af101a]">wifi</span>
-                <span>In-House Guest WiFi</span>
-              </div>
-              <span className="font-body-sm text-[11px] text-[#585757] block">
-                SSID: <strong className="text-[#1b1c1a]">Cutlet spring</strong>
-              </span>
-              <span className="font-body-sm text-[11px] text-[#585757] block">
-                PW: <strong className="text-[#1b1c1a]">01530153</strong>
-              </span>
-            </div>
           </div>
 
           {/* Gourmet Inquiries */}
@@ -92,7 +80,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentView, onOpenReservatio
             </p>
             <p className="font-body-sm text-xs text-[#5b403d] flex items-center gap-1.5">
               <span className="material-symbols-outlined text-[15px] text-[#585757]">schedule</span>
-              <span>Service Hours: 11:00 - 21:30 (Daily)</span>
+              <span>Service Hours: 11:00 - 15:00 | 17:00 - 21:00</span>
             </p>
           </div>
         </div>
@@ -101,8 +89,6 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentView, onOpenReservatio
         <div className="pt-6 border-t border-[#e4e2df] flex flex-col md:flex-row items-center justify-between gap-4 font-body-sm text-xs text-[#585757]">
           <div className="flex items-center gap-2">
             <span>© 2025 CUTLET SPRING Atelier. All Rights Reserved.</span>
-            <span>•</span>
-            <span>Thảo Điền Dining Quarter</span>
           </div>
           <div className="flex items-center gap-6 font-label-md text-xs uppercase tracking-wider">
             <button
@@ -113,15 +99,6 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentView, onOpenReservatio
               className="text-[#5b403d] hover:text-[#1b1c1a] transition-colors cursor-pointer"
             >
               Seasonal Cutlets
-            </button>
-            <button
-              onClick={() => {
-                setCurrentView('about-us');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="text-[#5b403d] hover:text-[#1b1c1a] transition-colors cursor-pointer"
-            >
-              Artisanship &amp; Philosophy
             </button>
           </div>
         </div>

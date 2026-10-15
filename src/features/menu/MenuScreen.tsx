@@ -40,6 +40,10 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
     () => MENU_ITEMS.filter((i) => i.category === 'addons'),
     []
   );
+  const sauceItems = useMemo(
+    () => MENU_ITEMS.filter((i) => i.category === 'sauces'),
+    []
+  );
   const drinkItems = useMemo(
     () => MENU_ITEMS.filter((i) => i.category === 'drinks'),
     []
@@ -53,6 +57,7 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
       'cat-curry',
       'cat-noodles',
       'cat-addons',
+      'cat-sauces',
       'cat-drinks',
     ];
 
@@ -114,11 +119,12 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
 
   const categories = [
     { id: 'cat-japanese', label: 'Japanese Tonkatsu', count: japaneseItems.length },
-    { id: 'cat-korean', label: 'Korean Retro Cutlet', count: koreanItems.length },
-    { id: 'cat-curry', label: 'Curry Rice & Cutlet', count: curryItems.length },
-    { id: 'cat-noodles', label: 'Noodles & Soba', count: noodleItems.length },
-    { id: 'cat-addons', label: 'Add-ons & Sauces', count: addonItems.length },
-    { id: 'cat-drinks', label: 'Drinks & Artisanal Beer', count: drinkItems.length },
+    { id: 'cat-korean', label: 'Korean Tonkatsu', count: koreanItems.length },
+    { id: 'cat-curry', label: 'Curry Set', count: curryItems.length },
+    { id: 'cat-noodles', label: 'Noodles', count: noodleItems.length },
+    { id: 'cat-addons', label: 'Add-ons', count: addonItems.length },
+    { id: 'cat-sauces', label: 'Sauces', count: sauceItems.length },
+    { id: 'cat-drinks', label: 'Drinks', count: drinkItems.length },
   ];
 
   return (
@@ -153,10 +159,10 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
               </div>
             </MenuSection>
 
-            {/* 02. KOREAN RETRO CUTLET */}
+            {/* 02. KOREAN TONKATSU */}
             <MenuSection
               id="cat-korean"
-              titleEn="Korean Retro Cutlet"
+              titleEn="Korean Tonkatsu"
               subtitleKr="경양식 돈까스 • 1980s Retro Seoul style thin-pounded crispy pork cutlets"
               note="Served with homemade cream corn soup, rice & spicy kimchi"
             >
@@ -170,10 +176,10 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
               </div>
             </MenuSection>
 
-            {/* 03. CURRY RICE */}
+            {/* 03. CURRY SET */}
             <MenuSection
               id="cat-curry"
-              titleEn="Curry Rice & Cutlet"
+              titleEn="Curry Set"
               subtitleKr="수제 카레라이스 • 48-hour slow-simmered caramelized onion Japanese spiced curry"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -186,10 +192,10 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
               </div>
             </MenuSection>
 
-            {/* 04. NOODLES & SOBA */}
+            {/* 04. NOODLES */}
             <MenuSection
               id="cat-noodles"
-              titleEn="Noodles & Soba"
+              titleEn="Noodles"
               subtitleKr="면 요리 • Chilled buckwheat soba & Sanuki udon with savory bonito dashi broth"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -202,11 +208,11 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
               </div>
             </MenuSection>
 
-            {/* 05. ADD-ONS & SAUCES */}
+            {/* 05. ADD-ONS */}
             <MenuSection
               id="cat-addons"
-              titleEn="Add-ons & Sauces"
-              subtitleKr="사이드 및 추가 메뉴 • Individual katsu pieces, artisan sauces & accompaniments"
+              titleEn="Add-ons"
+              subtitleKr="사이드 및 추가 메뉴 • Individual katsu pieces, extra soup, warm pearl rice & sides"
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 {addonItems.map((item) => (
@@ -218,10 +224,26 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
               </div>
             </MenuSection>
 
-            {/* 06. DRINKS & ARTISANAL BEER */}
+            {/* 06. SAUCES */}
+            <MenuSection
+              id="cat-sauces"
+              titleEn="Sauces"
+              subtitleKr="소스 추가 • House-made tonkatsu sauces, spicy retro sauce, curry & artisanal dips"
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                {sauceItems.map((item) => (
+                  <CompactItemCard
+                    key={item.id}
+                    item={item}
+                  />
+                ))}
+              </div>
+            </MenuSection>
+
+            {/* 07. DRINKS */}
             <MenuSection
               id="cat-drinks"
-              titleEn="Drinks & Artisanal Beer"
+              titleEn="Drinks"
               subtitleKr="음료 및 주류 • Craft beer, chilled sakes, Japanese sodas & mineral waters"
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">

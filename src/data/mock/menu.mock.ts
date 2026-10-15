@@ -1,605 +1,957 @@
 import { MenuItem } from '@/types';
 
 export const MOCK_MENU_ITEMS: MenuItem[] = [
-  // 1. JAPANESE TONKATSU
   {
-    id: 'spring-signature-set',
-    nameEn: 'SPRING SIGNATURE SET',
-    nameKr: '봄 시그니쳐 세트.',
-    nameJp: 'スプリングシグネチャーセット',
-    nameVi: 'Set Thập Cẩm Cao Cấp Xuân',
-    portionEn: 'Set for 1 person',
-    portionVi: 'Set dành cho 1 người',
-    portionKr: '1인 세트',
-    portionJp: '1名様用セット',
-    category: 'japanese',
-    price: 275,
-    priceFormatted: '275.000 VND',
-    prepTimeMinutes: 20,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCENajls9IE-ZeEVmtuVImYEFlvlo3LjNbXfBALI2MVe8GhgfFjEkMN_ENC9HmM5xzkexuPWRyn0Cqj0Kf1jFeHyhJ6r549pjcwjoeWC1D4tgSG5bCbyy36MHwHBAQ2Be2EC_vvd5n5hpP_KWkpH9f6cbB8VjQE_qjHh4Vbv0rUMeDJ0w-94Qb7l3OzCbNeDSkxVe2K0SC-_05t1fNY2xEbNg_tqjXZwFNjxDwB5NFZXkLrNiU-OAKKVQ',
-    altText: 'Overhead magazine food photography of an artisanal Japanese cutlet spread with golden tonkatsu, sliced mozzarella cheese katsu pulling cheese, golden king prawn, side bowls of miso soup, shredded cabbage with sesame sauce, white rice, small sauces.',
-    descriptionKr: '특별한 오늘의 한끼를 원하시는 분께 추천드리는 세트입니다. 부드럽고 육즙 가득한 특안심카츠 2조각, 치즈카츠 2조각, 버섯의 깊은 풍미를 살린 표고멘치카츠 2조각, 그리고 바삭하게 튀겨낸 킹타이거 새우 1마리로 구성했습니다. 봄돈까스의 다채로운 맛을 즐기실 수 있습니다.',
-    descriptionEn: 'A special set recommended for those looking to make today\'s meal a little more special. Featuring 2 pieces of tender and juicy Special Tenderloin Katsu, 2 pieces of Cheese Katsu, 2 pieces of Shiitake Menchi Katsu packed with the rich flavor of shiitake mushrooms, and 1 crispy King Tiger Shrimp. Enjoy a variety of Spring\'s signature flavors, all in one set.',
-    descriptionVi: 'Một Set đặc biệt hơn bình thường tại Cutlet Spring. Set gồm 2 miếng thăn nội cao cấp mềm mọng nước, 2 miếng Cheese Katsu, 2 miếng Shiitake Menchi Katsu đậm đà hương vị nấm hương, cùng 1 tôm sú King Tiger cỡ lớn chiên giòn.',
-    descriptionJp: '本日の食事をちょっと特別なものにしたい方におすすめの、SPRING自慢のスペシャルセットです。ジューシーで柔らかなスペシャルヒレカツ2個、とろりと濃厚なチーズを包んだチーズカツ2個、しいたけの豊かな旨味を存分に楽しめるしいたけメンチカツ2個、そしてサクサクに揚げたキングタイガーエビフライ1尾を贅沢に盛り合わせました。SPRING自慢のさまざまな味わいを、一度にお楽しみいただけるスペシャルセットです。',
-    isChefSignature: true,
-    dishTypes: ['pork', 'cheese'],
-    subBullet1: 'Includes Side Insets: Sesame Cabbage, Red Miso, Tonkatsu Sauce, Pearl Rice',
-    subBullet2: '+ Tartar, Wasabi, Pink Himalayan Salt',
-    features: ['Limited 30 portions freshly cut daily', 'Dual temperature fried', 'Free broth & cabbage refills']
-  },
-  {
-    id: 'pork-tenderloin-cutlet-set',
-    nameEn: 'Pork Tenderloin Cutlet Set',
-    nameKr: '안심카츠',
-    nameJp: 'ヒレかつ',
-    nameVi: 'Set Thịt Thăn Nội Mềm Mọng Nước',
-    category: 'japanese',
-    price: 200,
-    priceFormatted: '200.000 VND',
-    prepTimeMinutes: 15,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAU7uIRGweXD1EsXli-iJ42Rvq6DkkbZKz8VPVfG1-M_KpNeA3UMZ0wbYcbnuw2uxwAZaj8wB-AdklqYjOiKdJ7dwmVJvvTJNJHYW7d1fazQp1VPdfPefBkQf2IYu3ymzRnk5rnysaXrIzly_WcLI_Bu-dRC2U_FuMzFa91iLq1km8hCori4iq8I_M8AyOb-CNSJhWrmqUKrDd96lN7ceAV_NBBAuxdIxQJRmnDhhFjFf1AxrXpCxsybg',
-    altText: 'Culinary editorial photo of Japanese tenderloin pork tonkatsu with rosy blush center resting on metal wire rack over ceramic white plate with sliced cabbage side, warm natural sunlight, wood surface.',
-    descriptionEn: '돼지에서 소량으로 나오는 안심부위를 촉촉하고 부드럽게 튀겼습니다. Two thick medallions of ultra-tender center loin with pink succulent center.',
-    descriptionKr: '돼지 한 마리에서 소량만 나오는 특수 안심 부위를 저온 및 고온 교차 조리로 튀겨 촉촉한 분홍빛 육즙을 그대로 머금고 있습니다.',
-    descriptionVi: 'Thịt thăn nội heo mềm mọng nước chiên giòn, giữ lại sắc hồng tự nhiên và độ mọng nước hoàn hảo.',
-    isBestSeller: true,
-    dishTypes: ['pork'],
-    tags: ['Pork Tenderloin', 'Best Seller'],
-    subBullet1: 'Tenderloin (2 large rounds)',
-    subBullet2: 'Pink Salt + Wasabi',
-    features: ['Prep: ~15 mins', 'Elevated wire rack presentation', '120h wet-aged chilled pork']
-  },
-  {
-    id: 'cheese-king-katsu',
-    nameEn: 'Cheese King Katsu',
-    nameKr: '치즈킹',
-    nameJp: 'チーズキング',
-    nameVi: 'Set Thăn Heo Cuộn Phô Mai Mozzarella',
-    category: 'japanese',
-    price: 260,
-    priceFormatted: '260.000 VND',
-    prepTimeMinutes: 20,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBUcYGD4d0U6ZMPMNrIEUgId6QBXylv287e1p9gtxZOkYzZW0DsgojYGlY753CRm6zhLR_WkIG9Ot4DW5ZztkVB4hBs41O697wJwjv3adO1byoS-PAW2BdNGOA7GbAlDyC2IEiorFy8IUxI46OpRvkSqkOC0II7k-cIMoPKPvshF6T42g2_OykV5iaVF0ycMhKujqGHxmozGQ3Rq7Z5rUG00_UQIPKhgA0u0dsSCZH7tR2wjxMG1blfDQ',
-    altText: 'Delicious four pieces of deep-fried cheese king tonkatsu with overflowing melted mozzarella cheese oozing onto cooling rack, Japanese cabbage, sesame dressing, editorial aesthetic.',
-    descriptionEn: '얇게 편 등심에 모짜렐라 치즈를 듬뿍 감싸 튀긴 치즈 돈카츠입니다. Thinly pounded pork loin packed with decadent mozzarella cheese that stretches endlessly.',
-    descriptionKr: '얇게 두드린 신선한 돼지 등심 안에 최고급 모짜렐라 치즈를 빈틈없이 채워 폭포수처럼 흘러내리는 진한 치즈의 풍미를 자랑합니다.',
-    descriptionVi: 'Thịt thăn heo dần mỏng bọc phô mai Mozzarella nguyên khối thượng hạng, kéo sợi béo ngậy tan chảy giòn tan.',
-    isBestSeller: true,
-    dishTypes: ['pork', 'cheese'],
-    tags: ['20 MIN PREP', 'Best Seller'],
-    subBullet1: '4 Loaded Mozzarella Rolls',
-    subBullet2: 'Extra Gooey Rich Dairy Blend',
-    features: ['Rich Dairy Blend', '100% European natural cheese', 'Limited daily batch']
-  },
-  {
-    id: 'sasami-katsu-chicken',
-    nameEn: 'Sasami Katsu (Chicken)',
-    nameKr: '사사미카츠 (닭안심)',
-    nameJp: 'ささみかつ',
-    nameVi: 'Set Katsu Gà Thăn Mềm Tự Nhiên',
-    category: 'japanese',
-    price: 180,
-    priceFormatted: '180.000 VND',
-    prepTimeMinutes: 15,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBhOgJrYGygaMIzYM-4v1N4Py8OHM0gJ7hWsYQoxbdqjLubvvJokMpixMOnRNupCEQfJ_tFSUedPyR3AkAitAwTQwQvlqc6p-eyyDNhQvEpZqRhppKB_Pz8mEq3XMIffUX_OJi424JBnk-SM3zmykG0yXpnP4b-amoFcCTxz3IJP8zM_XohI87Ik4A_N6OI2jN3uahZ8c99GGskHjm9g73_1NArAG8jg3dU7waquOXknWUysO3xevrbug',
-    altText: 'Light golden crispy Japanese chicken tenderloin sasami katsu served with shredded cabbage, tartar sauce dish, chili dip, side tray styling, light airy high key lighting.',
-    descriptionEn: '닭 안심을 낮은 온도로 튀겨 바삭하면서 속은 촉촉. Low-temperature flash fried tenderloin cuts that retain complete juiciness without dry grain.',
-    descriptionKr: '지방이 적고 단백질이 풍부한 신선한 닭안심 부위를 저온 순간 튀김 공법으로 퍽퍽함 없이 부드럽게 완성했습니다.',
-    descriptionVi: 'Thịt ức thăn gà tự nhiên chiên xù ở nhiệt độ thấp, giòn rụm bên ngoài và mềm mọng mượt mà bên trong.',
-    dishTypes: ['chicken'],
-    tags: ['Chicken Tenderloin'],
-    subBullet1: 'Includes signature homemade Tartar & Sweet Garlic Chili dips',
-    subBullet2: 'Low fat / High protein',
-    features: ['Low fat / High protein', 'Double dips included', 'Light golden crumb']
-  },
-  {
-    id: 'all-star-atelier-set',
-    nameEn: 'All Star Atelier Set',
-    nameKr: '올스타 세트',
-    nameJp: 'オールスターセット',
-    nameVi: 'Set Đặc Biệt Gà - Tôm Sú - Heo Thăn',
-    category: 'japanese',
-    price: 250,
-    priceFormatted: '250.000 VND',
-    prepTimeMinutes: 20,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB4fR0MJuOcBQdN2bsZjqlAkZAclAHC6exlkXX1V79UL4xVCyiqAWTedpqieIQ7y382RJjn3meBKB4fS9whkRqeFHiwRBue2bi0lhu12FU0iM3KJ9Cu35rzNpo_CTHz0ZD2UfBxTnLVfN38wgxqz7sD1xHbyYxEUxZtGwub8aOMqE0QPbDRcKdzm9UvCfmdSpahVwUewAvvIvTI5eb7VoW-A77-H-18BeM_qdGPT5HGQD4HFYcCbMvhHw',
-    altText: 'Assorted Japanese combination fried platter featuring jumbo breaded prawn tail pointing upward, golden chicken cutlets, tender pork filet cuts, three dipping sauces, rice and miso soup spread.',
-    descriptionEn: '치킨 + 돼지안심 + 새우 구성 + 소스 3종. Chicken tenderloin, pork tenderloin and whole King Tiger shrimp served with custom tonkatsu, chili and house tartar.',
-    descriptionKr: '치킨 사사미 + 촉촉한 돼지 안심 + 블랙타이거 통새우 튀김 3종을 전용 소스 3가지와 함께 풍성하게 즐기는 1인 스페셜 세트.',
-    descriptionVi: 'Bộ ba tuyệt đỉnh: Thăn gà, thăn heo và tôm sú khổng lồ ăn kèm 3 loại nước sốt đặc biệt.',
-    isLimited: true,
-    dishTypes: ['pork', 'chicken'],
-    tags: ['LIMITED BATCH', 'Trio Combination'],
-    subBullet1: '1 Person Grand Feast (20 min prep)',
-    subBullet2: 'Signature Tri-Protein with 3 sauces',
-    features: ['Signature Tri-Protein', 'Custom sauce trio', 'Limited batch daily']
-  },
-  {
-    id: 'double-tender-duo-set',
-    nameEn: 'Double Tender Duo Set (Chicken & Pork)',
-    nameKr: '더블 텐더 세트',
-    nameJp: 'ダブルテンダーセット',
-    nameVi: 'Set Tonkatsu Gà + Heo Song Hành',
-    category: 'japanese',
-    price: 200,
-    priceFormatted: '200.000 VND',
-    prepTimeMinutes: 15,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAP5cr41xR6ieWoTxYpZMaXKXrw6AEUq0HVzOI1_gwexAFUN9KK1scClccCrTwAxgGgw-pXQTQ8H5m3lYd9UYmFKtUODdZEDnCoulwp0fMnKyX1lORK1saQjaHA3e-WNrXHzzosr9UIL-zPU8CGaNjAoZGN9knqG460P_7FdBQyUtz3MVCW64O14vcch23A4nsfUX94BZ7Co0H82HtlUBvAt3ry3-6uhtamsGDkguksNWw584bWigT79A',
-    altText: 'Plate arrangement of half pork cutlet and half chicken tenderloin cutlet sliced neatly on metal rack with two dips, warm dining setting.',
-    descriptionEn: '돼지 안심과 닭 안심을 반반 담아 부드럽고 촉촉하게 튀겨냈습니다. Perfectly balanced half portion pork filet and half chicken sasami tenderloin.',
-    descriptionKr: '돼지 안심 1피스와 닭 안심 2피스를 황금 비율로 담아 두 가지 육질의 부드러움을 동시에 맛볼 수 있는 듀오 세트입니다.',
-    descriptionVi: 'Sự kết hợp cân bằng hoàn hảo giữa thịt thăn heo mềm và thịt thăn gà mọng nước, dùng kèm sốt tonkatsu và sốt tartar.',
-    dishTypes: ['pork', 'chicken'],
-    tags: ['MUST TRY'],
-    subBullet1: 'Served with classic Tonkatsu sauce & Tartar',
-    subBullet2: 'Perfect 50/50 tender cutlet balance',
-    features: ['Must try combo', 'Double textures', 'House tartar dip']
-  },
-
-  // 2. KOREAN RETRO TONKATSU
-  {
-    id: 'half-half-korean-retro-katsu',
-    nameEn: 'Half & Half Korean Retro Katsu',
-    nameKr: '반반 경양까스',
-    nameJp: 'ハーフ＆ハーフ 韓国レトロとんかつ',
-    nameVi: 'Tonkatsu kiểu Hàn sốt hai vị đặc biệt',
-    category: 'korean',
-    price: 210,
-    priceFormatted: '210.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBpPMrZlNFRYX2PyIhzTFBCduDv6SSW8bKrSoNbd1UzY0Yd4Db5TO04S0fYL8RJeL1qutyYfgwSpc6-ZRzMEIYwVzgD78oE-N3XXXWbRvRSgp6B0xd6MCa0M799TMb9kUMu2a7Fgh-srAjgF4d0j9Rpy8nF_YT36fmdCrLFYKAgOQiJOcuieqwK0GnQ-VqggNPCYRUtodaSp-G_AGjIqM28aCQ31pDUVfY3o3eszXow2VckAcMWDK3u6A',
-    altText: 'Traditional Korean retro style tonkatsu cutlet covered half with brown demi-glace sauce and half with red spicy sauce, served with scoop of white rice, yellow pickled radish, macaroni salad on round white plate.',
-    descriptionEn: '일반 소스와 매운 소스, 두 가지 맛을 함께 즐길 수 있는 경양식 돈까스. Hand-pounded loin cutlet split cleanly with sweet demi-glace and spicy Korean gochujang-fruit sauce.',
-    descriptionKr: '얇게 펴낸 왕돈까스에 달콤하고 고소한 경양식 데미글라스 소스와 맛있게 매운 특제 과일 고추장 소스를 반반 얹었습니다.',
-    descriptionVi: 'Thịt thăn heo đập dẹp chiên giòn rưới hai nửa sốt: sốt demi-glace béo ngậy ngọt ngào và sốt tương ớt trái cây cay nồng kiểu Hàn.',
-    dishTypes: ['pork', 'spicy'],
-    isSpicy: true,
-    spiceLevel: 2,
-    spiceNote: 'Fixed spice level • Cream soup included',
-    tags: ['Signature Duo Sauce', 'Spicy Kick'],
-    subBullet1: 'Fixed spice level',
-    subBullet2: 'Cream soup included',
-    features: ['Signature duo sauce', 'Sauce served separately option', 'Sweet corn soup included']
-  },
-  {
-    id: 'korean-style-retro-tonkatsu',
-    nameEn: 'Korean-style Retro Tonkatsu',
-    nameKr: '경양식 돈까스',
-    nameJp: '伝統レトロとんかつ',
-    nameVi: 'Thịt heo chiên xù truyền thống sốt nâu',
-    category: 'korean',
-    price: 150,
-    priceFormatted: '150. / 180.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCrPNQvXcozwtwBl8PUuxpSD_d3IUfY_Vzc9sQEbv5a1UpfR1Ktfvx-6CANgvmjytqSM0FLfDo7XIJWNbiDMhRe48zcBPkBxrueIfwPvP5ytvcE86jpFtg7c6PnvUhxHtv6GnacSUwrJsrslhmk2NNt7692kvSFIGJeQEZ--InoP5THWyz7lO3792SqITZyU9DkKPh8USOBnyX7iLzKfp8_BjTkOMqBnSfV9KyZ0RIcgq_M-TsTs5eCEQ',
-    altText: 'Classic vintage Korean style retro cutlet covered in golden buttery brown gravy sauce with cabbage salad and round scoop of sticky rice on oversized plate, warm diner lighting.',
-    descriptionEn: 'Thinly pounded pork loin fried to an even golden crunch, smothered in buttery aromatic demi-glace. Served with velvet sweet corn soup.',
-    descriptionKr: '1988년 서울 추억의 맛 그대로! 얇게 편 등심을 바삭하게 튀겨 18시간 동안 정성으로 끓여낸 수제 브라운 데미소스를 듬뿍 부어냅니다.',
-    descriptionVi: 'Thịt heo dần mỏng chiên xù vàng rụm, đẫm sốt bơ nâu demi-glace thơm lừng truyền thống. Đi kèm súp ngô ngọt béo mịn màng.',
-    dishTypes: ['pork'],
-    tags: ['1988 Original Recipe'],
-    sizes: [
-      { label: 'S (Single)', price: 150 },
-      { label: 'L (Double/Jumbo)', price: 180 }
+    "id": "spring-signature-set",
+    "nameEn": "SPRING SIGNATURE SET",
+    "nameKr": "봄 시그니처 세트.",
+    "nameJp": "スプリングシグネチャーセット",
+    "portionEn": "Set for 1 person",
+    "portionVi": "Set dành cho 1 người",
+    "portionKr": "1인 세트",
+    "portionJp": "1名様用セット",
+    "category": "japanese",
+    "price": 275,
+    "priceFormatted": "275.000 VND",
+    "prepTimeMinutes": 20,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCENajls9IE-ZeEVmtuVImYEFlvlo3LjNbXfBALI2MVe8GhgfFjEkMN_ENC9HmM5xzkexuPWRyn0Cqj0Kf1jFeHyhJ6r549pjcwjoeWC1D4tgSG5bCbyy36MHwHBAQ2Be2EC_vvd5n5hpP_KWkpH9f6cbB8VjQE_qjHh4Vbv0rUMeDJ0w-94Qb7l3OzCbNeDSkxVe2K0SC-_05t1fNY2xEbNg_tqjXZwFNjxDwB5NFZXkLrNiU-OAKKVQ",
+    "altText": "Spring Signature Set Tonkatsu with King Tiger Prawn, Cheese Katsu, Shiitake Menchi",
+    "descriptionKr": "특별한 오늘의 한끼를 원하시는 분께 추천드리는 세트입니다. 부드럽고 육즙 가득한 특안심카츠 2조각, 치즈카츠 2조각, 버섯의 깊은 풍미를 살린 표고멘치카츠 2조각, 그리고 바삭하게 튀겨낸 킹타이거 새우 1마리로 구성했습니다. 봄돈까스의 다채로운 맛을 즐기실 수 있습니다.",
+    "descriptionEn": "A special set recommended for those looking to make today's meal a little more special. Featuring 2 pieces of tender and juicy Special Tenderloin Katsu, 2 pieces of Cheese Katsu, 2 pieces of Shiitake Menchi Katsu packed with the rich flavor of shiitake mushrooms, and 1 crispy King Tiger Shrimp. Enjoy a variety of Spring's signature flavors, all in one set.",
+    "descriptionVi": "Một Set đặc biệt hơn bình thường tại Cutlet Spring. Set gồm 2 miếng thăn nội cao cấp mềm mọng nước, 2 miếng Cheese Katsu, 2 miếng Shiitake Menchi Katsu đậm đà hương vị nấm hương, cùng 1 tôm sú King Tiger cỡ lớn chiên giòn.",
+    "descriptionJp": "本日の食事をちょっと特別なものにしたい方におすすめの、SPRING自慢のスペシャルセットです。ジューシーで柔らかなスペシャルヒレカツ2個、とろりと濃厚なチーズを包んだチーズカツ2個、しいたけの豊かな旨味を存分に楽しめるしいたけメンチカツ2個、そしてサクサクに揚げたキングタイガーエビフライ1尾を贅沢に盛り合わせました。SPRING自慢のさまざまな味わいを、一度にお楽しみいただけるスペシャルセットです。",
+    "isChefSignature": true,
+    "dishTypes": [
+      "pork",
+      "cheese",
+      "seafood"
     ],
-    subBullet1: 'Child friendly / Mild savory butter note',
-    subBullet2: 'Includes sweetcorn soup & macaroni salad',
-    features: ['Child friendly', '1988 Original recipe', 'Dual sizes available']
+    "tags": [
+      "Chef Signature",
+      "Atelier Selection"
+    ]
   },
   {
-    id: 'spicy-korean-retro-katsu',
-    nameEn: 'Spicy Korean Retro Katsu',
-    nameKr: '매운 경양식까스',
-    nameJp: '旨辛 韓国レトロとんかつ',
-    nameVi: 'Tonkatsu kiểu Hàn sốt cay nồng nàn',
-    category: 'korean',
-    price: 160,
-    priceFormatted: '160. / 210.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBQi1Rn5AFy_QBl64mhIss15T0f2bVE0lBHL7VI7lx4vKBfZ3I3dX1F0y39cGrIDptOfEd5TL_KKMU58trn-ZdJRHB8t_FeAHzFZ5ZXm8hH1cIG-L2YKTSxb-T3mPslzdsiIXhytix2e0KcWIF8u-l0IQ-uEg0e0jliaH8BfjwgP_yx2mykAtBkIlsduF-DEhTv_0Bh2SFZfxpZ4_iCJJmpWyep8ib1kOB96GM7Wq2i-PIXK97RAb8BXQ',
-    altText: 'Vibrant red spicy glazed Korean cutlet with diced chili peppers and sesame seeds sprinkled on top, side bowl of cold broth, kimchi and rice.',
-    descriptionEn: '신라면보다 조금 더 매콤한 경양식 소스를 곁들인 돈까스입니다. Glazed in fiery gochujang reduction. Slightly hotter than Shin Ramyun.',
-    descriptionKr: '신라면보다 한 단계 더 매콤하고 칼칼한 수제 고추장 과일 특제 소스로 코팅하여 느끼함 없이 중독성 있는 매운맛을 선사합니다.',
-    descriptionVi: 'Phủ đẫm sốt tương ớt nấu chậm cay đậm đà, vị cay ấm nồng hơn mì Shin Ramyun, kích thích vị giác tối đa.',
-    dishTypes: ['pork', 'spicy'],
-    isSpicy: true,
-    spiceLevel: 3,
-    spiceNote: '🌶️🌶️ Shin Ramyun Heat • Spice level cannot be adjusted',
-    tags: ['Shin Ramyun Heat'],
-    sizes: [
-      { label: 'Size S (Single Loin)', price: 160 },
-      { label: 'Size L (Double Feast)', price: 210 }
+    "id": "half-and-half-pork-cutlet",
+    "nameEn": "Half & Half Pork Cutlet",
+    "nameKr": "반반카츠",
+    "nameJp": "ロース & ヒレかつ",
+    "nameVi": "Tonkatsu 2 Nửa (Thăn Ngoại & Thăn Nội)",
+    "category": "japanese",
+    "price": 180,
+    "priceFormatted": "180.000 VND",
+    "prepTimeMinutes": 15,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB4fR0MJuOcBQdN2bsZjqlAkZAclAHC6exlkXX1V79UL4xVCyiqAWTedpqieIQ7y382RJjn3meBKB4fS9whkRqeFHiwRBue2bi0lhu12FU0iM3KJ9Cu35rzNpo_CTHz0ZD2UfBxTnLVfN38wgxqz7sD1xHbyYxEUxZtGwub8aOMqE0QPbDRcKdzm9UvCfmdSpahVwUewAvvIvTI5eb7VoW-A77-H-18BeM_qdGPT5HGQD4HFYcCbMvhHw",
+    "altText": "Half and half pork loin and pork tenderloin tonkatsu cutlet set",
+    "descriptionKr": "로스(등심)와 히레(안심)를 함께 즐길 수 있는 메뉴",
+    "descriptionEn": "Enjoy both pork loin and tenderloin in one dish.",
+    "descriptionVi": "Thưởng thức cả thịt thăn ngoại và thịt thăn nội trong một phần ăn.",
+    "descriptionJp": "ロースとヒレ、2種類の部位を一度に楽しめるメニューです。",
+    "isBestSeller": true,
+    "dishTypes": [
+      "pork"
     ],
-    features: ['Shin Ramyun Heat', 'Fiery glaze', 'Authentic Korean chili reduction']
+    "tags": [
+      "Best Seller",
+      "Duo Cut"
+    ]
   },
   {
-    id: 'cheese-bomb-katsu',
-    nameEn: 'Cheese Bomb Katsu',
-    nameKr: '치즈폭탄 경양까스',
-    nameJp: 'チーズ爆弾とんかつ',
-    nameVi: 'Cutlet Phô Mai Tan Chảy Thượng Hạng',
-    category: 'korean',
-    price: 260,
-    priceFormatted: '260.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAQvSBLInIWr5fP5Fvl1lcHokZWDqLGVpgzE9AWPvwrpx0mQ54ARn6b5VaOeZ1fFgYJfbW3LDy9doslEWoIbXfbp9n2evRVC3ULbRkQieWY8bypGDSgjucTqFzEZ4gwkupulzAmiH1pmwYhOIge_NbPDSgb5vnCI1ox0Xwr2bz8JwBCzvPkLW0Ss_uL9XQO4ISc8BzzVnHK0_MofNZ72b4aVJbGixooRWnIACqnA7O-BYm2LxjsNFGYvw',
-    altText: 'Cutlet smothered in rich gravy with molten white mozzarella cheese flowing out of center cut, steaming hot texture, side of pickles and soup.',
-    descriptionEn: '속은 치즈가 부드럽게 녹아내리고, 겉은 바삭한 돈까스에 진하고 깊은 풍미의 소스를 더했습니다. Molten cheese interior wrapped in crisp crust.',
-    descriptionKr: '바삭한 튀김옷 안에 고소한 유럽산 모짜렐라 치즈가 가득 차있어 한 입 베어 물면 치즈가 폭포처럼 터져 나오는 치즈 마니아의 최애 메뉴.',
-    descriptionVi: 'Bên trong ngập tràn phô mai béo ngậy tan chảy, bên ngoài giòn tan phủ sốt đậm đà tròn vị.',
-    dishTypes: ['pork', 'cheese', 'spicy'],
-    sauceOptions: ['Original Sauce (260k)', 'Spicy Sauce (270k)', 'Dual Sauce (270k)'],
-    tags: ['Cheese Loaded'],
-    subBullet1: '100% European Mozzarella',
-    subBullet2: 'Original, Spicy, or Dual Sauce choice',
-    features: ['100% European Mozzarella', 'Cheese loaded', 'Choice of sauce style']
-  },
-
-  // 3. CURRY RICE ATELIER
-  {
-    id: 'pork-loin-katsu-curry-rice',
-    nameEn: 'Pork Loin Katsu Curry Rice',
-    nameKr: '등심돈까츠 카레덮밥',
-    nameJp: 'ロースかつカレー丼',
-    nameVi: 'Katsu Cà Ri Thăn Ngoại Heo',
-    category: 'curry',
-    price: 180,
-    priceFormatted: '180.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAJaMFyc8QQy2CcW7B5xQOOFB9ZVsFRstIICo0Nt-RhGmXX1pysDCJNPPWw1YTwJTWyfFyhmOcm1hGQ6G87ICstcnIcEZmrVhxlNo5qToISTEq1TuXG3KrW0I1j-HiQdKfDpZLHB2OCuehXNbttzaisLCIWFcWbWOK98vG4BiE5Esj1k-DqqcXDmRBXmo67W7q3O0uRYr_LjVTyVQ-Pq1-7-BLXSyvtphdsyokM9jCUZu7aRJaeyxXNHA',
-    altText: 'Overhead shot of Japanese curry rice with sliced pork loin cutlet resting on bed of white rice, side silver gravy boat filled with rich dark aromatic curry, salad side.',
-    descriptionEn: '로스까스(등심)와 매콤한 카레의 조화. Thick succulent pork cutlet served with artisanal curry sauce in stainless gravy boat.',
-    descriptionKr: '48시간 동안 카라멜라이징한 양파 베이스의 진하고 감칠맛 넘치는 수제 카레와 두툼하고 바삭한 등심 돈까스의 완벽한 조화.',
-    descriptionVi: 'Thịt heo thăn ngoại chiên xù giòn kết hợp sốt cà ri Nhật ninh nhừ 48 giờ từ hành tây ngọt thanh tự nhiên.',
-    dishTypes: ['pork', 'spicy'],
-    isSpicy: true,
-    spiceLevel: 1,
-    spiceNote: 'Mild Spicy 🌶️ • Spice level cannot be adjusted (Mild pepper base)',
-    subBullet1: 'Includes Miso & Kimchi',
-    subBullet2: 'Served with artisanal stainless gravy boat',
-    features: ['48h Slow-cooked curry', 'Caramelized onion base', 'Includes Miso & Kimchi']
+    "id": "pork-tenderloin-cutlet-set",
+    "nameEn": "Pork Tenderloin Cutlet",
+    "nameKr": "안심카츠",
+    "nameJp": "ヒレかつ",
+    "nameVi": "Set Thịt Thăn Nội",
+    "category": "japanese",
+    "price": 200,
+    "priceFormatted": "200.000 VND",
+    "prepTimeMinutes": 15,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAU7uIRGweXD1EsXli-iJ42Rvq6DkkbZKz8VPVfG1-M_KpNeA3UMZ0wbYcbnuw2uxwAZaj8wB-AdklqYjOiKdJ7dwmVJvvTJNJHYW7d1fazQp1VPdfPefBkQf2IYu3ymzRnk5rnysaXrIzly_WcLI_Bu-dRC2U_FuMzFa91iLq1km8hCori4iq8I_M8AyOb-CNSJhWrmqUKrDd96lN7ceAV_NBBAuxdIxQJRmnDhhFjFf1AxrXpCxsybg",
+    "altText": "Japanese pork tenderloin cutlet set with juicy pink center",
+    "descriptionKr": "돼지에서 소량으로 나오는 안심부위를 촉촉하고 부드럽게 튀겼습니다.",
+    "descriptionEn": "Pork tenderloin cutlet gently fried to stay remarkably tender and juicy.",
+    "descriptionVi": "Phần thịt thăn nội được chiên mềm và mọng nước.",
+    "descriptionJp": "豚1頭から少量しか取れない希少なヒレ肉を、しっとり柔らかく仕上げました。",
+    "isBestSeller": true,
+    "dishTypes": [
+      "pork"
+    ],
+    "tags": [
+      "Best Seller",
+      "Super Tender"
+    ]
   },
   {
-    id: 'chicken-cutlet-curry-rice',
-    nameEn: 'Chicken Cutlet Curry Rice',
-    nameKr: '치킨카츠 카레덮밥',
-    nameJp: 'チキンかつカレー丼',
-    nameVi: 'Cơm Cà Ri Gà Chiên Giòn',
-    category: 'curry',
-    price: 180,
-    priceFormatted: '180.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBd1vx3B7lOnRD-OVRhKd1BuYu0ScumC3jbDnEbk1x5RanJ7cEZ9S4LZaw3cINJZw5VaBdmqWxoshQLrR5_eiE1n39yOnK4xN44QhlmGUfwp-tgPzLY2wWP33zpWR4f8D-2dNaOGT6A_779tWHVzF4Hj5waSou_9iU1m4-4zZktgh-SB4jXNxeg4QfTMyBiixPqNFgvSGsMBmgs8iF7aq8iFG-j5p1X-pwsWZ5-5DgleSx6A4FNVbNknA',
-    altText: 'Crispy breaded chicken cutlets arranged on steamed white rice beside dark amber curry gravy dish and fresh cabbage slaw.',
-    descriptionEn: '부드러운 치킨가스와 매콤한 카레의 조화. A perfect combination of tender chicken cutlet and slow-braised root vegetable curry.',
-    descriptionKr: '겉바속촉 닭안심 치킨까스와 은은하게 매콤한 일본식 진한 카레가 어우러져 한 그릇 가득 만족스러운 풍미를 냅니다.',
-    descriptionVi: 'Thịt gà thăn chiên xù giòn tan ăn cùng sốt cà ri đậm đà ninh nhừ cùng củ quả tự nhiên, kèm sốt chấm riêng biệt.',
-    dishTypes: ['chicken', 'spicy'],
-    isSpicy: true,
-    spiceLevel: 1,
-    spiceNote: 'Mild Spicy 🌶️ • Accompanied by house tartar and chili dipping sauce',
-    subBullet1: 'Includes Miso & Kimchi',
-    subBullet2: 'Accompanied by house tartar & chili sauce',
-    features: ['Tender chicken breast cutlet', 'Includes Miso & Kimchi', 'Mild savory curry']
-  },
-
-  // 4. NOODLES & SOBA
-  {
-    id: 'jjolmyeon-a-la-carte',
-    nameEn: 'Jjolmyeon (A La Carte)',
-    nameKr: '쫄면 (단품)',
-    nameJp: 'チョルミョン',
-    nameVi: 'Mì Trộn Chua Cay Hàn Quốc',
-    category: 'noodles',
-    price: 170,
-    priceFormatted: '170.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAN2mBhu0yaZfAa_CFDZVE6dZ2bYJVoZRjYysAPbt_PdYmli1fjgQHd6LtxTGXWvDkUG5Mfhkd0NE4fNo6F6DoYB8NIYFFOJpF01oxTFIGZa77Q7UAYpCzY1AkEJLNBQxLxOMrsV1uN0ELJHaRFeQDjjzO5ZclucsKOegSxxjA9LQMhQfk9Lbhzvew15yip7nX7RHm-RzTNS5hnPdJHRBYy_KMvgYRM7bnTR-WuA_yEK37Nych4ECpgEQ',
-    altText: 'Korean spicy chewy jjolmyeon cold noodles in traditional brass bowl topped with half boiled egg, shredded cucumber, cabbage, red sweet chili paste, bright daylight.',
-    descriptionEn: '과일이 들어간 특제 소스로 완성한 새콤달콤쫄면. Chewy cold noodles mixed with signature fruity sweet-and-tangy sauce.',
-    descriptionKr: '사과, 배를 갈아 넣은 비법 새콤달콤 고추장 양념장에 쫄깃한 면발, 아삭한 양배추와 콩나물이 어우러진 한국 전통 별미.',
-    descriptionVi: 'Mì dai lạnh trộn sốt ớt hoa quả chua ngọt truyền thống Hàn Quốc, ăn kèm rau củ tươi mát và trứng luộc.',
-    dishTypes: ['spicy', 'noodles'],
-    isSpicy: true,
-    spiceLevel: 2,
-    subBullet1: 'Traditional brass bowl presentation',
-    subBullet2: 'Sweet & tangy fruit reduction',
-    features: ['Signature chewy noodles', 'Fruit spiced sauce', 'Palate refresher']
+    "id": "sasami-katsu-chicken",
+    "nameEn": "Sasami Katsu (Chicken)",
+    "nameKr": "사사미카츠 (닭안심 카츠)",
+    "nameJp": "ささみかつ (鶏ささみ)",
+    "nameVi": "Set Katsu Gà",
+    "category": "japanese",
+    "price": 180,
+    "priceFormatted": "180.000 VND",
+    "prepTimeMinutes": 15,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBhOgJrYGygaMIzYM-4v1N4Py8OHM0gJ7hWsYQoxbdqjLubvvJokMpixMOnRNupCEQfJ_tFSUedPyR3AkAitAwTQwQvlqc6p-eyyDNhQvEpZqRhppKB_Pz8mEq3XMIffUX_OJi424JBnk-SM3zmykG0yXpnP4b-amoFcCTxz3IJP8zM_XohI87Ik4A_N6OI2jN3uahZ8c99GGskHjm9g73_1NArAG8jg3dU7waquOXknWUysO3xevrbug",
+    "altText": "Golden crispy Japanese chicken tenderloin sasami katsu",
+    "descriptionKr": "닭 안심을 낮은 온도로 튀겨 바삭하면서 속은 촉촉",
+    "descriptionEn": "Low-temperature fried chicken tenderloin - crispy outside, juicy inside.",
+    "descriptionVi": "Ức gà chiên nhiệt độ thấp - vỏ giòn, bên trong mềm ẩm.",
+    "descriptionJp": "低温でじっくり火入れした鶏ささみ。外はサクサク、中はしっとりジューシー",
+    "dishTypes": [
+      "chicken"
+    ],
+    "tags": [
+      "Chicken Tenderloin"
+    ]
   },
   {
-    id: 'cold-buckwheat-noodle',
-    nameEn: 'Cold Buckwheat Noodle',
-    nameKr: '짱 시원한 냉모밀',
-    nameJp: '冷やしそば',
-    nameVi: 'Mì Kiều Mạch Lạnh Thanh Mát',
-    category: 'noodles',
-    price: 180,
-    priceFormatted: '180.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDo3cqoL-JShk6YxA9Obulr882nQ8OZY17m6zhjU8gO0yr7QhDg4xfzXXlYWTwBE8G0aFG4L_1w8_7PRFLtAWLdL586-iED-yqUcUrdjkz_QVt0VaocwMS8s4S1uEKoVS0MOJSbOuyugfXuuwLeptjrvvHZgbkpgh9k2l0udnRoP4a7xuQiEhC9dLTx9ojlrdhwFBlT2BSICGvJAQkUATMn-onpBeTPRuar0_W_VD-QnkDhn3E6UZTbnQ',
-    altText: 'Chilled Japanese buckwheat soba noodles in icy savory dashi broth with grated daikon radish, wasabi, scallions, nori seaweed flakes, refreshing aesthetic.',
-    descriptionEn: '시원한 육수와 비빔면. 돈까스와 궁합 최고. Chilled soba in iced bonito broth — the ideal palate cleansing pairing for cutlets.',
-    descriptionKr: '살얼음 동동 띄운 깊고 깔끔한 가쓰오부시 육수에 메밀면을 담아 간 무와 생와사비를 풀어 먹는 극상의 청량감.',
-    descriptionVi: 'Mì soba kiều mạch chan nước dùng dashi ướp đá lạnh thanh tao, ăn kèm củ cải mài và wasabi tươi, tuyệt phẩm giải nhiệt.',
-    dishTypes: ['noodles'],
-    tags: ['★ Refreshing'],
-    subBullet1: 'Iced bonito dashi broth',
-    subBullet2: 'Grated daikon radish & fresh wasabi',
-    features: ['Iced broth', 'Palate cleansing', 'Authentic buckwheat']
+    "id": "cheese-king-katsu",
+    "nameEn": "Cheese King Katsu",
+    "nameKr": "치즈킹",
+    "nameJp": "チーズキング",
+    "category": "japanese",
+    "price": 260,
+    "priceFormatted": "260.000 VND",
+    "prepTimeMinutes": 20,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBUcYGD4d0U6ZMPMNrIEUgId6QBXylv287e1p9gtxZOkYzZW0DsgojYGlY753CRm6zhLR_WkIG9Ot4DW5ZztkVB4hBs41O697wJwjv3adO1byoS-PAW2BdNGOA7GbAlDyC2IEiorFy8IUxI46OpRvkSqkOC0II7k-cIMoPKPvshF6T42g2_OykV5iaVF0ycMhKujqGHxmozGQ3Rq7Z5rUG00_UQIPKhgA0u0dsSCZH7tR2wjxMG1blfDQ",
+    "altText": "Cheese king katsu overflowing with melted mozzarella cheese",
+    "descriptionKr": "얇게 편 등심에 모짜렐라 치즈를 듬뿍 감싸 튀긴 치즈 돈카츠입니다.",
+    "descriptionEn": "Thinly pounded pork loin wrapped with plenty of mozzarella cheese and deep-fried until crispy.",
+    "descriptionVi": "Thịt thăn heo được cán mỏng, cuộn cùng nhiều phô mai mozzarella và chiên giòn.",
+    "descriptionJp": "薄く伸ばした豚ロースでたっぷりのモッツァレラチーズを包み、サクサクに揚げました。",
+    "isBestSeller": true,
+    "dishTypes": [
+      "pork",
+      "cheese"
+    ],
+    "tags": [
+      "Best Seller",
+      "20 MIN PREP"
+    ]
   },
   {
-    id: 'jjolmyeon-set-with-cutlet',
-    nameEn: 'Jjolmyeon Set (With Cutlet)',
-    nameKr: '쫄면정식',
-    nameJp: 'チョルミョン定食',
-    nameVi: 'Set Mì Trộn Kèm Thăn Heo Chiên Xù',
-    category: 'noodles',
-    price: 250,
-    priceFormatted: '250.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDUBluE82A7WO25W2UE-1w66Bhi98R0EIi4P-6SbR6my73nh1viW4laryAjKmKUHOTDS-B-Bl6L6VvY71dV4juuw2VJnmKUgJl0qCPU2aOwixDGBcPAMYgy0KNITUaaw5GtukAqrcbK-bq8JtNuLHUTFN83YrU09xwk27GyVbTgSDaLWZQWjhNG28FpZvkQa2yQ4uJkuccUA-D4YOEYRjQnVlbu6FXCqPZXWcYCDNMlXqgiFQcTxwGKUw',
-    altText: 'Full banquet setting of spicy cold jjolmyeon in gold bowl alongside side plate of crunchy fried pork tenderloin fillet cutlet with dipping sauce and radish pickles.',
-    descriptionEn: '1 large bowl of spicy chewy noodles + 1 piece of hot crispy pork tenderloin cutlet + warm soup.',
-    descriptionKr: '새콤달콤한 쫄면 한 그릇과 갓 튀겨낸 두툼한 프리미엄 돼지 안심카츠 1조각, 따뜻한 장국이 세트로 구성된 든든한 정식.',
-    descriptionVi: 'Một tô mì trộn chua cay đầy đặn đi kèm một miếng thịt thăn heo chiên xù nóng giòn và súp ấm.',
-    dishTypes: ['pork', 'spicy', 'noodles'],
-    isSpicy: true,
-    spiceLevel: 2,
-    tags: ['Full Set'],
-    subBullet1: '1 Large spicy chewy noodle bowl',
-    subBullet2: '1 Piece hot crispy pork tenderloin cutlet + soup',
-    features: ['Best combination', 'Noodle + Cutlet duo', 'Hearty meal']
-  },
-
-  // 5. ADD-ONS & SAUCES
-  {
-    id: 'addon-tenderloin-1pc',
-    nameEn: 'Tenderloin 1pc',
-    nameKr: '안심 추가 (1개)',
-    nameJp: 'ヒレかつ追加 (1個)',
-    nameVi: 'Thêm 1 miếng thăn nội',
-    category: 'addons',
-    price: 90,
-    priceFormatted: '90.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAU7uIRGweXD1EsXli-iJ42Rvq6DkkbZKz8VPVfG1-M_KpNeA3UMZ0wbYcbnuw2uxwAZaj8wB-AdklqYjOiKdJ7dwmVJvvTJNJHYW7d1fazQp1VPdfPefBkQf2IYu3ymzRnk5rnysaXrIzly_WcLI_Bu-dRC2U_FuMzFa91iLq1km8hCori4iq8I_M8AyOb-CNSJhWrmqUKrDd96lN7ceAV_NBBAuxdIxQJRmnDhhFjFf1AxrXpCxsybg',
-    altText: 'Extra tenderloin cutlet 1 piece',
-    descriptionEn: 'Freshly fried prime pork tenderloin medallion with pink center.',
-    descriptionKr: '120시간 습식 숙성된 부드러운 안심 1조각 추가.',
-    descriptionVi: '1 miếng thăn nội heo tươi mềm mọng nước chiên mới.',
-    dishTypes: ['pork'],
-    tags: ['Cutlet Add-on']
+    "id": "all-star-atelier-set",
+    "nameEn": "All Star Set",
+    "nameKr": "올스타 세트",
+    "nameJp": "オールスターセット",
+    "nameVi": "Set Đặc Biệt Gà Tôm Heo",
+    "category": "japanese",
+    "price": 250,
+    "priceFormatted": "250.000 VND",
+    "prepTimeMinutes": 20,
+    "isLimited": true,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB4fR0MJuOcBQdN2bsZjqlAkZAclAHC6exlkXX1V79UL4xVCyiqAWTedpqieIQ7y382RJjn3meBKB4fS9whkRqeFHiwRBue2bi0lhu12FU0iM3KJ9Cu35rzNpo_CTHz0ZD2UfBxTnLVfN38wgxqz7sD1xHbyYxEUxZtGwub8aOMqE0QPbDRcKdzm9UvCfmdSpahVwUewAvvIvTI5eb7VoW-A77-H-18BeM_qdGPT5HGQD4HFYcCbMvhHw",
+    "altText": "All star set platter with chicken, tenderloin, king tiger prawn and three sauces",
+    "descriptionKr": "치킨+돼지안심+새우 구성 + 소스 3종 (돈카츠, 타르타르, 칠리)",
+    "descriptionEn": "Chicken & Pork Tenderloin • King Tiger Shrimp. Served with Tartar, Chili & Tonkatsu sauces.",
+    "descriptionVi": "Thăn nội Gà, Heo và Tôm cỡ lớn phục vụ kèm 3 loại sốt: Tartar, Chili và sốt Tonkatsu.",
+    "descriptionJp": "鶏ささみ・豚ヒレ・キングタイガー海老を一度に楽しめる贅沢なセット。タルタルソース、チリソース、とんかつソースの3種類でお楽しみください。",
+    "dishTypes": [
+      "pork",
+      "chicken",
+      "seafood"
+    ],
+    "tags": [
+      "Limited",
+      "20 MIN PREP"
+    ]
   },
   {
-    id: 'addon-cheese-katsu-1pc',
-    nameEn: 'Cheese Katsu 1pc',
-    nameKr: '치즈카츠 추가 (1개)',
-    nameJp: 'チーズカツ追加 (1個)',
-    nameVi: 'Thêm 1 miếng phô mai chiên',
-    category: 'addons',
-    price: 120,
-    priceFormatted: '120.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBUcYGD4d0U6ZMPMNrIEUgId6QBXylv287e1p9gtxZOkYzZW0DsgojYGlY753CRm6zhLR_WkIG9Ot4DW5ZztkVB4hBs41O697wJwjv3adO1byoS-PAW2BdNGOA7GbAlDyC2IEiorFy8IUxI46OpRvkSqkOC0II7k-cIMoPKPvshF6T42g2_OykV5iaVF0ycMhKujqGHxmozGQ3Rq7Z5rUG00_UQIPKhgA0u0dsSCZH7tR2wjxMG1blfDQ',
-    altText: 'Extra cheese katsu 1 piece',
-    descriptionEn: 'Thin loin wrapped around overflowing European mozzarella.',
-    descriptionKr: '100% 유럽산 모짜렐라 치즈가 듬뿍 들어간 치즈카츠 1조각.',
-    descriptionVi: '1 miếng phô mai Mozzarella nguyên khối cuộn thịt chiên giòn.',
-    dishTypes: ['cheese', 'pork'],
-    tags: ['Cutlet Add-on']
+    "id": "double-tender-duo-set",
+    "nameEn": "Double Tender Set",
+    "nameKr": "더블 텐더 세트",
+    "nameKrSubtitle": "(Chicken & Pork)",
+    "nameJp": "ダブルテンダーセット",
+    "nameVi": "Set Tonkatsu Gà + Heo",
+    "category": "japanese",
+    "price": 200,
+    "priceFormatted": "200.000 VND",
+    "prepTimeMinutes": 15,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAP5cr41xR6ieWoTxYpZMaXKXrw6AEUq0HVzOI1_gwexAFUN9KK1scClccCrTwAxgGgw-pXQTQ8H5m3lYd9UYmFKtUODdZEDnCoulwp0fMnKyX1lORK1saQjaHA3e-WNrXHzzosr9UIL-zPU8CGaNjAoZGN9knqG460P_7FdBQyUtz3MVCW64O14vcch23A4nsfUX94BZ7Co0H82HtlUBvAt3ry3-6uhtamsGDkguksNWw584bWigT79A",
+    "altText": "Double tender chicken and pork cutlet combination",
+    "descriptionKr": "돼지 안심과 닭 안심을 반반 담아 부드럽고 촉촉하게 튀겨냈습니다. 돈카스 소스와 타르타르 소스를 함께 제공합니다.",
+    "descriptionEn": "Half pork tenderloin and half chicken tenderloin - soft, juicy, and perfectly crispy. Served with Tonkatsu and Tartar sauces.",
+    "descriptionVi": "Một nửa thịt thăn heo và một nửa thịt thăn gà - mềm, mọng nước và chiên giòn hoàn hảo. Dùng kèm hai loại sốt: Tonkatsu và Tartar.",
+    "descriptionJp": "豚ヒレと鶏ささみを半分ずつ楽しめるセット。柔らかくジューシーに揚げ、とんかつソースとタルタルソースを添えました。",
+    "dishTypes": [
+      "pork",
+      "chicken"
+    ],
+    "tags": [
+      "MUST TRY"
+    ]
   },
   {
-    id: 'addon-king-tiger-shrimp',
-    nameEn: 'King Tiger Shrimp',
-    nameKr: '왕새우튀김 (1마리)',
-    nameJp: 'キングタイガーエビフライ (1尾)',
-    nameVi: 'Thêm 1 con tôm sú khổng lồ',
-    category: 'addons',
-    price: 70,
-    priceFormatted: '70.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB4fR0MJuOcBQdN2bsZjqlAkZAclAHC6exlkXX1V79UL4xVCyiqAWTedpqieIQ7y382RJjn3meBKB4fS9whkRqeFHiwRBue2bi0lhu12FU0iM3KJ9Cu35rzNpo_CTHz0ZD2UfBxTnLVfN38wgxqz7sD1xHbyYxEUxZtGwub8aOMqE0QPbDRcKdzm9UvCfmdSpahVwUewAvvIvTI5eb7VoW-A77-H-18BeM_qdGPT5HGQD4HFYcCbMvhHw',
-    altText: 'Single jumbo king tiger shrimp breaded and fried',
-    descriptionEn: 'Whole crispy King Tiger Prawn coated in needle panko.',
-    descriptionKr: '바삭한 빵가루를 입혀 고소하게 튀겨낸 통통한 블랙타이거 왕새우.',
-    descriptionVi: '1 con tôm sú biển khổng lồ chiên bột xù tươi giòn tan.',
-    dishTypes: ['addons'],
-    tags: ['Seafood Add-on']
+    "id": "korean-style-retro-tonkatsu",
+    "nameEn": "Korean-style Tonkatsu",
+    "nameKr": "경양식 돈까스",
+    "nameJp": "韓国式とんかつ",
+    "nameVi": "Tonkatsu Kiểu Hàn",
+    "category": "korean",
+    "price": 150,
+    "priceFormatted": "150. / 180.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCrPNQvXcozwtwBl8PUuxpSD_d3IUfY_Vzc9sQEbv5a1UpfR1Ktfvx-6CANgvmjytqSM0FLfDo7XIJWNbiDMhRe48zcBPkBxrueIfwPvP5ytvcE86jpFtg7c6PnvUhxHtv6GnacSUwrJsrslhmk2NNt7692kvSFIGJeQEZ--InoP5THWyz7lO3792SqITZyU9DkKPh8USOBnyX7iLzKfp8_BjTkOMqBnSfV9KyZ0RIcgq_M-TsTs5eCEQ",
+    "altText": "Korean retro-style pounded pork cutlet served with rich brown sauce",
+    "descriptionKr": "두툼한 등심돈까스에 브라운소스가 함께 제공됩니다. (소스 따로 가능)",
+    "descriptionEn": "Tenderized pork loin cutlet served crispy with a rich, classic brown sauce. We can serve the sauce separately.",
+    "descriptionVi": "Thịt thăn heo được đập mềm, chiên giòn vàng và dùng kèm nước sốt nâu đậm đà kiểu cổ điển. Sốt có thể để riêng.",
+    "descriptionJp": "豚ロース肉をやわらかく叩いてから、サクサクに揚げ、昔ながらの濃厚なブラウンソースとともにお召し上がりいただく一品です。ソースは別添えにできます。",
+    "sizes": [
+      {
+        "label": "S",
+        "price": 150
+      },
+      {
+        "label": "L",
+        "price": 180
+      }
+    ],
+    "dishTypes": [
+      "pork"
+    ],
+    "tags": [
+      "Classic Sauce"
+    ]
   },
   {
-    id: 'addon-curry-sauce-bowl',
-    nameEn: 'Curry Sauce Bowl',
-    nameKr: '수제 카레 추가',
-    nameJp: '自家製カレー追加',
-    nameVi: 'Chén sốt cà ri thủ công',
-    category: 'addons',
-    price: 90,
-    priceFormatted: '90.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAJaMFyc8QQy2CcW7B5xQOOFB9ZVsFRstIICo0Nt-RhGmXX1pysDCJNPPWw1YTwJTWyfFyhmOcm1hGQ6G87ICstcnIcEZmrVhxlNo5qToISTEq1TuXG3KrW0I1j-HiQdKfDpZLHB2OCuehXNbttzaisLCIWFcWbWOK98vG4BiE5Esj1k-DqqcXDmRBXmo67W7q3O0uRYr_LjVTyVQ-Pq1-7-BLXSyvtphdsyokM9jCUZu7aRJaeyxXNHA',
-    altText: 'Small silver bowl of rich slow simmered curry sauce',
-    descriptionEn: '48-hour slow-cooked caramelized onion curry gravy.',
-    descriptionKr: '48시간 동안 푹 끓여 진한 풍미를 자랑하는 수제 카레 한 그릇.',
-    descriptionVi: 'Chén sốt cà ri Nhật nấu chậm 48 giờ từ hành tây ngọt thơm.',
-    dishTypes: ['addons'],
-    tags: ['Sauce Craft']
+    "id": "half-half-korean-retro-katsu",
+    "nameEn": "Half & Half Korean Retro Katsu",
+    "nameKr": "반반 경양까스",
+    "nameJp": "ハーフ & ハーフ 韓国レトロとんかつ",
+    "nameVi": "Tonkatsu Kiểu Hàn Sốt Hai Vị",
+    "category": "korean",
+    "price": 210,
+    "priceFormatted": "210.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBpPMrZlNFRYX2PyIhzTFBCduDv6SSW8bKrSoNbd1UzY0Yd4Db5TO04S0fYL8RJeL1qutyYfgwSpc6-ZRzMEIYwVzgD78oE-N3XXXWbRvRSgp6B0xd6MCa0M799TMb9kUMu2a7Fgh-srAjgF4d0j9Rpy8nF_YT36fmdCrLFYKAgOQiJOcuieqwK0GnQ-VqggNPCYRUtodaSp-G_AGjIqM28aCQ31pDUVfY3o3eszXow2VckAcMWDK3u6A",
+    "altText": "Korean retro cutlet served half with classic sauce and half with spicy sauce",
+    "descriptionKr": "일반 소스와 매운 소스, 두 가지 맛을 함께 즐길 수 있는 경양식 돈까스입니다. 맵기 조절은 불가합니다.",
+    "descriptionEn": "Korean retro-style katsu served with two sauces: classic sauce and spicy sauce. Spice level cannot be adjusted.",
+    "descriptionVi": "Tonkatsu kiểu Hàn với hai loại sốt: sốt truyền thống và sốt cay. Không thay đổi được mức độ cay.",
+    "descriptionJp": "韓国風トンカツを、伝統ソースまたは辛口ソースの2種類からお選びいただけます。辛さの調整はできません。",
+    "isSpicy": true,
+    "spiceLevel": 1,
+    "dishTypes": [
+      "pork",
+      "spicy"
+    ],
+    "tags": [
+      "2 Sauces",
+      "Dual Flavor"
+    ]
   },
   {
-    id: 'addon-korean-demi-sauce',
-    nameEn: 'Korean Demi Sauce',
-    nameKr: '경양식 일반 소스',
-    nameJp: 'デミグラスソース',
-    nameVi: 'Sốt nâu Demi Glace truyền thống',
-    category: 'addons',
-    price: 30,
-    priceFormatted: '30.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB2RuDPR276Q7qeT6uI6vKTsBfNm-FJRJKBap87og95okoiYAHF9qwYsmGfEP2b1jJFh3z8xS2MuUXaOiQWxFXD1kRfq9d4gANlwTEHSTL5EZbvah254sFs3ngjEPVCWeoFfy9IUaSb7LXluyaIHOlR8lOzN9DWUwApVNCOfkmK2qOJ-Ou8d6sHPgcBiKH_FGQLIsWyXIYiz0xg_msb6fA7CRHHCDc1Lw0p53NqdTjpvhs7zPQfXDpPqg',
-    altText: 'Artisanal bowl of brown demi glace sauce',
-    descriptionEn: 'Classic buttery fruit and bone reduction demi-glace.',
-    descriptionKr: '신선한 사과와 양파를 듬뿍 넣고 끓여낸 정통 경양식 브라운 소스.',
-    descriptionVi: 'Nước sốt nâu thơm bơ đun cùng táo ngọt thanh truyền thống.',
-    dishTypes: ['addons'],
-    tags: ['Sauce Craft']
+    "id": "spicy-korean-retro-katsu",
+    "nameEn": "Spicy Korean Retro Katsu",
+    "nameKr": "매운 경양식까스",
+    "nameJp": "旨辛 韓国レトロとんかつ",
+    "nameVi": "Tonkatsu Kiểu Hàn Sốt Cay",
+    "category": "korean",
+    "price": 160,
+    "priceFormatted": "160. / 210.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQi1Rn5AFy_QBl64mhIss15T0f2bVE0lBHL7VI7lx4vKBfZ3I3dX1F0y39cGrIDptOfEd5TL_KKMU58trn-ZdJRHB8t_FeAHzFZ5ZXm8hH1cIG-L2YKTSxb-T3mPslzdsiIXhytix2e0KcWIF8u-l0IQ-uEg0e0jliaH8BfjwgP_yx2mykAtBkIlsduF-DEhTv_0Bh2SFZfxpZ4_iCJJmpWyep8ib1kOB96GM7Wq2i-PIXK97RAb8BXQ",
+    "altText": "Spicy glazed Korean cutlet hotter than Shin Ramyun",
+    "descriptionKr": "신라면보다 조금 더 매콤한 경양식 소스를 곁들인 미니 돈까스입니다. 맵기 조절은 불가합니다.",
+    "descriptionEn": "A Korean retro-style katsu served with spicy sauce, slightly hotter than Shin Ramyun. Spice level cannot be adjusted.",
+    "descriptionVi": "Tonkatsu kiểu Hàn ăn kèm sốt cay, cay hơn Shin Ramyun một chút. Không thay đổi được mức độ cay.",
+    "descriptionJp": "韓国風ミニトンカツを辛口ソースとともにお楽しみいただけます。辛さは辛ラーメンより少し辛めです。辛さの調整はできません。",
+    "sizes": [
+      {
+        "label": "S",
+        "price": 160
+      },
+      {
+        "label": "L",
+        "price": 210
+      }
+    ],
+    "isSpicy": true,
+    "spiceLevel": 2,
+    "dishTypes": [
+      "pork",
+      "spicy"
+    ],
+    "tags": [
+      "Spicy Sauce",
+      "Shin Ramyun Heat"
+    ]
   },
   {
-    id: 'addon-spicy-gochujang-sauce',
-    nameEn: 'Spicy Gochujang Sauce',
-    nameKr: '경양식 매운 소스',
-    nameJp: '特製辛口ソース',
-    nameVi: 'Sốt cay Gochujang hoa quả',
-    category: 'addons',
-    price: 40,
-    priceFormatted: '40.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBQi1Rn5AFy_QBl64mhIss15T0f2bVE0lBHL7VI7lx4vKBfZ3I3dX1F0y39cGrIDptOfEd5TL_KKMU58trn-ZdJRHB8t_FeAHzFZ5ZXm8hH1cIG-L2YKTSxb-T3mPslzdsiIXhytix2e0KcWIF8u-l0IQ-uEg0e0jliaH8BfjwgP_yx2mykAtBkIlsduF-DEhTv_0Bh2SFZfxpZ4_iCJJmpWyep8ib1kOB96GM7Wq2i-PIXK97RAb8BXQ',
-    altText: 'Spicy red gochujang sauce dip',
-    descriptionEn: 'Fiery sweet and savory Korean gochujang chili dip.',
-    descriptionKr: '신라면 이상의 칼칼한 매운맛을 자랑하는 특제 매운 소스.',
-    descriptionVi: 'Sốt tương ớt đặc biệt cay nồng nàn thơm mùi ớt Hàn Quốc.',
-    dishTypes: ['addons', 'spicy'],
-    tags: ['Sauce Craft']
+    "id": "cheese-bomb-katsu",
+    "nameEn": "Cheese Bomb Katsu",
+    "nameKr": "치즈폭탄 경양까스",
+    "nameJp": "チーズ爆弾とんかつ",
+    "nameVi": "Cutlet Phô Mai Tan Chảy",
+    "category": "korean",
+    "price": 260,
+    "priceFormatted": "260. / 270.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAQvSBLInIWr5fP5Fvl1lcHokZWDqLGVpgzE9AWPvwrpx0mQ54ARn6b5VaOeZ1fFgYJfbW3LDy9doslEWoIbXfbp9n2evRVC3ULbRkQieWY8bypGDSgjucTqFzEZ4gwkupulzAmiH1pmwYhOIge_NbPDSgb5vnCI1ox0Xwr2bz8JwBCzvPkLW0Ss_uL9XQO4ISc8BzzVnHK0_MofNZ72b4aVJbGixooRWnIACqnA7O-BYm2LxjsNFGYvw",
+    "altText": "Melted cheese inside crispy Korean cutlet with rich sauce",
+    "descriptionKr": "속은 치즈가 부드럽게 녹아내리고, 겉은 바삭한 돈까스에 진하고 깊은 풍미의 소스를 더했습니다. (일반 260 / 매운소스 270 / 반반 270)",
+    "descriptionEn": "Melted cheese inside, crispy tonkatsu outside, finished with a rich and flavorful sauce. (Regular 260k / Spicy 270k / Half & Half 270k)",
+    "descriptionVi": "Phô mai tan chảy bên trong, lớp vỏ tonkatsu giòn rụm, phủ sốt đậm đà. (Sốt thường 260k / Sốt cay 270k / 2 loại sốt 270k)",
+    "descriptionJp": "中からとろけるチーズ、外はサクサクのとんかつ。濃厚でコクのあるソースとともにお楽しみください。",
+    "sizes": [
+      {
+        "label": "일반소스 (Sốt Thường)",
+        "price": 260
+      },
+      {
+        "label": "매운소스 (Sốt Cay)",
+        "price": 270
+      },
+      {
+        "label": "반반소스 (2 Loại Sốt)",
+        "price": 270
+      }
+    ],
+    "sauceOptions": [
+      "일반소스 (Korean Sauce - Sốt Thường): 260k",
+      "매운소스 (Korean Spicy Sauce - Sốt Cay): 270k",
+      "반반소스 (2 Sauces - 2 Loại Sốt): 270k"
+    ],
+    "dishTypes": [
+      "pork",
+      "cheese"
+    ],
+    "tags": [
+      "Cheese Loaded",
+      "3 Sauce Styles"
+    ]
   },
   {
-    id: 'addon-artisan-pearl-rice',
-    nameEn: 'Artisan Pearl Rice',
-    nameKr: '공기밥 추가',
-    nameJp: 'ご飯追加 (コシヒカリ)',
-    nameVi: 'Cơm trắng dẻo Koshihikari',
-    category: 'addons',
-    price: 20,
-    priceFormatted: '20.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAQZyseVh5rSv0ikNDOPcmHsjiq859ljgZGGdFKA-xlxu_UllgAdg_qci_N5kttQFQLZPys20hHfZQ32KPHm185sKo9sKGzLz76ZKfnkTMFLwhedHNGrFtkMlolS9EdsLVOfOrXvxYpUhYVfrVAQ86BrZEbp9x-GpYQuAWsG82VpSbww-gK7BoFnpP8QvMEf6CEmbHAiMew-MiJXT51ofpC_hDwJpmEO3JUXgvNceuOnsQbdGT6u1wpJQ',
-    altText: 'Bowl of steaming white pearl rice',
-    descriptionEn: 'Steamed premium sticky pearl rice cooked fresh every hour.',
-    descriptionKr: '윤기가 흐르는 찰진 최고급 고시히카리 쌀밥.',
-    descriptionVi: 'Bát cơm trắng dẻo thơm nấu mới nóng hổi.',
-    dishTypes: ['addons'],
-    tags: ['Staple']
+    "id": "pork-tenderloin-katsu-curry-rice",
+    "nameEn": "Pork Tenderloin Katsu Curry Rice",
+    "nameKr": "안심 돈까츠 카레덮밥",
+    "nameJp": "ヒレかつカレー丼",
+    "nameVi": "Cơm Cà Ri Thịt Thăn Nội Heo Chiên Xù",
+    "category": "curry",
+    "price": 170,
+    "priceFormatted": "170. / 220.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAJaMFyc8QQy2CcW7B5xQOOFB9ZVsFRstIICo0Nt-RhGmXX1pysDCJNPPWw1YTwJTWyfFyhmOcm1hGQ6G87ICstcnIcEZmrVhxlNo5qToISTEq1TuXG3KrW0I1j-HiQdKfDpZLHB2OCuehXNbttzaisLCIWFcWbWOK98vG4BiE5Esj1k-DqqcXDmRBXmo67W7q3O0uRYr_LjVTyVQ-Pq1-7-BLXSyvtphdsyokM9jCUZu7aRJaeyxXNHA",
+    "altText": "Pork tenderloin katsu served with Japanese spiced curry over pearl rice",
+    "descriptionKr": "안심 중에서도 육즙이 풍부하고 쫄깃한 부위만 선별해, 매콤한 카레 소스와 함께 즐기는 덮밥입니다. 맵기 조절은 불가합니다.",
+    "descriptionEn": "Made with carefully selected juicy and tender pork tenderloin, served with mildly spicy curry sauce over rice. Spice level cannot be adjusted.",
+    "descriptionVi": "Sử dụng phần thăn nội heo được chọn lọc kỹ, có độ mọng nước và dai nhẹ, ăn kèm sốt cà ri cay nhẹ. Không thay đổi được mức độ cay.",
+    "descriptionJp": "厳選したジューシーで柔らかなヒレかつを、ピリ辛のカレーライス仕立てにしました。辛さの調節はできません。",
+    "sizes": [
+      {
+        "label": "S",
+        "price": 170
+      },
+      {
+        "label": "L",
+        "price": 220
+      }
+    ],
+    "isSpicy": true,
+    "spiceLevel": 1,
+    "dishTypes": [
+      "pork",
+      "spicy"
+    ],
+    "tags": [
+      "MILD LEVEL"
+    ]
   },
   {
-    id: 'addon-cream-soup-broth',
-    nameEn: 'Cream Soup / Broth',
-    nameKr: '수프 / 장국 추가',
-    nameJp: 'コーンスープ / 味噌汁',
-    nameVi: 'Thêm súp kem bắp / canh miso',
-    category: 'addons',
-    price: 10,
-    priceFormatted: '10.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBHamC3DKoGpCnH9yzLrLc3ZsDu3J7GiMIdJHQIox49LUbOnRaNnBhN9Tdz1szefwSLJO29oOCTL4X_yFWdB7IgqreBFFHERk0DCtgbe3iEe-bS5QtlB0723-bHJcvi00jkrtdYj0nFwI9xeFANAn7cvyvSsKS00otF1vF5vFRNn7xowAgh5GXLKmSJi8p92vnGvlkMiwffEia3sHKZtl1CANIJWPvND6BrJ2-X4Niwv8GbIbFNZ6AhPw',
-    altText: 'Bowl of warm soup or broth',
-    descriptionEn: 'Choice of warm sweet corn cream soup or savory miso broth.',
-    descriptionKr: '부드러운 옛날 옥수수 크림수프 또는 구수한 미소 장국.',
-    descriptionVi: 'Súp kem bắp ngọt ngào truyền thống hoặc canh tương miso đậm đà.',
-    dishTypes: ['addons'],
-    tags: ['Side']
-  },
-
-  // 6. REFRESHING DRINKS & BEER
-  {
-    id: 'artisanal-kombucha',
-    nameEn: 'Artisanal Kombucha',
-    nameKr: '수제 콤부차',
-    nameJp: '自家製コンブチャ',
-    nameVi: 'Trà Kombucha Thủ Công',
-    category: 'drinks',
-    price: 65,
-    priceFormatted: '65.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB0JEY2qTMEv-dl-nKcCEZn9PCdFvqQbZ3CNgti1A4ZomzbQEWEl2wleYeF6RAslLG3UacZoG1e_KbttjTZQa0oCeHD-fJjtOW6gBK4_xBZfgxyX4246sAgQqd8B8y2cXUdwPtOBjF3Cv-cVtE5eHOKETrpGfreNxfSC3TKkqRLEIxMtrtpIRhgmw_7pJmp6GG-enmxHNpj25zOd6DxYGiwMosEX9q3ZS8DmFf4JmX6WbPO-16Z4crWMA',
-    altText: 'Refreshing artisanal iced kombucha',
-    descriptionEn: 'Strawberry Hibiscus or Passionfruit naturally fermented tea.',
-    descriptionKr: '딸기 히비스커스 또는 패션후르츠 천연 발효 탄산 콤부차.',
-    descriptionVi: 'Trà kombucha lên men tự nhiên hương dâu atiso hoặc chanh leo.',
-    dishTypes: ['drinks'],
-    tags: ['Fermented']
+    "id": "pork-loin-katsu-curry-rice",
+    "nameEn": "Pork Loin Katsu Curry Rice",
+    "nameKr": "등심돈까츠 카레덮밥",
+    "nameJp": "ロースかつカレー丼",
+    "nameVi": "Katsu Cà Ri Thăn Ngoại Heo",
+    "category": "curry",
+    "price": 180,
+    "priceFormatted": "180.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAJaMFyc8QQy2CcW7B5xQOOFB9ZVsFRstIICo0Nt-RhGmXX1pysDCJNPPWw1YTwJTWyfFyhmOcm1hGQ6G87ICstcnIcEZmrVhxlNo5qToISTEq1TuXG3KrW0I1j-HiQdKfDpZLHB2OCuehXNbttzaisLCIWFcWbWOK98vG4BiE5Esj1k-DqqcXDmRBXmo67W7q3O0uRYr_LjVTyVQ-Pq1-7-BLXSyvtphdsyokM9jCUZu7aRJaeyxXNHA",
+    "altText": "Pork loin cutlet served with mildly spicy curry sauce over rice",
+    "descriptionKr": "로스까스(등심)와 매콤한 카레의 조화. 맵기 조절은 불가합니다.",
+    "descriptionEn": "Pork loin cutlet served with mildly spicy curry. Spice level cannot be adjusted.",
+    "descriptionVi": "Thịt thăn ngoại chiên giòn ăn kèm sốt cà ri cay nhẹ. Không thay đổi được mức độ cay.",
+    "isSpicy": true,
+    "spiceLevel": 1,
+    "dishTypes": [
+      "pork",
+      "spicy"
+    ],
+    "tags": [
+      "MILD LEVEL"
+    ]
   },
   {
-    id: '100-cold-squeezed-juice',
-    nameEn: '100% Cold Squeezed Juice',
-    nameKr: '100% 착즙 생과일주스',
-    nameJp: '100%搾りたて生ジュース',
-    nameVi: 'Nước Ép Trái Cây Nguyên Chất 100%',
-    category: 'drinks',
-    price: 65,
-    priceFormatted: '65.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB0JEY2qTMEv-dl-nKcCEZn9PCdFvqQbZ3CNgti1A4ZomzbQEWEl2wleYeF6RAslLG3UacZoG1e_KbttjTZQa0oCeHD-fJjtOW6gBK4_xBZfgxyX4246sAgQqd8B8y2cXUdwPtOBjF3Cv-cVtE5eHOKETrpGfreNxfSC3TKkqRLEIxMtrtpIRhgmw_7pJmp6GG-enmxHNpj25zOd6DxYGiwMosEX9q3ZS8DmFf4JmX6WbPO-16Z4crWMA',
-    altText: 'Cold squeezed fresh fruit juice',
-    descriptionEn: 'Daily Fresh Watermelon or Orange squeezed on order.',
-    descriptionKr: '매일 아침 착즙하는 신선한 수박 또는 오렌지 100% 생과일 주스.',
-    descriptionVi: 'Nước ép dưa hấu hoặc cam tươi nguyên chất không pha đường.',
-    dishTypes: ['drinks'],
-    tags: ['Fresh']
+    "id": "chicken-cutlet-curry-rice",
+    "nameEn": "Chicken Cutlet Curry Rice",
+    "nameKr": "치킨카츠 카레덮밥",
+    "nameJp": "チキンかつカレー丼",
+    "nameVi": "Cơm Cà Ri Gà",
+    "category": "curry",
+    "price": 180,
+    "priceFormatted": "180.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBd1vx3B7lOnRD-OVRhKd1BuYu0ScumC3jbDnEbk1x5RanJ7cEZ9S4LZaw3cINJZw5VaBdmqWxoshQLrR5_eiE1n39yOnK4xN44QhlmGUfwp-tgPzLY2wWP33zpWR4f8D-2dNaOGT6A_779tWHVzF4Hj5waSou_9iU1m4-4zZktgh-SB4jXNxeg4QfTMyBiixPqNFgvSGsMBmgs8iF7aq8iFG-j5p1X-pwsWZ5-5DgleSx6A4FNVbNknA",
+    "altText": "Chicken cutlet served with mildly spicy curry, tartar and chili dip",
+    "descriptionKr": "부드러운 치킨가스와 매콤한 카레의 조화 (카레 조금 매콤해요 • 타르타르 + 칠리소스 제공). 맵기 조절은 불가합니다.",
+    "descriptionEn": "A perfect combination of tender chicken cutlet and mildly spicy curry. (Curry is slightly spicy • Served with Tartar & Chili sauces). Spice level cannot be adjusted.",
+    "descriptionVi": "Sự kết hợp tuyệt vời giữa gà chiên mềm và sốt cà ri cay nhẹ. (Cà ri hơi cay một chút • Kèm sốt Tartar và Chili). Không thay đổi được mức độ cay.",
+    "descriptionJp": "柔らかなチキンかつと、ピリ辛カレーの絶妙なコンビネーション。(カレーはやや辛めです)。辛さの調節はできません。",
+    "isSpicy": true,
+    "spiceLevel": 1,
+    "dishTypes": [
+      "chicken",
+      "spicy"
+    ],
+    "tags": [
+      "MILD LEVEL",
+      "Tartar & Chili"
+    ]
   },
   {
-    id: 'soursop-nectar-smoothie',
-    nameEn: 'Soursop Nectar Smoothie',
-    nameKr: '망고스틴 & 망꺼우 스무디',
-    nameJp: 'サワーソップスムージー',
-    nameVi: 'Sinh Tố Mãng Cầu Xiêm',
-    category: 'drinks',
-    price: 65,
-    priceFormatted: '65.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB0JEY2qTMEv-dl-nKcCEZn9PCdFvqQbZ3CNgti1A4ZomzbQEWEl2wleYeF6RAslLG3UacZoG1e_KbttjTZQa0oCeHD-fJjtOW6gBK4_xBZfgxyX4246sAgQqd8B8y2cXUdwPtOBjF3Cv-cVtE5eHOKETrpGfreNxfSC3TKkqRLEIxMtrtpIRhgmw_7pJmp6GG-enmxHNpj25zOd6DxYGiwMosEX9q3ZS8DmFf4JmX6WbPO-16Z4crWMA',
-    altText: 'Blended soursop smoothie',
-    descriptionEn: 'Smooth blended tropical mãng cầu with a hint of lime.',
-    descriptionKr: '상큼하고 달콤한 열대 과일 망꺼우(가시여의)를 부드럽게 갈아낸 스무디.',
-    descriptionVi: 'Mãng cầu xiêm xay mịn sánh ngậy chua thanh sảng khoái.',
-    dishTypes: ['drinks'],
-    tags: ['Smoothie']
+    "id": "cold-buckwheat-noodle-set",
+    "nameEn": "Cold Buckwheat Noodle Set",
+    "nameKr": "냉모밀 정식",
+    "nameJp": "冷やしそばセット",
+    "nameVi": "Set Mì Kiều Mạch Lạnh",
+    "category": "noodles",
+    "price": 260,
+    "priceFormatted": "260.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDo3cqoL-JShk6YxA9Obulr882nQ8OZY17m6zhjU8gO0yr7QhDg4xfzXXlYWTwBE8G0aFG4L_1w8_7PRFLtAWLdL586-iED-yqUcUrdjkz_QVt0VaocwMS8s4S1uEKoVS0MOJSbOuyugfXuuwLeptjrvvHZgbkpgh9k2l0udnRoP4a7xuQiEhC9dLTx9ojlrdhwFBlT2BSICGvJAQkUATMn-onpBeTPRuar0_W_VD-QnkDhn3E6UZTbnQ",
+    "altText": "Cold buckwheat noodles paired with freshly fried pork tenderloin cutlet",
+    "descriptionKr": "냉모밀 한그릇 + 돈안심 한 덩이. 시원하고 깔끔한 냉모밀과 육즙 가득한 돈안심카츠를 함께 즐기는 세트.",
+    "descriptionEn": "1 bowl of cold soba + 1 piece of pork tenderloin cutlet. Enjoy the refreshing cold soba paired with a juicy pork cutlet.",
+    "descriptionVi": "1 phần mì lạnh thanh mát + 1 miếng thịt heo thăn nội chiên giòn mọng nước.",
+    "descriptionJp": "冷やしそば + ヒレかつ(1枚)のセット。さっぱりとした冷やしそばと、ジューシーなヒレかつの相性抜群な組み合わせをお楽しみください。",
+    "isBestSeller": true,
+    "dishTypes": [
+      "pork",
+      "noodles"
+    ],
+    "tags": [
+      "Best Seller",
+      "Soba + Cutlet"
+    ]
   },
   {
-    id: 'sapporo-draft-beer',
-    nameEn: 'Sapporo Draft Beer (Chilled Mug)',
-    nameKr: '삿포로 생맥주 (얼음잔)',
-    nameJp: 'サッポロ生ビール (凍結ジョッキ)',
-    nameVi: 'Bia Tươi Sapporo Ly Lạnh',
-    category: 'drinks',
-    price: 55,
-    priceFormatted: '55.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB0JEY2qTMEv-dl-nKcCEZn9PCdFvqQbZ3CNgti1A4ZomzbQEWEl2wleYeF6RAslLG3UacZoG1e_KbttjTZQa0oCeHD-fJjtOW6gBK4_xBZfgxyX4246sAgQqd8B8y2cXUdwPtOBjF3Cv-cVtE5eHOKETrpGfreNxfSC3TKkqRLEIxMtrtpIRhgmw_7pJmp6GG-enmxHNpj25zOd6DxYGiwMosEX9q3ZS8DmFf4JmX6WbPO-16Z4crWMA',
-    altText: 'Cold mug of Sapporo draft beer with dense white foam',
-    descriptionEn: 'Cold pressurized draft pour served in an frosted beer mug.',
-    descriptionKr: '영하 2도 냉각된 전용 잔에 서빙되는 크리미한 거품의 삿포로 생맥주.',
-    descriptionVi: 'Bia tươi Sapporo rót áp suất trong ly ướp lạnh bọt tuyết bồng bềnh.',
-    dishTypes: ['drinks'],
-    tags: ['Draft Beer']
+    "id": "cold-buckwheat-noodle",
+    "nameEn": "Cold Buckwheat Noodle",
+    "nameKr": "짱 시원한 냉모밀",
+    "nameJp": "冷やしそば",
+    "nameVi": "Mì Kiều Mạch Lạnh Bát",
+    "category": "noodles",
+    "price": 180,
+    "priceFormatted": "180.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDo3cqoL-JShk6YxA9Obulr882nQ8OZY17m6zhjU8gO0yr7QhDg4xfzXXlYWTwBE8G0aFG4L_1w8_7PRFLtAWLdL586-iED-yqUcUrdjkz_QVt0VaocwMS8s4S1uEKoVS0MOJSbOuyugfXuuwLeptjrvvHZgbkpgh9k2l0udnRoP4a7xuQiEhC9dLTx9ojlrdhwFBlT2BSICGvJAQkUATMn-onpBeTPRuar0_W_VD-QnkDhn3E6UZTbnQ",
+    "altText": "Chilled Japanese buckwheat soba noodles in iced savory dashi broth",
+    "descriptionKr": "시원한 육수와 비빔면, 돈까스와 궁합 최고",
+    "descriptionEn": "Cold buckwheat noodles in refreshing broth - perfect with cutlet.",
+    "descriptionVi": "Mì kiều mạch lạnh ăn kèm nước dùng thanh mát - rất hợp khi dùng kèm tonkatsu.",
+    "descriptionJp": "さっぱりとした出汁でいただく冷やしそば。とんかつと一緒に食べるのがおすすめです。",
+    "isBestSeller": true,
+    "dishTypes": [
+      "noodles"
+    ],
+    "tags": [
+      "Best Seller",
+      "Cold Soba"
+    ]
   },
   {
-    id: 'dr-pepper-ginger-ale',
-    nameEn: 'Dr Pepper / Ginger Ale',
-    nameKr: '닥터페퍼 / 진저에일',
-    nameJp: 'ドクターペッパー / ジンジャーエール',
-    nameVi: 'Nước Ngọt Dr Pepper / Ginger Ale',
-    category: 'drinks',
-    price: 55,
-    priceFormatted: '55.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB0JEY2qTMEv-dl-nKcCEZn9PCdFvqQbZ3CNgti1A4ZomzbQEWEl2wleYeF6RAslLG3UacZoG1e_KbttjTZQa0oCeHD-fJjtOW6gBK4_xBZfgxyX4246sAgQqd8B8y2cXUdwPtOBjF3Cv-cVtE5eHOKETrpGfreNxfSC3TKkqRLEIxMtrtpIRhgmw_7pJmp6GG-enmxHNpj25zOd6DxYGiwMosEX9q3ZS8DmFf4JmX6WbPO-16Z4crWMA',
-    altText: 'Dr Pepper and Ginger Ale canned sodas',
-    descriptionEn: 'Imported soda can with lemon slice and clear rock ice.',
-    descriptionKr: '수입 탄산음료 (레몬 슬라이스와 얼음잔 제공).',
-    descriptionVi: 'Nước ngọt nhập khẩu dùng kèm ly đá viên và lát chanh vàng tươi.',
-    dishTypes: ['drinks'],
-    tags: ['Soda']
+    "id": "jjolmyeon-set-with-cutlet",
+    "nameEn": "Jjolmyeon (Spicy Chewy Noodles) Set",
+    "nameKr": "쫄면정식",
+    "nameJp": "汁なしチョルミョン / ビビンチョルミョン セット",
+    "nameVi": "Set Mì Trộn Cay Jjolmyeon",
+    "category": "noodles",
+    "price": 250,
+    "priceFormatted": "250.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDUBluE82A7WO25W2UE-1w66Bhi98R0EIi4P-6SbR6my73nh1viW4laryAjKmKUHOTDS-B-Bl6L6VvY71dV4juuw2VJnmKUgJl0qCPU2aOwixDGBcPAMYgy0KNITUaaw5GtukAqrcbK-bq8JtNuLHUTFN83YrU09xwk27GyVbTgSDaLWZQWjhNG28FpZvkQa2yQ4uJkuccUA-D4YOEYRjQnVlbu6FXCqPZXWcYCDNMlXqgiFQcTxwGKUw",
+    "altText": "Spicy cold chewy jjolmyeon noodles paired with golden crispy pork cutlet",
+    "descriptionKr": "1 bowl of Spicy Chewy Noodles + 1 pc of Pork Tenderloin Cutlet (안심한덩이 + 장국포함)",
+    "descriptionEn": "1 bowl of Spicy Chewy Noodles + 1 pc of Pork Tenderloin Cutlet (Includes miso soup).",
+    "descriptionVi": "1 tô mì trộn Jjolmyeon + 1 miếng thịt thăn heo chiên xù + kèm súp nóng.",
+    "descriptionJp": "チョルミョン + ヒレカツ(1枚) + 味噌汁のセット。",
+    "isSpicy": true,
+    "spiceLevel": 2,
+    "dishTypes": [
+      "pork",
+      "spicy",
+      "noodles"
+    ],
+    "tags": [
+      "Full Set",
+      "Noodle & Cutlet"
+    ]
   },
   {
-    id: 'coca-cola-zero-sprite',
-    nameEn: 'Coca-Cola / Coke Zero / Sprite',
-    nameKr: '코카콜라 / 제로 / 스프라이트',
-    nameJp: 'コカ・コーラ / ゼロ / スプライト',
-    nameVi: 'Coca-Cola / Zero / Sprite',
-    category: 'drinks',
-    price: 25,
-    priceFormatted: '25.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB0JEY2qTMEv-dl-nKcCEZn9PCdFvqQbZ3CNgti1A4ZomzbQEWEl2wleYeF6RAslLG3UacZoG1e_KbttjTZQa0oCeHD-fJjtOW6gBK4_xBZfgxyX4246sAgQqd8B8y2cXUdwPtOBjF3Cv-cVtE5eHOKETrpGfreNxfSC3TKkqRLEIxMtrtpIRhgmw_7pJmp6GG-enmxHNpj25zOd6DxYGiwMosEX9q3ZS8DmFf4JmX6WbPO-16Z4crWMA',
-    altText: 'Cold canned soda',
-    descriptionEn: 'Chilled can with ice cup.',
-    descriptionKr: '시원한 캔 음료와 얼음 컵.',
-    descriptionVi: 'Lon ướp lạnh kèm ly đá viên sạch.',
-    dishTypes: ['drinks'],
-    tags: ['Soft Drink']
+    "id": "jjolmyeon-a-la-carte",
+    "nameEn": "Jjolmyeon - Spicy Chewy Noodles",
+    "nameKr": "쫄면 (단품)",
+    "nameJp": "チョルミョン ― 韓国風甘辛もちもち冷麺",
+    "nameVi": "Mì Trộn Cay Hàn Quốc",
+    "category": "noodles",
+    "price": 170,
+    "priceFormatted": "170.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAN2mBhu0yaZfAa_CFDZVE6dZ2bYJVoZRjYysAPbt_PdYmli1fjgQHd6LtxTGXWvDkUG5Mfhkd0NE4fNo6F6DoYB8NIYFFOJpF01oxTFIGZa77Q7UAYpCzY1AkEJLNBQxLxOMrsV1uN0ELJHaRFeQDjjzO5ZclucsKOegSxxjA9LQMhQfk9Lbhzvew15yip7nX7RHm-RzTNS5hnPdJHRBYy_KMvgYRM7bnTR-WuA_yEK37Nych4ECpgEQ",
+    "altText": "Korean spicy chewy jjolmyeon cold noodles mixed with fruit sauce",
+    "descriptionKr": "과일이 들어간 특제 소스로 완성한 새콤달콤 쫄면",
+    "descriptionEn": "Chewy cold noodles mixed with our signature fruity sweet-and-tangy sauce.",
+    "descriptionVi": "Sợi mì dai lạnh, trộn cùng sốt trái cây đặc biệt chua ngọt cay kích thích vị giác.",
+    "descriptionJp": "特製のフルーティーな甘辛ソースで和えた、もちもち食感の冷たい麺。",
+    "isSpicy": true,
+    "spiceLevel": 2,
+    "dishTypes": [
+      "spicy",
+      "noodles"
+    ],
+    "tags": [
+      "Spicy Chewy Noodles"
+    ]
   },
   {
-    id: 'dasani-pure-water',
-    nameEn: 'Dasani Pure Water (500ml)',
-    nameKr: '다사니 생수 (500ml)',
-    nameJp: 'ダサニ天然水 (500ml)',
-    nameVi: 'Nước Khoáng Dasani (500ml)',
-    category: 'drinks',
-    price: 20,
-    priceFormatted: '20.000 VND',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB0JEY2qTMEv-dl-nKcCEZn9PCdFvqQbZ3CNgti1A4ZomzbQEWEl2wleYeF6RAslLG3UacZoG1e_KbttjTZQa0oCeHD-fJjtOW6gBK4_xBZfgxyX4246sAgQqd8B8y2cXUdwPtOBjF3Cv-cVtE5eHOKETrpGfreNxfSC3TKkqRLEIxMtrtpIRhgmw_7pJmp6GG-enmxHNpj25zOd6DxYGiwMosEX9q3ZS8DmFf4JmX6WbPO-16Z4crWMA',
-    altText: 'Dasani bottled spring water',
-    descriptionEn: 'Purified spring mineral bottle.',
-    descriptionKr: '깔끔한 정제 생수 500ml.',
-    descriptionVi: 'Nước suối tinh khiết đóng chai 500ml.',
-    dishTypes: ['drinks'],
-    tags: ['Water']
+    "id": "addon-tenderloin-1pc",
+    "nameEn": "One Piece of Tender Pork",
+    "nameKr": "안심 한 덩이 추가",
+    "nameJp": "追加ヒレかつ (1枚)",
+    "nameVi": "1 miếng thăn nội",
+    "category": "addons",
+    "price": 90,
+    "priceFormatted": "90.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAU7uIRGweXD1EsXli-iJ42Rvq6DkkbZKz8VPVfG1-M_KpNeA3UMZ0wbYcbnuw2uxwAZaj8wB-AdklqYjOiKdJ7dwmVJvvTJNJHYW7d1fazQp1VPdfPefBkQf2IYu3ymzRnk5rnysaXrIzly_WcLI_Bu-dRC2U_FuMzFa91iLq1km8hCori4iq8I_M8AyOb-CNSJhWrmqUKrDd96lN7ceAV_NBBAuxdIxQJRmnDhhFjFf1AxrXpCxsybg",
+    "altText": "One piece of tender pork tenderloin cutlet",
+    "descriptionKr": "신선한 안심 1조각 추가.",
+    "descriptionEn": "One freshly fried tender pork tenderloin cutlet piece.",
+    "descriptionVi": "1 miếng thịt heo thăn nội chiên xù giòn rụm tươi ngon.",
+    "descriptionJp": "追加のヒレかつ1枚。",
+    "dishTypes": [
+      "pork"
+    ],
+    "tags": [
+      "Add-on"
+    ]
+  },
+  {
+    "id": "addon-cheese-katsu-1pc",
+    "nameEn": "Cheese Katsu",
+    "nameKr": "치즈까스 (밥 불포함)",
+    "nameJp": "追加チーズかつ",
+    "nameVi": "Tonkatsu nhân phô mai (Không kèm cơm)",
+    "category": "addons",
+    "price": 120,
+    "priceFormatted": "120.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBUcYGD4d0U6ZMPMNrIEUgId6QBXylv287e1p9gtxZOkYzZW0DsgojYGlY753CRm6zhLR_WkIG9Ot4DW5ZztkVB4hBs41O697wJwjv3adO1byoS-PAW2BdNGOA7GbAlDyC2IEiorFy8IUxI46OpRvkSqkOC0II7k-cIMoPKPvshF6T42g2_OykV5iaVF0ycMhKujqGHxmozGQ3Rq7Z5rUG00_UQIPKhgA0u0dsSCZH7tR2wjxMG1blfDQ",
+    "altText": "Extra cheese katsu piece without rice",
+    "descriptionKr": "모짜렐라 치즈가 듬뿍 들어간 치즈카츠 1조각.",
+    "descriptionEn": "Cheese katsu loaded with melted mozzarella (Rice not included).",
+    "descriptionVi": "Tonkatsu nhân phô mai mozzarella kéo sợi (Không gồm cơm).",
+    "descriptionJp": "とろけるモッツァレラチーズがたっぷり入ったチーズかつ。",
+    "dishTypes": [
+      "cheese",
+      "pork"
+    ],
+    "tags": [
+      "Add-on"
+    ]
+  },
+  {
+    "id": "addon-king-tiger-shrimp",
+    "nameEn": "King Tiger Shrimp",
+    "nameKr": "킹타이거새우 튀김",
+    "nameJp": "大海老フライ",
+    "nameVi": "Tôm chiên xù loại lớn",
+    "category": "addons",
+    "price": 70,
+    "priceFormatted": "70.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB4fR0MJuOcBQdN2bsZjqlAkZAclAHC6exlkXX1V79UL4xVCyiqAWTedpqieIQ7y382RJjn3meBKB4fS9whkRqeFHiwRBue2bi0lhu12FU0iM3KJ9Cu35rzNpo_CTHz0ZD2UfBxTnLVfN38wgxqz7sD1xHbyYxEUxZtGwub8aOMqE0QPbDRcKdzm9UvCfmdSpahVwUewAvvIvTI5eb7VoW-A77-H-18BeM_qdGPT5HGQD4HFYcCbMvhHw",
+    "altText": "Jumbo king tiger shrimp fried crispy",
+    "descriptionKr": "바삭하게 튀겨낸 킹타이거 통새우 1마리.",
+    "descriptionEn": "Crispy fried giant King Tiger shrimp.",
+    "descriptionVi": "Tôm sú King Tiger cỡ lớn chiên giòn rụm.",
+    "descriptionJp": "サクサクに揚げたキングタイガー海老フライ1尾。",
+    "dishTypes": [
+      "addons",
+      "seafood"
+    ],
+    "tags": [
+      "Add-on"
+    ]
+  },
+  {
+    "id": "addon-cream-soup-broth",
+    "nameEn": "Extra Soup",
+    "nameKr": "국 추가",
+    "nameJp": "スープのおかわり / 追加スープ",
+    "nameVi": "Canh Thêm",
+    "category": "addons",
+    "price": 10,
+    "priceFormatted": "10.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBHamC3DKoGpCnH9yzLrLc3ZsDu3J7GiMIdJHQIox49LUbOnRaNnBhN9Tdz1szefwSLJO29oOCTL4X_yFWdB7IgqreBFFHERk0DCtgbe3iEe-bS5QtlB0723-bHJcvi00jkrtdYj0nFwI9xeFANAn7cvyvSsKS00otF1vF5vFRNn7xowAgh5GXLKmSJi8p92vnGvlkMiwffEia3sHKZtl1CANIJWPvND6BrJ2-X4Niwv8GbIbFNZ6AhPw",
+    "altText": "Extra warm soup bowl",
+    "descriptionKr": "따뜻한 국 추가.",
+    "descriptionEn": "Extra warm soup/broth.",
+    "descriptionVi": "Phần canh súp thêm nóng hổi.",
+    "descriptionJp": "温かいスープの追加。",
+    "dishTypes": [
+      "addons"
+    ],
+    "tags": [
+      "Add-on"
+    ]
+  },
+  {
+    "id": "addon-artisan-pearl-rice",
+    "nameEn": "Extra Rice",
+    "nameKr": "밥공기 추가",
+    "nameJp": "ご飯のおかわり / 追加ライス",
+    "nameVi": "Cơm Thêm",
+    "category": "addons",
+    "price": 20,
+    "priceFormatted": "20.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAQZyseVh5rSv0ikNDOPcmHsjiq859ljgZGGdFKA-xlxu_UllgAdg_qci_N5kttQFQLZPys20hHfZQ32KPHm185sKo9sKGzLz76ZKfnkTMFLwhedHNGrFtkMlolS9EdsLVOfOrXvxYpUhYVfrVAQ86BrZEbp9x-GpYQuAWsG82VpSbww-gK7BoFnpP8QvMEf6CEmbHAiMew-MiJXT51ofpC_hDwJpmEO3JUXgvNceuOnsQbdGT6u1wpJQ",
+    "altText": "Extra bowl of warm steamed pearl rice",
+    "descriptionKr": "찰진 고품질 밥 한 공기 추가.",
+    "descriptionEn": "Extra bowl of freshly steamed rice.",
+    "descriptionVi": "Thêm một bát cơm trắng dẻo thơm.",
+    "descriptionJp": "炊きたてご飯の追加。",
+    "dishTypes": [
+      "addons"
+    ],
+    "tags": [
+      "Add-on"
+    ]
+  },
+  {
+    "id": "addon-macaroni-salad",
+    "nameEn": "Extra Macaroni",
+    "nameKr": "마카로니 추가",
+    "nameJp": "マカロニサラダ",
+    "nameVi": "Nui Thêm",
+    "category": "addons",
+    "price": 8,
+    "priceFormatted": "8.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB0JEY2qTMEv-dl-nKcCEZn9PCdFvqQbZ3CNgti1A4ZomzbQEWEl2wleYeF6RAslLG3UacZoG1e_KbttjTZQa0oCeHD-fJjtOW6gBK4_xBZfgxyX4246sAgQqd8B8y2cXUdwPtOBjF3Cv-cVtE5eHOKETrpGfreNxfSC3TKkqRLEIxMtrtpIRhgmw_7pJmp6GG-enmxHNpj25zOd6DxYGiwMosEX9q3ZS8DmFf4JmX6WbPO-16Z4crWMA",
+    "altText": "Extra macaroni salad side",
+    "descriptionKr": "고소하고 부드러운 마카로니 샐러드 추가.",
+    "descriptionEn": "Extra serving of sweet savory macaroni salad.",
+    "descriptionVi": "Thêm phần nui trộn mayonnaise béo ngậy.",
+    "descriptionJp": "マカロニサラダの追加。",
+    "dishTypes": [
+      "addons"
+    ],
+    "tags": [
+      "Add-on"
+    ]
+  },
+  {
+    "id": "addon-korean-tonkatsu-sauce",
+    "nameEn": "Korean Tonkatsu Sauce",
+    "nameKr": "경양식 돈까스 소스 추가",
+    "nameJp": "韓国風特製とんかつソース",
+    "nameVi": "Sốt Tonkatsu Kiểu Hàn",
+    "category": "sauces",
+    "price": 30,
+    "priceFormatted": "30.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB2RuDPR276Q7qeT6uI6vKTsBfNm-FJRJKBap87og95okoiYAHF9qwYsmGfEP2b1jJFh3z8xS2MuUXaOiQWxFXD1kRfq9d4gANlwTEHSTL5EZbvah254sFs3ngjEPVCWeoFfy9IUaSb7LXluyaIHOlR8lOzN9DWUwApVNCOfkmK2qOJ-Ou8d6sHPgcBiKH_FGQLIsWyXIYiz0xg_msb6fA7CRHHCDc1Lw0p53NqdTjpvhs7zPQfXDpPqg",
+    "altText": "Korean retro tonkatsu brown sauce",
+    "descriptionKr": "경양식 돈까스 특제 브라운 소스.",
+    "descriptionEn": "Classic Korean retro-style savory brown gravy sauce.",
+    "descriptionVi": "Nước sốt nâu thơm béo đậm đà kiểu Hàn cổ điển.",
+    "descriptionJp": "昔ながらの韓国風特製ブラウンソース。",
+    "dishTypes": [
+      "addons"
+    ],
+    "tags": [
+      "Sauce"
+    ]
+  },
+  {
+    "id": "addon-spicy-korean-tonkatsu-sauce",
+    "nameEn": "Spicy Korean Tonkatsu Sauce",
+    "nameKr": "매운 경양식 돈까스 소스 추가",
+    "nameJp": "韓国風旨辛とんかつソース",
+    "nameVi": "Sốt Cay Tonkatsu Kiểu Hàn",
+    "category": "sauces",
+    "price": 40,
+    "priceFormatted": "40.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQi1Rn5AFy_QBl64mhIss15T0f2bVE0lBHL7VI7lx4vKBfZ3I3dX1F0y39cGrIDptOfEd5TL_KKMU58trn-ZdJRHB8t_FeAHzFZ5ZXm8hH1cIG-L2YKTSxb-T3mPslzdsiIXhytix2e0KcWIF8u-l0IQ-uEg0e0jliaH8BfjwgP_yx2mykAtBkIlsduF-DEhTv_0Bh2SFZfxpZ4_iCJJmpWyep8ib1kOB96GM7Wq2i-PIXK97RAb8BXQ",
+    "altText": "Spicy Korean retro sauce",
+    "descriptionKr": "신라면보다 매콤한 특제 매운 경양식 소스.",
+    "descriptionEn": "Fiery spicy Korean retro sauce (hotter than Shin Ramyun).",
+    "descriptionVi": "Sốt cay đặc biệt kiểu Hàn nồng ấm kích thích vị giác.",
+    "descriptionJp": "辛ラーメンよりやや辛めの特製旨辛ソース。",
+    "isSpicy": true,
+    "spiceLevel": 2,
+    "dishTypes": [
+      "addons",
+      "spicy"
+    ],
+    "tags": [
+      "Sauce",
+      "Spicy"
+    ]
+  },
+  {
+    "id": "addon-curry-sauce-bowl",
+    "nameEn": "Curry Sauce",
+    "nameKr": "카레 소스",
+    "nameJp": "カレーソース",
+    "nameVi": "Sốt Cà Ri",
+    "category": "sauces",
+    "price": 90,
+    "priceFormatted": "90.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAJaMFyc8QQy2CcW7B5xQOOFB9ZVsFRstIICo0Nt-RhGmXX1pysDCJNPPWw1YTwJTWyfFyhmOcm1hGQ6G87ICstcnIcEZmrVhxlNo5qToISTEq1TuXG3KrW0I1j-HiQdKfDpZLHB2OCuehXNbttzaisLCIWFcWbWOK98vG4BiE5Esj1k-DqqcXDmRBXmo67W7q3O0uRYr_LjVTyVQ-Pq1-7-BLXSyvtphdsyokM9jCUZu7aRJaeyxXNHA",
+    "altText": "Rich slow simmered Japanese curry sauce",
+    "descriptionKr": "카라멜라이징 양파 베이스의 진한 수제 카레 소스.",
+    "descriptionEn": "Rich artisanal Japanese spiced curry sauce.",
+    "descriptionVi": "Sốt cà ri thủ công thơm ngậy cay nhẹ.",
+    "descriptionJp": "玉ねぎの甘みとスパイスが調和したカレーソース。",
+    "dishTypes": [
+      "addons"
+    ],
+    "tags": [
+      "Sauce"
+    ]
+  },
+  {
+    "id": "addon-tartar-sauce",
+    "nameEn": "Tartar Sauce",
+    "nameKr": "타르타르 소스",
+    "nameJp": "タルタルソース",
+    "nameVi": "Sốt Tartar",
+    "category": "sauces",
+    "price": 10,
+    "priceFormatted": "10.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB2RuDPR276Q7qeT6uI6vKTsBfNm-FJRJKBap87og95okoiYAHF9qwYsmGfEP2b1jJFh3z8xS2MuUXaOiQWxFXD1kRfq9d4gANlwTEHSTL5EZbvah254sFs3ngjEPVCWeoFfy9IUaSb7LXluyaIHOlR8lOzN9DWUwApVNCOfkmK2qOJ-Ou8d6sHPgcBiKH_FGQLIsWyXIYiz0xg_msb6fA7CRHHCDc1Lw0p53NqdTjpvhs7zPQfXDpPqg",
+    "altText": "Creamy homemade tartar sauce dip",
+    "descriptionKr": "고소하고 상큼한 수제 타르타르 소스.",
+    "descriptionEn": "Fresh creamy homemade tartar sauce.",
+    "descriptionVi": "Sốt tartar ngậy thơm chua nhẹ tự làm.",
+    "descriptionJp": "魚介やフライにぴったりの自家製タルタルソース。",
+    "dishTypes": [
+      "addons"
+    ],
+    "tags": [
+      "Sauce"
+    ]
+  },
+  {
+    "id": "addon-tonkatsu-sauce",
+    "nameEn": "Tonkatsu Sauce",
+    "nameKr": "돈까스 소스",
+    "nameJp": "特製とんかつソース",
+    "nameVi": "Sốt Tonkatsu",
+    "category": "sauces",
+    "price": 10,
+    "priceFormatted": "10.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB2RuDPR276Q7qeT6uI6vKTsBfNm-FJRJKBap87og95okoiYAHF9qwYsmGfEP2b1jJFh3z8xS2MuUXaOiQWxFXD1kRfq9d4gANlwTEHSTL5EZbvah254sFs3ngjEPVCWeoFfy9IUaSb7LXluyaIHOlR8lOzN9DWUwApVNCOfkmK2qOJ-Ou8d6sHPgcBiKH_FGQLIsWyXIYiz0xg_msb6fA7CRHHCDc1Lw0p53NqdTjpvhs7zPQfXDpPqg",
+    "altText": "Original tonkatsu fruit sauce dip",
+    "descriptionKr": "신선한 과일과 채소로 만든 오리지널 돈까스 소스.",
+    "descriptionEn": "Original Japanese tonkatsu fruit sauce.",
+    "descriptionVi": "Sốt tonkatsu truyền thống sánh quyện từ hoa quả.",
+    "descriptionJp": "フルーツと野菜の旨味が詰まったオリジナルとんかつソース。",
+    "dishTypes": [
+      "addons"
+    ],
+    "tags": [
+      "Sauce"
+    ]
+  },
+  {
+    "id": "addon-sweet-chili-sauce",
+    "nameEn": "Sweet Chili Sauce",
+    "nameKr": "칠리 소스",
+    "nameJp": "スイートチリソース",
+    "nameVi": "Sốt Cay Ngọt",
+    "category": "sauces",
+    "price": 10,
+    "priceFormatted": "10.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQi1Rn5AFy_QBl64mhIss15T0f2bVE0lBHL7VI7lx4vKBfZ3I3dX1F0y39cGrIDptOfEd5TL_KKMU58trn-ZdJRHB8t_FeAHzFZ5ZXm8hH1cIG-L2YKTSxb-T3mPslzdsiIXhytix2e0KcWIF8u-l0IQ-uEg0e0jliaH8BfjwgP_yx2mykAtBkIlsduF-DEhTv_0Bh2SFZfxpZ4_iCJJmpWyep8ib1kOB96GM7Wq2i-PIXK97RAb8BXQ",
+    "altText": "Sweet and mild chili dip",
+    "descriptionKr": "달콤하고 매콤한 칠리소스.",
+    "descriptionEn": "Sweet and mild spicy chili dipping sauce.",
+    "descriptionVi": "Sốt ớt ngọt cay dịu hài hòa.",
+    "descriptionJp": "甘辛くマイルドなスイートチリソース。",
+    "dishTypes": [
+      "addons"
+    ],
+    "tags": [
+      "Sauce"
+    ]
+  },
+  {
+    "id": "coca-cola-zero-sprite",
+    "nameEn": "Coke / Zero / Fanta / Sprite",
+    "nameKr": "코카콜라 / 제로 / 환타 / 스프라이트",
+    "nameJp": "コカ・コーラ / コカ・コーラ ゼロ / ファンタ / スプライト",
+    "nameVi": "Coke / Zero / Fanta / Sprite",
+    "category": "drinks",
+    "price": 25,
+    "priceFormatted": "25.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB0JEY2qTMEv-dl-nKcCEZn9PCdFvqQbZ3CNgti1A4ZomzbQEWEl2wleYeF6RAslLG3UacZoG1e_KbttjTZQa0oCeHD-fJjtOW6gBK4_xBZfgxyX4246sAgQqd8B8y2cXUdwPtOBjF3Cv-cVtE5eHOKETrpGfreNxfSC3TKkqRLEIxMtrtpIRhgmw_7pJmp6GG-enmxHNpj25zOd6DxYGiwMosEX9q3ZS8DmFf4JmX6WbPO-16Z4crWMA",
+    "altText": "Cold canned soda",
+    "descriptionKr": "시원한 캔 탄산음료 (얼음잔 제공).",
+    "descriptionEn": "Chilled canned soda served with fresh ice cup.",
+    "descriptionVi": "Nước ngọt lon ướp lạnh kèm ly đá viên.",
+    "descriptionJp": "冷えた缶ドリンク (氷グラス付き)。",
+    "dishTypes": [
+      "drinks"
+    ],
+    "tags": [
+      "Soda"
+    ]
+  },
+  {
+    "id": "dasani-pure-water",
+    "nameEn": "Dasani Water",
+    "nameKr": "다사니 생수",
+    "nameJp": "ダサニ ミネラルウォーター",
+    "nameVi": "Nước Suối Dasani",
+    "category": "drinks",
+    "price": 20,
+    "priceFormatted": "20.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB0JEY2qTMEv-dl-nKcCEZn9PCdFvqQbZ3CNgti1A4ZomzbQEWEl2wleYeF6RAslLG3UacZoG1e_KbttjTZQa0oCeHD-fJjtOW6gBK4_xBZfgxyX4246sAgQqd8B8y2cXUdwPtOBjF3Cv-cVtE5eHOKETrpGfreNxfSC3TKkqRLEIxMtrtpIRhgmw_7pJmp6GG-enmxHNpj25zOd6DxYGiwMosEX9q3ZS8DmFf4JmX6WbPO-16Z4crWMA",
+    "altText": "Dasani pure mineral water bottle",
+    "descriptionKr": "시원하고 깨끗한 생수.",
+    "descriptionEn": "Pure mineral bottled water.",
+    "descriptionVi": "Nước khoáng đóng chai tinh khiết.",
+    "descriptionJp": "清らかなミネラルウォーター。",
+    "dishTypes": [
+      "drinks"
+    ],
+    "tags": [
+      "Water"
+    ]
+  },
+  {
+    "id": "strawberry-kombucha",
+    "nameEn": "Strawberry Kombucha",
+    "nameKr": "콤부차 딸기",
+    "nameJp": "ストロベリーコンブチャ",
+    "nameVi": "Kombucha Dâu",
+    "category": "drinks",
+    "price": 65,
+    "priceFormatted": "65.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB0JEY2qTMEv-dl-nKcCEZn9PCdFvqQbZ3CNgti1A4ZomzbQEWEl2wleYeF6RAslLG3UacZoG1e_KbttjTZQa0oCeHD-fJjtOW6gBK4_xBZfgxyX4246sAgQqd8B8y2cXUdwPtOBjF3Cv-cVtE5eHOKETrpGfreNxfSC3TKkqRLEIxMtrtpIRhgmw_7pJmp6GG-enmxHNpj25zOd6DxYGiwMosEX9q3ZS8DmFf4JmX6WbPO-16Z4crWMA",
+    "altText": "Refreshing naturally fermented strawberry kombucha",
+    "descriptionKr": "달콤상큼한 딸기 풍미의 자연 발효 탄산 콤부차.",
+    "descriptionEn": "Naturally fermented strawberry sparkling kombucha tea.",
+    "descriptionVi": "Trà lên men Kombucha tự nhiên vị dâu thơm ngọt thanh mát.",
+    "descriptionJp": "自然発酵させた爽やかなストロベリー風味のコンブチャ。",
+    "dishTypes": [
+      "drinks"
+    ],
+    "tags": [
+      "Kombucha",
+      "Fermented"
+    ]
+  },
+  {
+    "id": "passion-fruit-kombucha",
+    "nameEn": "Passion Fruit Kombucha",
+    "nameKr": "콤부차 패션후르츠",
+    "nameJp": "パッションフルーツコンブチャ",
+    "nameVi": "Kombucha Chanh Dây",
+    "category": "drinks",
+    "price": 65,
+    "priceFormatted": "65.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB0JEY2qTMEv-dl-nKcCEZn9PCdFvqQbZ3CNgti1A4ZomzbQEWEl2wleYeF6RAslLG3UacZoG1e_KbttjTZQa0oCeHD-fJjtOW6gBK4_xBZfgxyX4246sAgQqd8B8y2cXUdwPtOBjF3Cv-cVtE5eHOKETrpGfreNxfSC3TKkqRLEIxMtrtpIRhgmw_7pJmp6GG-enmxHNpj25zOd6DxYGiwMosEX9q3ZS8DmFf4JmX6WbPO-16Z4crWMA",
+    "altText": "Passion fruit kombucha iced drink",
+    "descriptionKr": "새콤달콤한 패션후르츠 풍미의 자연 발효 콤부차.",
+    "descriptionEn": "Naturally fermented passion fruit sparkling kombucha tea.",
+    "descriptionVi": "Trà lên men Kombucha tự nhiên vị chanh dây chua ngọt sảng khoái.",
+    "descriptionJp": "トロピカルなパッションフルーツの酸味が広がるコンブチャ。",
+    "dishTypes": [
+      "drinks"
+    ],
+    "tags": [
+      "Kombucha",
+      "Fermented"
+    ]
+  },
+  {
+    "id": "unsweetened-fresh-juice",
+    "nameEn": "Unsweetened Guava / Pineapple / Mango / Orange Juice",
+    "nameKr": "무가당 구아바 / 파인애플 / 망고 / 오렌지 주스",
+    "nameJp": "無糖グアバジュース / パイナップル / マンゴー / オレンジ",
+    "nameVi": "Nước ép ổi / dứa / xoài / cam không đường",
+    "category": "drinks",
+    "price": 65,
+    "priceFormatted": "65.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB0JEY2qTMEv-dl-nKcCEZn9PCdFvqQbZ3CNgti1A4ZomzbQEWEl2wleYeF6RAslLG3UacZoG1e_KbttjTZQa0oCeHD-fJjtOW6gBK4_xBZfgxyX4246sAgQqd8B8y2cXUdwPtOBjF3Cv-cVtE5eHOKETrpGfreNxfSC3TKkqRLEIxMtrtpIRhgmw_7pJmp6GG-enmxHNpj25zOd6DxYGiwMosEX9q3ZS8DmFf4JmX6WbPO-16Z4crWMA",
+    "altText": "Unsweetened cold-pressed guava pineapple mango orange juice",
+    "descriptionKr": "설탕 없이 과일 본연의 맛을 살린 100% 무가당 생과일 주스.",
+    "descriptionEn": "100% freshly pressed unsweetened pure fruit juice.",
+    "descriptionVi": "Nước ép nguyên chất 100% không đường giữ trọn vị trái cây tươi.",
+    "descriptionJp": "砂糖不使用、果物本来の味わいを楽しめる100%無糖生ジュース。",
+    "dishTypes": [
+      "drinks"
+    ],
+    "tags": [
+      "100% Juice",
+      "No Sugar"
+    ]
+  },
+  {
+    "id": "soursop-nectar",
+    "nameEn": "Soursop Nectar",
+    "nameKr": "구아바노 넥타 (사워솝)",
+    "nameJp": "サワーソップジュース",
+    "nameVi": "Nước Mãng Cầu Xiêm",
+    "category": "drinks",
+    "price": 65,
+    "priceFormatted": "65.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB0JEY2qTMEv-dl-nKcCEZn9PCdFvqQbZ3CNgti1A4ZomzbQEWEl2wleYeF6RAslLG3UacZoG1e_KbttjTZQa0oCeHD-fJjtOW6gBK4_xBZfgxyX4246sAgQqd8B8y2cXUdwPtOBjF3Cv-cVtE5eHOKETrpGfreNxfSC3TKkqRLEIxMtrtpIRhgmw_7pJmp6GG-enmxHNpj25zOd6DxYGiwMosEX9q3ZS8DmFf4JmX6WbPO-16Z4crWMA",
+    "altText": "Soursop nectar drink",
+    "descriptionKr": "100% 신선한 과일 착즙 구아바노 넥타.",
+    "descriptionEn": "100% freshly squeezed soursop nectar.",
+    "descriptionVi": "100% nguyên chất vỏ vắt từ trái tươi.",
+    "descriptionJp": "100%天然・新鮮な果実を使用したサワーソップジュース。",
+    "dishTypes": [
+      "drinks"
+    ],
+    "tags": [
+      "100% Freshly Squeezed"
+    ]
+  },
+  {
+    "id": "sapporo-draft-beer",
+    "nameEn": "Sapporo Draft Beer",
+    "nameKr": "삿포로 생맥주",
+    "nameJp": "サッポロ生ビール",
+    "nameVi": "Bia Tươi Sapporo",
+    "category": "drinks",
+    "price": 55,
+    "priceFormatted": "55.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB0JEY2qTMEv-dl-nKcCEZn9PCdFvqQbZ3CNgti1A4ZomzbQEWEl2wleYeF6RAslLG3UacZoG1e_KbttjTZQa0oCeHD-fJjtOW6gBK4_xBZfgxyX4246sAgQqd8B8y2cXUdwPtOBjF3Cv-cVtE5eHOKETrpGfreNxfSC3TKkqRLEIxMtrtpIRhgmw_7pJmp6GG-enmxHNpj25zOd6DxYGiwMosEX9q3ZS8DmFf4JmX6WbPO-16Z4crWMA",
+    "altText": "Chilled mug of Sapporo draft beer",
+    "descriptionKr": "부드럽고 풍부한 거품의 삿포로 생맥주.",
+    "descriptionEn": "Fresh and crisp Japanese Sapporo draft beer.",
+    "descriptionVi": "Bia tươi Sapporo mát lạnh bọt mịn đậm đà hương vị lúa mạch.",
+    "descriptionJp": "キリッとした喉越しと豊かな泡のサッポロ生ビール。",
+    "dishTypes": [
+      "drinks"
+    ],
+    "tags": [
+      "Draft Beer"
+    ]
+  },
+  {
+    "id": "dr-pepper",
+    "nameEn": "Dr Pepper",
+    "nameKr": "닥터페퍼",
+    "nameJp": "ドクターペッパー",
+    "nameVi": "Nước Ngọt Dr Pepper",
+    "category": "drinks",
+    "price": 55,
+    "priceFormatted": "55.000 VND",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB0JEY2qTMEv-dl-nKcCEZn9PCdFvqQbZ3CNgti1A4ZomzbQEWEl2wleYeF6RAslLG3UacZoG1e_KbttjTZQa0oCeHD-fJjtOW6gBK4_xBZfgxyX4246sAgQqd8B8y2cXUdwPtOBjF3Cv-cVtE5eHOKETrpGfreNxfSC3TKkqRLEIxMtrtpIRhgmw_7pJmp6GG-enmxHNpj25zOd6DxYGiwMosEX9q3ZS8DmFf4JmX6WbPO-16Z4crWMA",
+    "altText": "Original Dr Pepper canned soda",
+    "descriptionKr": "23가지 풍미가 조화로운 오리지널 닥터페퍼.",
+    "descriptionEn": "Original authentic Dr Pepper with ice.",
+    "descriptionVi": "Nước ngọt Dr Pepper vị độc đáo truyền thống kèm đá lạnh.",
+    "descriptionJp": "独特の23種類のフレーバーが楽しめるドクターペッパー。",
+    "dishTypes": [
+      "drinks"
+    ],
+    "tags": [
+      "Soda"
+    ]
   }
 ];
 

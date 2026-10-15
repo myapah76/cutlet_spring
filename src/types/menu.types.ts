@@ -1,4 +1,4 @@
-export type DishCategory = 'japanese' | 'korean' | 'curry' | 'noodles' | 'addons' | 'drinks';
+export type DishCategory = 'japanese' | 'korean' | 'curry' | 'noodles' | 'addons' | 'sauces' | 'drinks';
 
 export interface MenuSizeOption {
   label: string;
@@ -9,8 +9,9 @@ export interface MenuItem {
   id: string;
   nameEn: string;
   nameKr: string;
+  nameKrSubtitle?: string;
   nameJp?: string;
-  nameVi: string;
+  nameVi?: string;
   category: DishCategory;
   price: number; // in thousands VND, e.g. 200 = 200.000 VND
   priceFormatted?: string;
