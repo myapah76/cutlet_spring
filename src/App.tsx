@@ -28,7 +28,7 @@ export default function App() {
       />
 
       {/* Main Content View Container */}
-      <main className="w-full pt-20 flex-1">
+      <main className="w-full pt-14 sm:pt-20 flex-1">
         {currentView === 'home' && (
           <HomeScreen
             setCurrentView={setCurrentView}
