@@ -126,9 +126,9 @@ export const DishCard: React.FC<DishCardProps> = ({ item, isFeatured }) => {
         </div>
       </div>
 
-      {/* 4-Language Description: Hàn -> Anh -> Việt -> Nhật */}
+      {/* 4-Language Description: Hàn -> Anh -> Việt -> Nhật (Hidden on mobile/phone) */}
       {isFeatured ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-xs leading-relaxed pt-3">
+        <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-xs leading-relaxed pt-3">
           {item.descriptionKr && (
             <div className="font-kr-serif text-[#1b1c1a] text-xs leading-relaxed text-left">
               {item.descriptionKr}
@@ -151,7 +151,7 @@ export const DishCard: React.FC<DishCardProps> = ({ item, isFeatured }) => {
           )}
         </div>
       ) : (
-        <div className="space-y-1.5 text-xs leading-relaxed pt-3">
+        <div className="hidden md:block space-y-1.5 text-xs leading-relaxed pt-3">
           {item.descriptionKr && (
             <div className="font-kr-serif text-[#1b1c1a] text-xs leading-relaxed text-left">
               {item.descriptionKr}
