@@ -18,9 +18,15 @@ export const MasterpieceSection: React.FC<MasterpieceSectionProps> = ({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Large Dish Feature Photography (7 Cols) */}
             <div className="lg:col-span-7 flex flex-col">
-              <div className="relative w-full h-[360px] sm:h-[420px] lg:h-[480px] rounded-xl overflow-hidden bg-[#efeeeb] shadow-inner group flex items-center justify-center">
-                <div className="flex items-center justify-center text-[#c2bfb8] select-none">
-                  <span className="material-symbols-outlined text-5xl sm:text-6xl opacity-40">restaurant</span>
+              <div className="relative w-full h-[360px] sm:h-[420px] lg:h-[480px] rounded-xl overflow-hidden bg-[#f3f1ec] border border-[#eae6df] shadow-inner group flex flex-col items-center justify-center select-none">
+                <div className="flex flex-col items-center justify-center gap-2 text-[#8f6f6c]">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border-2 border-[#d5cfc5] border-t-[#af101a] animate-spin" />
+                  <span className="font-menu-bar text-xs sm:text-sm uppercase tracking-widest font-bold text-[#8f6f6c]">
+                    Photo Loading...
+                  </span>
+                  <span className="font-kr-serif text-[11px] sm:text-xs text-[#a89d91]">
+                    사진 준비 중
+                  </span>
                 </div>
                 <div className="absolute top-4 left-4 bg-[#af101a] text-white px-3 py-1.5 rounded-full font-label-md text-xs tracking-wider uppercase flex items-center gap-1.5 shadow">
                   <span className="material-symbols-outlined text-[16px]">grade</span>
@@ -34,8 +40,8 @@ export const MasterpieceSection: React.FC<MasterpieceSectionProps> = ({
               {/* Inset Miniature Dish Gallery (Sides & Components) */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4">
                 <div className="bg-[#f5f3f0] p-2.5 rounded-lg flex items-center gap-2 border border-[#eae8e5]">
-                  <div className="w-10 h-10 rounded-full bg-[#efeeeb] overflow-hidden shrink-0 border border-[#eae8e5] flex items-center justify-center text-[#c2bfb8]">
-                    <span className="material-symbols-outlined text-[18px] opacity-40">soup_kitchen</span>
+                  <div className="w-10 h-10 rounded-full bg-[#f3f1ec] overflow-hidden shrink-0 border border-[#eae6df] flex items-center justify-center">
+                    <div className="w-4 h-4 rounded-full border-2 border-[#d5cfc5] border-t-[#af101a] animate-spin" />
                   </div>
                   <div className="truncate">
                     <span className="font-label-md text-[10px] text-[#585757] block truncate">SOUP</span>
@@ -44,8 +50,8 @@ export const MasterpieceSection: React.FC<MasterpieceSectionProps> = ({
                 </div>
 
                 <div className="bg-[#f5f3f0] p-2.5 rounded-lg flex items-center gap-2 border border-[#eae8e5]">
-                  <div className="w-10 h-10 rounded-full bg-[#efeeeb] overflow-hidden shrink-0 border border-[#eae8e5] flex items-center justify-center text-[#c2bfb8]">
-                    <span className="material-symbols-outlined text-[18px] opacity-40">rice_bowl</span>
+                  <div className="w-10 h-10 rounded-full bg-[#f3f1ec] overflow-hidden shrink-0 border border-[#eae6df] flex items-center justify-center">
+                    <div className="w-4 h-4 rounded-full border-2 border-[#d5cfc5] border-t-[#af101a] animate-spin" />
                   </div>
                   <div className="truncate">
                     <span className="font-label-md text-[10px] text-[#585757] block truncate">GRAIN</span>
@@ -54,8 +60,8 @@ export const MasterpieceSection: React.FC<MasterpieceSectionProps> = ({
                 </div>
 
                 <div className="bg-[#f5f3f0] p-2.5 rounded-lg flex items-center gap-2 border border-[#eae8e5]">
-                  <div className="w-10 h-10 rounded-full bg-[#efeeeb] overflow-hidden shrink-0 border border-[#eae8e5] flex items-center justify-center text-[#c2bfb8]">
-                    <span className="material-symbols-outlined text-[18px] opacity-40">sauce</span>
+                  <div className="w-10 h-10 rounded-full bg-[#f3f1ec] overflow-hidden shrink-0 border border-[#eae8e5] flex items-center justify-center">
+                    <div className="w-4 h-4 rounded-full border-2 border-[#d5cfc5] border-t-[#af101a] animate-spin" />
                   </div>
                   <div className="truncate">
                     <span className="font-label-md text-[10px] text-[#585757] block truncate">SAUCE</span>
@@ -64,8 +70,8 @@ export const MasterpieceSection: React.FC<MasterpieceSectionProps> = ({
                 </div>
 
                 <div className="bg-[#f5f3f0] p-2.5 rounded-lg flex items-center gap-2 border border-[#eae8e5]">
-                  <div className="w-10 h-10 rounded-full bg-[#efeeeb] overflow-hidden shrink-0 border border-[#eae8e5] flex items-center justify-center text-[#c2bfb8]">
-                    <span className="material-symbols-outlined text-[18px] opacity-40">eco</span>
+                  <div className="w-10 h-10 rounded-full bg-[#f3f1ec] overflow-hidden shrink-0 border border-[#eae6df] flex items-center justify-center">
+                    <div className="w-4 h-4 rounded-full border-2 border-[#d5cfc5] border-t-[#af101a] animate-spin" />
                   </div>
                   <div className="truncate">
                     <span className="font-label-md text-[10px] text-[#585757] block truncate">BANCHAN</span>

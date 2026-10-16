@@ -95,10 +95,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
             {/* Hero Dish Visual Frame */}
             <div className="relative w-full max-w-md p-2 overflow-hidden">
-              {/* Cutlet Hero Frame (Image hidden, layout frame preserved) */}
-              <div className="relative w-full h-[440px] sm:h-[480px] rounded-xl overflow-hidden bg-[#efeeeb] group flex items-center justify-center">
-                <div className="flex items-center justify-center text-[#c2bfb8] select-none">
-                  <span className="material-symbols-outlined text-5xl sm:text-6xl opacity-40">restaurant</span>
+              {/* Cutlet Hero Frame - Photo Loading placeholder matching menu */}
+              <div className="relative w-full h-[440px] sm:h-[480px] rounded-xl overflow-hidden bg-[#f3f1ec] border border-[#eae6df] group flex flex-col items-center justify-center select-none">
+                <div className="flex flex-col items-center justify-center gap-2 text-[#8f6f6c]">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border-2 border-[#d5cfc5] border-t-[#af101a] animate-spin" />
+                  <span className="font-menu-bar text-xs sm:text-sm uppercase tracking-widest font-bold text-[#8f6f6c]">
+                    Photo Loading...
+                  </span>
+                  <span className="font-kr-serif text-[11px] sm:text-xs text-[#a89d91]">
+                    사진 준비 중
+                  </span>
                 </div>
 
                 {/* Overlaid Editorial Kanji/Hangul Stamp */}

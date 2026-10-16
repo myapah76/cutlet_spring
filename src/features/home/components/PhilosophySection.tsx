@@ -25,9 +25,17 @@ export const PhilosophySection: React.FC = () => {
           {/* Pillar 1: Chilled Aged Pork */}
           <div className="flex flex-col justify-between space-y-4">
             <div>
-              {/* Top Image Frame (Image hidden, layout frame preserved) */}
-              <div className="w-full h-44 rounded-xl overflow-hidden bg-[#efeeeb] flex items-center justify-center mb-4 text-[#c2bfb8] select-none shrink-0">
-                <span className="material-symbols-outlined text-3xl opacity-40">restaurant</span>
+              {/* Top Image Frame - Photo Loading placeholder matching menu */}
+              <div className="w-full h-44 rounded-xl overflow-hidden bg-[#f3f1ec] border border-[#eae6df] flex flex-col items-center justify-center mb-4 select-none shrink-0">
+                <div className="flex flex-col items-center justify-center gap-1.5 text-[#8f6f6c]">
+                  <div className="w-6 h-6 rounded-full border-2 border-[#d5cfc5] border-t-[#af101a] animate-spin" />
+                  <span className="font-menu-bar text-[10px] uppercase tracking-widest font-bold text-[#8f6f6c]">
+                    Photo Loading...
+                  </span>
+                  <span className="font-kr-serif text-[10px] text-[#a89d91]">
+                    사진 준비 중
+                  </span>
+                </div>
               </div>
               <div className="flex items-start justify-between mb-2">
                 <div>
@@ -46,9 +54,17 @@ export const PhilosophySection: React.FC = () => {
           {/* Pillar 2: Fresh Bakery Panko */}
           <div className="flex flex-col justify-between space-y-4">
             <div>
-              {/* Top Image Frame (Image hidden, layout frame preserved) */}
-              <div className="w-full h-44 rounded-xl overflow-hidden bg-[#efeeeb] flex items-center justify-center mb-4 text-[#c2bfb8] select-none shrink-0">
-                <span className="material-symbols-outlined text-3xl opacity-40">bakery_dining</span>
+              {/* Top Image Frame - Photo Loading placeholder matching menu */}
+              <div className="w-full h-44 rounded-xl overflow-hidden bg-[#f3f1ec] border border-[#eae6df] flex flex-col items-center justify-center mb-4 select-none shrink-0">
+                <div className="flex flex-col items-center justify-center gap-1.5 text-[#8f6f6c]">
+                  <div className="w-6 h-6 rounded-full border-2 border-[#d5cfc5] border-t-[#af101a] animate-spin" />
+                  <span className="font-menu-bar text-[10px] uppercase tracking-widest font-bold text-[#8f6f6c]">
+                    Photo Loading...
+                  </span>
+                  <span className="font-kr-serif text-[10px] text-[#a89d91]">
+                    사진 준비 중
+                  </span>
+                </div>
               </div>
               <div className="flex items-start justify-between mb-2">
                 <div>
@@ -67,9 +83,17 @@ export const PhilosophySection: React.FC = () => {
           {/* Pillar 3: Homemade Demi-Glace Sauce */}
           <div className="flex flex-col justify-between space-y-4">
             <div>
-              {/* Top Image Frame (Image hidden, layout frame preserved) */}
-              <div className="w-full h-44 rounded-xl overflow-hidden bg-[#efeeeb] flex items-center justify-center mb-4 text-[#c2bfb8] select-none shrink-0">
-                <span className="material-symbols-outlined text-3xl opacity-40">soup_kitchen</span>
+              {/* Top Image Frame - Photo Loading placeholder matching menu */}
+              <div className="w-full h-44 rounded-xl overflow-hidden bg-[#f3f1ec] border border-[#eae6df] flex flex-col items-center justify-center mb-4 select-none shrink-0">
+                <div className="flex flex-col items-center justify-center gap-1.5 text-[#8f6f6c]">
+                  <div className="w-6 h-6 rounded-full border-2 border-[#d5cfc5] border-t-[#af101a] animate-spin" />
+                  <span className="font-menu-bar text-[10px] uppercase tracking-widest font-bold text-[#8f6f6c]">
+                    Photo Loading...
+                  </span>
+                  <span className="font-kr-serif text-[10px] text-[#a89d91]">
+                    사진 준비 중
+                  </span>
+                </div>
               </div>
               <div className="flex items-start justify-between mb-2">
                 <div>
@@ -88,9 +112,17 @@ export const PhilosophySection: React.FC = () => {
           {/* Pillar 4: Precision 0.8mm Mountain Cabbage */}
           <div className="flex flex-col justify-between space-y-4">
             <div>
-              {/* Top Image Frame (Image hidden, layout frame preserved) */}
-              <div className="w-full h-44 rounded-xl overflow-hidden bg-[#efeeeb] flex items-center justify-center mb-4 text-[#c2bfb8] select-none shrink-0">
-                <span className="material-symbols-outlined text-3xl opacity-40">restaurant</span>
+              {/* Top Image Frame - Photo Loading placeholder matching menu */}
+              <div className="w-full h-44 rounded-xl overflow-hidden bg-[#f3f1ec] border border-[#eae6df] flex flex-col items-center justify-center mb-4 select-none shrink-0">
+                <div className="flex flex-col items-center justify-center gap-1.5 text-[#8f6f6c]">
+                  <div className="w-6 h-6 rounded-full border-2 border-[#d5cfc5] border-t-[#af101a] animate-spin" />
+                  <span className="font-menu-bar text-[10px] uppercase tracking-widest font-bold text-[#8f6f6c]">
+                    Photo Loading...
+                  </span>
+                  <span className="font-kr-serif text-[10px] text-[#a89d91]">
+                    사진 준비 중
+                  </span>
+                </div>
               </div>
               <div className="flex items-start justify-between mb-2">
                 <div>
