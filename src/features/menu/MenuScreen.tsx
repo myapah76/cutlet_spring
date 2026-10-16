@@ -130,8 +130,8 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
   return (
     <div className="flex flex-col w-full pb-16">
       {/* Main Body Grid: Sticky Left Category Index & Right Food Spreads */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-8 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12">
           {/* LEFT SIDEBAR: Sticky Category Navigation */}
           <MenuSidebar
             activeCategory={activeCategory}
@@ -140,7 +140,7 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
           />
 
           {/* RIGHT MAIN CONTENT: The Dish Catalog */}
-          <main className="lg:col-span-9 space-y-14">
+          <main className="lg:col-span-9 xl:col-span-10 space-y-16">
             {/* 01. JAPANESE TONKATSU */}
             <MenuSection
               id="cat-japanese"
@@ -148,7 +148,7 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
               subtitleKr="일본식 정통 카츠 • Deep golden coarse panko fried at precision dual temperatures"
               note="All sets include cabbage, miso broth, pickles & pearl rice"
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
                 {japaneseItems.map((item) => (
                   <DishCard
                     key={item.id}
@@ -166,7 +166,7 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
               subtitleKr="경양식 돈까스 • 1980s Retro Seoul style thin-pounded crispy pork cutlets"
               note="Served with homemade cream corn soup, rice & spicy kimchi"
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
                 {koreanItems.map((item) => (
                   <DishCard
                     key={item.id}
@@ -182,7 +182,7 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
               titleEn="Curry Set"
               subtitleKr="수제 카레라이스 • 48-hour slow-simmered caramelized onion Japanese spiced curry"
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
                 {curryItems.map((item) => (
                   <DishCard
                     key={item.id}
@@ -198,7 +198,7 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
               titleEn="Noodles"
               subtitleKr="면 요리 • Chilled buckwheat soba & Sanuki udon with savory bonito dashi broth"
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
                 {noodleItems.map((item) => (
                   <DishCard
                     key={item.id}
@@ -214,7 +214,7 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
               titleEn="Add-ons"
               subtitleKr="사이드 및 추가 메뉴 • Individual katsu pieces, extra soup, warm pearl rice & sides"
             >
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-5">
                 {addonItems.map((item) => (
                   <CompactItemCard
                     key={item.id}
@@ -230,7 +230,7 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
               titleEn="Sauces"
               subtitleKr="소스 추가 • House-made tonkatsu sauces, spicy retro sauce, curry & artisanal dips"
             >
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-5">
                 {sauceItems.map((item) => (
                   <CompactItemCard
                     key={item.id}
@@ -246,7 +246,7 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
               titleEn="Drinks"
               subtitleKr="음료 및 주류 • Craft beer, chilled sakes, Japanese sodas & mineral waters"
             >
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-5">
                 {drinkItems.map((item) => (
                   <CompactItemCard
                     key={item.id}

@@ -221,12 +221,16 @@ export const OrderPadDrawer: React.FC<OrderPadDrawerProps> = ({
                       className="p-3.5 bg-[#f5f3f0] rounded-xl border border-[#eae8e5] space-y-2 hover:border-[#8f6f6c]/40 transition-colors"
                     >
                       <div className="flex gap-3">
-                        <div className="w-16 h-16 rounded-lg overflow-hidden bg-white shrink-0 border border-[#eae8e5]">
-                          <img
-                            src={item.menuItem.image}
-                            alt={item.menuItem.altText}
-                            className="w-full h-full object-cover"
-                          />
+                        <div className="w-16 h-16 rounded-lg overflow-hidden bg-[#efeeeb] shrink-0 border border-[#eae8e5] flex items-center justify-center">
+                          {item.menuItem.image && item.menuItem.image.startsWith('/images/menu/') ? (
+                            <img
+                              src={item.menuItem.image}
+                              alt={item.menuItem.altText}
+                              className="w-full h-full object-cover"
+                            />
+                          ) : (
+                            <span className="material-symbols-outlined text-xl text-[#c2bfb8] opacity-50 select-none">restaurant</span>
+                          )}
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex items-start justify-between">

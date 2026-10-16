@@ -6,67 +6,87 @@ interface CompactItemCardProps {
 }
 
 export const CompactItemCard: React.FC<CompactItemCardProps> = ({ item }) => {
-  return (
-    <div className="flex flex-col justify-between space-y-3 h-full pb-2">
-      {/* Top Image Frame (Image hidden, layout frame preserved) */}
-      <div className="relative w-full h-36 sm:h-44 rounded-xl overflow-hidden bg-[#efeeeb] group shrink-0 flex items-center justify-center">
-        <div className="flex items-center justify-center text-[#c2bfb8] select-none">
-          <span className="material-symbols-outlined text-2xl sm:text-3xl opacity-40">restaurant</span>
-        </div>
-        {item.tags && item.tags.length > 0 && (
-          <div className="absolute top-2.5 left-2.5 bg-black/75 backdrop-blur-xs text-white font-label-md text-[10px] uppercase px-2 py-0.5 rounded font-semibold tracking-wider">
-            {item.tags[0]}
-          </div>
-        )}
-        {item.isBestSeller && (
-          <div className="absolute top-2.5 right-2.5 bg-[#feae2c] text-[#291800] font-label-md text-[10px] uppercase px-2 py-0.5 rounded font-bold shadow-xs">
-            Best
-          </div>
-        )}
-      </div>
+  const hasImage = Boolean(item.image && item.image.startsWith('/images/menu/'));
 
-      {/* Multilingual Titles in order: Hàn -> Anh -> Việt -> Nhật */}
-      <div className="space-y-1 flex-1">
-        {/* 1. Korean Primary Title */}
-        {item.nameKr && (
-          <div>
-            <h4 className="font-kr-serif text-base sm:text-lg text-[#1b1c1a] font-bold tracking-tight leading-snug">
-              {item.nameKr}
-            </h4>
-            {item.nameKrSubtitle && (
-              <div className="text-[11px] text-[#585757] font-semibold tracking-normal">
-                {item.nameKrSubtitle}
+  return (
+    <div className="group flex flex-col justify-between h-full pb-3 cursor-pointer">
+      <div className="space-y-2.5">
+        {/* Top Image Frame - Locked Aspect Ratio & No Radius */}
+        {hasImage ? (
+          <div className="relative w-full aspect-[4/3] rounded-none overflow-hidden bg-[#efeeeb] shrink-0 border border-[#eae8e5]/80">
+            <img
+              src={item.image}
+              alt={item.nameEn || item.nameKr}
+              className="w-full h-full object-cover rounded-none transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+              style={{ objectPosition: item.imagePosition || 'center 60%' }}
+              loading="lazy"
+              onError={(e) => {
+                e.currentTarget.style.display = 'none';
+              }}
+            />
+            {item.tags && item.tags.length > 0 && (
+              <div className="absolute top-2 left-2 bg-black/75 backdrop-blur-xs text-white font-label-md text-[10px] uppercase px-2 py-0.5 rounded-none font-semibold tracking-wider">
+                {item.tags[0]}
+              </div>
+            )}
+            {item.isBestSeller && (
+              <div className="absolute top-2 right-2 bg-[#feae2c] text-[#291800] font-label-md text-[10px] uppercase px-2 py-0.5 rounded-none font-bold shadow-xs">
+                Best
+              </div>
+            )}
+          </div>
+        ) : (
+          /* Locked Loading Placeholder - Guarantees horizontal title alignment across the row */
+          <div className="relative w-full aspect-[4/3] rounded-none overflow-hidden bg-[#f3f1ec] shrink-0 border border-[#eae6df] flex flex-col items-center justify-center select-none">
+            <div className="flex flex-col items-center justify-center gap-1.5 text-[#8f6f6c]">
+              <div className="w-5 h-5 rounded-full border-2 border-[#d5cfc5] border-t-[#af101a] animate-spin" />
+              <span className="font-menu-bar text-[10px] uppercase tracking-widest font-bold text-[#8f6f6c]">
+                Photo Loading...
+              </span>
+            </div>
+
+            {item.tags && item.tags.length > 0 && (
+              <div className="absolute top-2 left-2 bg-black/75 backdrop-blur-xs text-white font-label-md text-[10px] uppercase px-2 py-0.5 rounded-none font-semibold tracking-wider">
+                {item.tags[0]}
+              </div>
+            )}
+            {item.isBestSeller && (
+              <div className="absolute top-2 right-2 bg-[#feae2c] text-[#291800] font-label-md text-[10px] uppercase px-2 py-0.5 rounded-none font-bold shadow-xs">
+                Best
               </div>
             )}
           </div>
         )}
 
-        {/* 2. English Subtitle */}
-        {item.nameEn && (
-          <div className="font-menu-title text-xs sm:text-sm text-[#1b1c1a] font-bold uppercase tracking-tight">
-            {item.nameEn}
-          </div>
-        )}
-
-        {/* 3. Vietnamese Translation */}
-        {item.nameVi && (
-          <div className="font-body-md text-xs text-[#8f6f6c] italic">
-            {item.nameVi}
-          </div>
-        )}
-
-        {/* 4. Japanese Subtitle */}
-        {item.nameJp && (
-          <div className="font-jp-serif text-xs text-[#585757]">
-            {item.nameJp}
-          </div>
-        )}
+        {/* Multilingual Titles */}
+        <div className="space-y-0.5">
+          {item.nameKr && (
+            <h4 className="font-kr-serif text-base text-[#1b1c1a] font-bold tracking-tight leading-snug group-hover:text-[#af101a] transition-colors">
+              {item.nameKr}
+            </h4>
+          )}
+          {item.nameEn && (
+            <div className="font-menu-title text-xs text-[#1b1c1a] font-bold uppercase tracking-tight">
+              {item.nameEn}
+            </div>
+          )}
+          {item.nameVi && (
+            <div className="font-body-md text-xs text-[#8f6f6c] italic">
+              {item.nameVi}
+            </div>
+          )}
+          {item.nameJp && (
+            <div className="font-jp-serif text-xs text-[#585757]">
+              {item.nameJp}
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Card Footer: Price */}
-      <div className="pt-1 flex items-baseline justify-end">
+      <div className="pt-2 mt-2 flex items-baseline justify-end border-t border-[#eae8e5]/60">
         <div className="text-right">
-          <span className="font-price-numeral text-2xl sm:text-3xl text-[#af101a] font-black leading-none">
+          <span className="font-price-numeral text-xl sm:text-2xl text-[#af101a] font-black leading-none">
             {item.price}.
           </span>
         </div>

@@ -7,47 +7,114 @@ interface DishCardProps {
   isFeatured?: boolean;
 }
 
-export const DishCard: React.FC<DishCardProps> = ({ item, isFeatured }) => {
+// Focal point alignments shifted down 25% as requested to frame the main dish in front
+const ITEM_OBJECT_POSITIONS: Record<string, string> = {
+  'half-and-half-pork-cutlet': 'center 63%',
+  'pork-tenderloin-cutlet-set': 'center 63%',
+  'all-star-atelier-set': 'center 60%',
+  'cheese-king-katsu': 'center 60%',
+  'korean-style-retro-tonkatsu': 'center 60%',
+  'pork-tenderloin-katsu-curry-rice': 'center 60%',
+  'jjolmyeon-set-with-cutlet': 'center 60%',
+};
+
+export const DishCard: React.FC<DishCardProps> = ({ item, isFeatured, onSelectItem }) => {
+  const hasImage = Boolean(item.image && item.image.startsWith('/images/menu/'));
+  const objectPosition = item.imagePosition || ITEM_OBJECT_POSITIONS[item.id] || 'center 60%';
+
   return (
     <div
-      className={`flex flex-col h-full pb-4 ${
+      onClick={() => onSelectItem?.(item)}
+      className={`group flex flex-col justify-between h-full pb-4 cursor-pointer ${
         isFeatured ? 'col-span-1 md:col-span-2' : ''
       }`}
     >
-      {/* Top Header Group: Image Frame + Titles & Price (prevents title drift from sibling height stretch) */}
       <div className="space-y-4">
-        {/* Top Image Frame (Image hidden, layout frame preserved) */}
-        <div
-          className={`relative w-full ${
-            isFeatured ? 'h-64 sm:h-80' : 'h-48 sm:h-56'
-          } rounded-xl overflow-hidden bg-[#efeeeb] group flex items-center justify-center shrink-0`}
-        >
-          <div className="flex items-center justify-center text-[#c2bfb8] select-none">
-            <span className="material-symbols-outlined text-3xl sm:text-4xl opacity-40">restaurant</span>
-          </div>
+        {/* Top Image Frame - Locked Height & Aspect Ratio across all cards, NO RADIUS */}
+        {hasImage ? (
+          <div
+            className={`relative w-full ${
+              isFeatured
+                ? 'h-72 sm:h-84 md:h-[400px]'
+                : 'aspect-[4/3]'
+            } rounded-none overflow-hidden bg-[#efeeeb] shrink-0 border border-[#eae8e5]/80`}
+          >
+            <img
+              src={item.image}
+              alt={item.nameEn || item.nameKr}
+              className="w-full h-full object-cover rounded-none transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+              style={{ objectPosition }}
+              loading="lazy"
+              onError={(e) => {
+                e.currentTarget.style.display = 'none';
+              }}
+            />
 
-          {item.isChefSignature && (
-            <div className="absolute top-3 left-3 bg-[#af101a] text-white font-label-md text-xs uppercase px-3 py-1 rounded tracking-wider font-bold shadow">
-              Chef Signature
+            {item.isChefSignature && (
+              <div className="absolute top-3 left-3 bg-[#af101a] text-white font-label-md text-xs uppercase px-3 py-1 tracking-wider font-bold shadow-xs rounded-none">
+                Chef Signature
+              </div>
+            )}
+            {item.isBestSeller && !item.isChefSignature && (
+              <div className="absolute top-3 left-3 bg-[#feae2c] text-[#291800] font-label-md text-xs uppercase px-3 py-1 tracking-wider font-bold shadow-xs rounded-none">
+                Best Seller
+              </div>
+            )}
+            {item.isLimited && (
+              <div className="absolute top-3 right-3 bg-[#1b1c1a] text-white font-label-md text-[10px] uppercase px-2.5 py-1 font-bold shadow-xs rounded-none">
+                Limited Daily Batch
+              </div>
+            )}
+            {item.prepTimeMinutes && (
+              <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 text-[11px] font-semibold text-[#1b1c1a] shadow-xs rounded-none flex items-center gap-1">
+                <span className="material-symbols-outlined text-[14px] text-[#835500]">schedule</span>
+                <span>{item.prepTimeMinutes} min prep</span>
+              </div>
+            )}
+          </div>
+        ) : (
+          /* Locked Loading Placeholder for dishes without an image - guarantees titles stay horizontally aligned */
+          <div
+            className={`relative w-full ${
+              isFeatured
+                ? 'h-72 sm:h-84 md:h-[400px]'
+                : 'aspect-[4/3]'
+            } rounded-none overflow-hidden bg-[#f3f1ec] shrink-0 border border-[#eae6df] flex flex-col items-center justify-center select-none`}
+          >
+            {/* Shimmer pulse effect */}
+            <div className="flex flex-col items-center justify-center gap-2.5 text-[#8f6f6c]">
+              <div className="w-8 h-8 rounded-full border-2 border-[#d5cfc5] border-t-[#af101a] animate-spin" />
+              <span className="font-menu-bar text-[11px] sm:text-xs uppercase tracking-widest font-bold text-[#8f6f6c]">
+                Photo Loading...
+              </span>
+              <span className="font-kr-serif text-[10px] text-[#a89d91]">
+                사진 준비 중
+              </span>
             </div>
-          )}
-          {item.isBestSeller && !item.isChefSignature && (
-            <div className="absolute top-3 left-3 bg-[#feae2c] text-[#291800] font-label-md text-xs uppercase px-3 py-1 rounded tracking-wider font-bold shadow">
-              Best Seller
-            </div>
-          )}
-          {item.isLimited && (
-            <div className="absolute top-3 right-3 bg-[#1b1c1a] text-white font-label-md text-[10px] uppercase px-2.5 py-1 rounded font-bold shadow">
-              Limited Daily Batch
-            </div>
-          )}
-          {item.prepTimeMinutes && (
-            <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 rounded-md text-[11px] font-semibold text-[#1b1c1a] shadow-xs flex items-center gap-1">
-              <span className="material-symbols-outlined text-[14px] text-[#835500]">schedule</span>
-              <span>{item.prepTimeMinutes} min prep</span>
-            </div>
-          )}
-        </div>
+
+            {item.isChefSignature && (
+              <div className="absolute top-3 left-3 bg-[#af101a] text-white font-label-md text-xs uppercase px-3 py-1 tracking-wider font-bold shadow-xs rounded-none">
+                Chef Signature
+              </div>
+            )}
+            {item.isBestSeller && !item.isChefSignature && (
+              <div className="absolute top-3 left-3 bg-[#feae2c] text-[#291800] font-label-md text-xs uppercase px-3 py-1 tracking-wider font-bold shadow-xs rounded-none">
+                Best Seller
+              </div>
+            )}
+            {item.isLimited && (
+              <div className="absolute top-3 right-3 bg-[#1b1c1a] text-white font-label-md text-[10px] uppercase px-2.5 py-1 font-bold shadow-xs rounded-none">
+                Limited Daily Batch
+              </div>
+            )}
+            {item.prepTimeMinutes && (
+              <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 text-[11px] font-semibold text-[#1b1c1a] shadow-xs rounded-none flex items-center gap-1">
+                <span className="material-symbols-outlined text-[14px] text-[#835500]">schedule</span>
+                <span>{item.prepTimeMinutes} min prep</span>
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Title, Subtitles, Portion, Big Red Price (Order: Hàn -> Anh -> Việt -> Nhật) */}
         <div className="flex flex-row items-start justify-between gap-3 pb-3 border-b border-[#eae8e5]/70">
@@ -55,7 +122,7 @@ export const DishCard: React.FC<DishCardProps> = ({ item, isFeatured }) => {
             {/* 1. Korean Primary Title */}
             {item.nameKr && (
               <div>
-                <h3 className={`font-kr-serif ${isFeatured ? 'text-2xl sm:text-3xl' : 'text-xl sm:text-2xl'} text-[#1b1c1a] font-black tracking-tight leading-snug`}>
+                <h3 className={`font-kr-serif ${isFeatured ? 'text-2xl sm:text-3xl' : 'text-xl sm:text-2xl'} text-[#1b1c1a] font-black tracking-tight leading-snug group-hover:text-[#af101a] transition-colors`}>
                   {item.nameKr}
                 </h3>
                 {item.nameKrSubtitle && (
@@ -73,14 +140,14 @@ export const DishCard: React.FC<DishCardProps> = ({ item, isFeatured }) => {
               </div>
             )}
 
-            {/* 3. Vietnamese Subtitle (on its own line, no bullet) */}
+            {/* 3. Vietnamese Subtitle */}
             {item.nameVi && (
               <div className="font-body-md text-xs sm:text-sm text-[#8f6f6c] font-medium italic">
                 {item.nameVi}
               </div>
             )}
 
-            {/* 4. Japanese Subtitle (on its own line, no bullet) */}
+            {/* 4. Japanese Subtitle */}
             {item.nameJp && (
               <div className="font-jp-serif text-xs text-[#585757]">
                 {item.nameJp}
@@ -102,7 +169,7 @@ export const DishCard: React.FC<DishCardProps> = ({ item, isFeatured }) => {
                   {item.sizes.map((s, idx) => (
                     <div key={idx} className="flex items-center gap-2 font-bold">
                       {s.label === 'S' || s.label === 'L' ? (
-                        <span className="w-5 h-5 rounded-full bg-[#feae2c] text-[#291800] text-[11px] font-black flex items-center justify-center shadow-xs">
+                        <span className="w-5 h-5 rounded-none bg-[#feae2c] text-[#291800] text-[11px] font-black flex items-center justify-center shadow-xs">
                           {s.label}
                         </span>
                       ) : (

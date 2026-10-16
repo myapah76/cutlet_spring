@@ -91,13 +91,27 @@ export const ItemDetailModal: React.FC<ItemDetailModalProps> = ({
           <span className="material-symbols-outlined text-[20px]">close</span>
         </button>
 
-        {/* Modal Hero Frame (Image hidden, layout frame preserved) */}
+        {/* Modal Hero Frame */}
         <div className="relative w-full h-56 sm:h-64 bg-[#efeeeb] shrink-0 flex items-center justify-center overflow-hidden">
-          <div className="flex items-center justify-center text-[#c2bfb8] select-none">
+          {/* Fallback Icon */}
+          <div className="absolute inset-0 flex items-center justify-center text-[#c2bfb8] select-none">
             <span className="material-symbols-outlined text-4xl opacity-40">restaurant</span>
           </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent pointer-events-none"></div>
-          <div className="absolute bottom-3 left-4 right-4 text-white">
+
+          {/* Product Hero Image: Only if from folder menu */}
+          {item.image && item.image.startsWith('/images/menu/') && (
+            <img
+              src={item.image}
+              alt={item.nameEn || item.nameKr}
+              className="absolute inset-0 w-full h-full object-cover"
+              onError={(e) => {
+                e.currentTarget.style.display = 'none';
+              }}
+            />
+          )}
+
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none z-1"></div>
+          <div className="absolute bottom-3 left-4 right-4 text-white z-2">
             <span className="font-label-md text-[10px] tracking-widest uppercase bg-[#af101a] text-white px-2.5 py-0.5 rounded font-bold">
               {item.category.toUpperCase()} ATELIER
             </span>

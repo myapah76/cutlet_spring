@@ -18,7 +18,7 @@ export const MenuSidebar: React.FC<MenuSidebarProps> = ({
   onSelectCategory,
 }) => {
   return (
-    <aside className="lg:col-span-3">
+    <aside className="lg:col-span-3 xl:col-span-2">
       {/* Adjusted with lg:pt-[76px] to align horizontally with the Signature dish card */}
       <div className="lg:sticky lg:top-28 pt-0 lg:pt-[76px] space-y-4">
         {/* Category Navigation - Blended with background for open spaciousness */}
@@ -36,9 +36,9 @@ export const MenuSidebar: React.FC<MenuSidebarProps> = ({
                 <button
                   key={cat.id}
                   onClick={() => onSelectCategory(cat.id)}
-                  className={`group flex items-center justify-between py-2.5 px-3 rounded-xl transition-all text-left cursor-pointer ${
+                  className={`group flex items-center justify-between py-2.5 px-3 rounded-none transition-all text-left cursor-pointer ${
                     isActive
-                      ? 'bg-[#eae8e5]/70 text-[#af101a] font-bold shadow-xs'
+                      ? 'bg-[#eae8e5]/80 text-[#af101a] font-bold border-l-2 border-[#af101a]'
                       : 'text-[#5b403d] hover:bg-[#eae8e5]/40 hover:text-[#1b1c1a]'
                   }`}
                 >

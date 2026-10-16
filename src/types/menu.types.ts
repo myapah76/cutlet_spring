@@ -17,6 +17,7 @@ export interface MenuItem {
   priceFormatted?: string;
   prepTimeMinutes?: number;
   image: string;
+  imagePosition?: string;
   altText: string;
   descriptionEn: string;
   descriptionKr: string;
