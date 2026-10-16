@@ -18,28 +18,28 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="fixed top-0 w-full z-50 bg-[#fbf9f6]/95 backdrop-blur-xl border-b border-[#eae8e5] shadow-[0_1px_8px_rgba(0,0,0,0.03)]">
-      <div className="h-14 sm:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between">
-        {/* Brand Logo */}
+      <div className="h-14 sm:h-20 max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 relative flex items-center justify-between">
+        {/* Left Side: Brand Logo */}
         <button
           onClick={() => {
             setCurrentView('home');
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
-          className="flex flex-col text-left group cursor-pointer shrink-0"
+          className="flex flex-col text-left group cursor-pointer shrink-0 z-10"
         >
           <div className="flex items-baseline gap-1.5 sm:gap-2">
             <span className="font-headline-lg text-lg sm:text-2xl tracking-tight text-[#1b1c1a] group-hover:text-[#af101a] transition-colors font-bold">
               봄돈까스
             </span>
-            <span className="font-body-md text-[#585757] text-xs sm:text-sm">|</span>
-            <span className="font-label-lg text-[10px] sm:text-xs tracking-wider sm:tracking-widest uppercase text-[#1b1c1a]">
+            <span className="font-body-md text-[#585757] text-xs sm:text-sm hidden xs:inline">|</span>
+            <span className="font-label-lg text-[10px] sm:text-xs tracking-wider sm:tracking-widest uppercase text-[#1b1c1a] hidden xs:inline">
               CUTLET SPRING
             </span>
           </div>
         </button>
 
-        {/* Navigation Tabs */}
-        <nav className="flex items-center gap-4 sm:gap-6 md:gap-10">
+        {/* Center: Navigation Tabs (Home & Menu) */}
+        <nav className="absolute left-1/2 -translate-x-1/2 flex items-center gap-4 sm:gap-8 md:gap-10 z-10">
           <button
             onClick={() => {
               setCurrentView('home');
@@ -68,16 +68,17 @@ export const Header: React.FC<HeaderProps> = ({
           </button>
         </nav>
 
-        {/* Right Info & Actions */}
-        <div className="flex items-center gap-2 sm:gap-4 md:gap-6 shrink-0">
-          {/* Direct Line / Contact */}
+        {/* Right Info: Phone Number strictly aligned to the right */}
+        <div className="flex items-center justify-end shrink-0 z-10">
           <a
             href="tel:0393762717"
             aria-label="Call 039 376 2717"
-            className="flex items-center gap-1.5 p-2 sm:px-3 sm:py-1.5 border border-[#eae8e5] bg-[#f5f3f0] hover:bg-[#eae8e5] text-[#1b1c1a] hover:text-[#af101a] rounded-lg transition-colors font-label-md text-xs tracking-wider font-bold"
+            className="flex items-center gap-1.5 px-2.5 py-1.5 sm:px-3.5 sm:py-2 border border-[#eae8e5] bg-[#f5f3f0] hover:bg-[#eae8e5] text-[#1b1c1a] hover:text-[#af101a] rounded-none transition-colors font-label-md text-xs tracking-wider font-bold"
           >
-            <span className="material-symbols-outlined text-[16px] text-[#af101a]">call</span>
-            <span className="hidden sm:inline">039 376 2717</span>
+            <span className="material-symbols-outlined text-[15px] sm:text-[17px] text-[#af101a]">call</span>
+            <span className="font-price-numeral tracking-tight text-[11px] sm:text-xs">
+              039 376 2717
+            </span>
           </a>
         </div>
       </div>
