@@ -18,24 +18,20 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="fixed top-0 w-full z-50 bg-[#fbf9f6]/95 backdrop-blur-xl border-b border-[#eae8e5] shadow-[0_1px_8px_rgba(0,0,0,0.03)]">
-      <div className="h-14 sm:h-20 max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 relative flex items-center justify-between">
+      <div className="h-20 sm:h-28 max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 relative flex items-center justify-between">
         {/* Left Side: Brand Logo */}
         <button
           onClick={() => {
             setCurrentView('home');
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
-          className="flex flex-col text-left group cursor-pointer shrink-0 z-10"
+          className="flex items-center text-left group cursor-pointer shrink-0 z-10 py-1"
         >
-          <div className="flex items-baseline gap-1.5 sm:gap-2">
-            <span className="font-headline-lg text-lg sm:text-2xl tracking-tight text-[#1b1c1a] group-hover:text-[#af101a] transition-colors font-bold">
-              봄돈까스
-            </span>
-            <span className="font-body-md text-[#585757] text-xs sm:text-sm hidden xs:inline">|</span>
-            <span className="font-label-lg text-[10px] sm:text-xs tracking-wider sm:tracking-widest uppercase text-[#1b1c1a] hidden xs:inline">
-              CUTLET SPRING
-            </span>
-          </div>
+          <img
+            src="/images/common/1-removebg-preview.png"
+            alt="봄돈까스 CUTLET SPRING"
+            className="h-16 sm:h-24 w-auto object-contain"
+          />
         </button>
 
         {/* Center: Navigation Tabs (Home & Menu) */}
@@ -45,11 +41,10 @@ export const Header: React.FC<HeaderProps> = ({
               setCurrentView('home');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className={`font-menu-bar text-xs sm:text-sm uppercase tracking-wider transition-all cursor-pointer ${
-              currentView === 'home'
-                ? 'text-[#af101a] font-bold border-b-2 border-[#af101a] pb-0.5 sm:pb-1'
-                : 'text-[#5b403d] hover:text-[#1b1c1a]'
-            }`}
+            className={`font-menu-bar text-xs sm:text-sm uppercase tracking-wider transition-all cursor-pointer ${currentView === 'home'
+              ? 'text-[#af101a] font-bold border-b-2 border-[#af101a] pb-0.5 sm:pb-1'
+              : 'text-[#5b403d] hover:text-[#1b1c1a]'
+              }`}
           >
             Home
           </button>
@@ -58,11 +53,10 @@ export const Header: React.FC<HeaderProps> = ({
               setCurrentView('menu');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className={`font-menu-bar text-xs sm:text-sm uppercase tracking-wider transition-all cursor-pointer ${
-              currentView === 'menu'
-                ? 'text-[#af101a] font-bold border-b-2 border-[#af101a] pb-0.5 sm:pb-1'
-                : 'text-[#5b403d] hover:text-[#1b1c1a]'
-            }`}
+            className={`font-menu-bar text-xs sm:text-sm uppercase tracking-wider transition-all cursor-pointer ${currentView === 'menu'
+              ? 'text-[#af101a] font-bold border-b-2 border-[#af101a] pb-0.5 sm:pb-1'
+              : 'text-[#5b403d] hover:text-[#1b1c1a]'
+              }`}
           >
             Menu
           </button>

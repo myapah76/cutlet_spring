@@ -24,7 +24,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentView, onOpenReservatio
             </p>
             <div className="pt-2 flex items-center gap-2">
               <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-[#eae8e5] text-[#5b403d] uppercase tracking-wider">
-                Est. 2021
+                Est. 2023
               </span>
             </div>
           </div>
@@ -41,7 +41,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentView, onOpenReservatio
               </li>
               <li className="flex items-start gap-1.5">
                 <span className="text-[#af101a]">•</span>
-                <span>8% VAT inclusive billing policy</span>
+                <span>8% VAT not included</span>
               </li>
               <li className="flex items-start gap-1.5">
                 <span className="text-[#af101a]">•</span>

@@ -20,7 +20,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <div className="flex flex-wrap items-center gap-2 mb-4">
               <span className="inline-flex items-center gap-2 px-3 py-1 bg-[#eae8e5] rounded-full font-label-md text-xs uppercase tracking-widest text-[#1b1c1a] font-bold">
                 <span className="w-2 h-2 rounded-full bg-[#af101a]"></span>
-                Established 2021
+                Established 2023
               </span>
             </div>
 
@@ -58,10 +58,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   {language === 'KR'
                     ? '전체 메뉴 둘러보기'
                     : language === 'VI'
-                    ? 'Xem Thực Đơn Đầy Đủ'
-                    : language === 'JP'
-                    ? 'メニューを見る'
-                    : 'Explore Full Menu'}
+                      ? 'Xem Thực Đơn Đầy Đủ'
+                      : language === 'JP'
+                        ? 'メニューを見る'
+                        : 'Explore Full Menu'}
                 </span>
                 <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
               </button>
