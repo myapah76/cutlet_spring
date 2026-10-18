@@ -108,7 +108,7 @@ export const MenuScreen: React.FC<MenuScreenProps> = () => {
     isClickScrolling.current = true;
     const elem = document.getElementById(catId);
     if (elem) {
-      const yOffset = window.innerWidth < 1024 ? -115 : -95;
+      const yOffset = window.innerWidth < 1024 ? -90 : -95;
       const y = elem.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }

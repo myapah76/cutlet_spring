@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 export interface MenuCategoryItem {
   id: string;
@@ -17,46 +17,105 @@ export const MenuSidebar: React.FC<MenuSidebarProps> = ({
   categories,
   onSelectCategory,
 }) => {
-  const mobileNavRef = React.useRef<HTMLDivElement>(null);
+  const [isOpen, setIsOpen] = useState(false);
 
-  // Auto-scroll active category tab into view on mobile
-  React.useEffect(() => {
-    if (!mobileNavRef.current) return;
-    const activeTab = document.getElementById(`mobile-tab-${activeCategory}`);
-    if (activeTab) {
-      activeTab.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'center',
-      });
+  // Lock body scroll when mobile drawer is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
     }
-  }, [activeCategory]);
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
+  // Handle ESC key to close drawer
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isOpen) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen]);
 
   return (
     <>
-      {/* MOBILE & TABLET (< lg): Sticky Horizontal Category Nav Bar */}
-      <div className="lg:hidden sticky top-14 sm:top-20 z-30 bg-[#fbf9f6]/95 backdrop-blur-md border-b border-[#eae8e5] -mx-4 px-4 sm:-mx-6 sm:px-6 py-2.5 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
-        <div
-          ref={mobileNavRef}
-          className="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5"
+      {/* MOBILE & TABLET (< lg): FLOATING LEFT EDGE TRIGGER (ALWAYS VISIBLE) */}
+      <div className="lg:hidden fixed left-0 top-24 sm:top-28 z-40">
+        <button
+          onClick={() => setIsOpen(true)}
+          aria-label="Open Menu Sections"
+          className="flex items-center gap-1 pl-2 pr-1.5 py-1.5 bg-[#fbf9f6]/95 hover:bg-[#eae8e5] backdrop-blur-md rounded-r-md shadow-md border-y border-r border-[#eae8e5] active:scale-95 transition-all cursor-pointer group"
         >
+          <div className="w-6 h-6 rounded-none bg-[#af101a] flex items-center justify-center shrink-0 shadow-xs">
+            <span className="material-symbols-outlined text-[15px] text-white">
+              format_list_bulleted
+            </span>
+          </div>
+          <span className="material-symbols-outlined text-[16px] text-[#5b403d] group-hover:text-[#1b1c1a] group-hover:translate-x-0.5 transition-all">
+            chevron_right
+          </span>
+        </button>
+      </div>
+
+      {/* MOBILE & TABLET (< lg): SLIDE-OUT MENU SECTION DRAWER */}
+      {/* Backdrop */}
+      <div
+        onClick={() => setIsOpen(false)}
+        className={`lg:hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-xs transition-opacity duration-300 ${
+          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+      />
+
+      {/* Drawer Container */}
+      <aside
+        className={`lg:hidden fixed top-0 left-0 bottom-0 z-50 w-72 sm:w-80 max-w-[85vw] bg-[#fbf9f6] shadow-2xl flex flex-col border-r border-[#eae8e5] transition-transform duration-300 ease-out ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        {/* Drawer Header */}
+        <div className="p-4 border-b border-[#eae8e5] flex items-center justify-between shrink-0">
+          <span className="font-menu-bar text-xs sm:text-sm tracking-wider text-[#1b1c1a] uppercase font-bold">
+            Menu Sections
+          </span>
+          <button
+            onClick={() => setIsOpen(false)}
+            className="w-7 h-7 rounded-none border border-[#eae8e5] bg-white hover:bg-[#eae8e5] text-[#1b1c1a] flex items-center justify-center transition-colors cursor-pointer"
+            aria-label="Close menu sections"
+          >
+            <span className="material-symbols-outlined text-[16px]">close</span>
+          </button>
+        </div>
+
+        {/* Categories Navigation List - matching original color styling */}
+        <nav className="flex-1 overflow-y-auto p-3 space-y-1.5 no-scrollbar">
           {categories.map((cat) => {
             const isActive = activeCategory === cat.id;
             return (
               <button
                 key={cat.id}
-                id={`mobile-tab-${cat.id}`}
-                onClick={() => onSelectCategory(cat.id)}
-                className={`flex items-center gap-1.5 px-3 py-1.5 text-xs whitespace-nowrap rounded-none transition-all cursor-pointer shrink-0 font-menu-bar tracking-wider ${
+                onClick={() => {
+                  onSelectCategory(cat.id);
+                  setIsOpen(false);
+                }}
+                className={`group flex items-center justify-between py-2.5 px-3 rounded-none transition-all text-left cursor-pointer w-full ${
                   isActive
-                    ? 'bg-[#1b1c1a] text-white font-bold shadow-xs'
-                    : 'bg-[#f5f3f0] text-[#5b403d] border border-[#eae8e5] hover:bg-[#eae8e5] hover:text-[#1b1c1a]'
+                    ? 'bg-[#eae8e5]/80 text-[#af101a] font-bold border-l-2 border-[#af101a]'
+                    : 'text-[#5b403d] hover:bg-[#eae8e5]/40 hover:text-[#1b1c1a]'
                 }`}
               >
-                <span>{cat.label}</span>
+                <span className="font-menu-bar text-xs tracking-wider group-hover:translate-x-0.5 transition-transform">
+                  {cat.label}
+                </span>
                 <span
-                  className={`font-price-numeral text-[11px] font-bold ${
-                    isActive ? 'text-[#feae2c]' : 'text-[#8f6f6c]'
+                  className={`font-price-numeral text-xs transition-colors ${
+                    isActive
+                      ? 'text-[#af101a] font-bold'
+                      : 'text-[#8f6f6c] group-hover:text-[#1b1c1a]'
                   }`}
                 >
                   {cat.count}
@@ -64,8 +123,8 @@ export const MenuSidebar: React.FC<MenuSidebarProps> = ({
               </button>
             );
           })}
-        </div>
-      </div>
+        </nav>
+      </aside>
 
       {/* DESKTOP (lg+): Sticky Vertical Left Sidebar */}
       <aside className="hidden lg:block lg:col-span-3 xl:col-span-2">
@@ -112,3 +171,4 @@ export const MenuSidebar: React.FC<MenuSidebarProps> = ({
     </>
   );
 };
+
