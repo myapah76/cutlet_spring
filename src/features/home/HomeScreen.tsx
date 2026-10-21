@@ -3,7 +3,8 @@ import { Language, PageView, MenuItem } from '@/types';
 import {
   HeroSection,
   PhilosophySection,
-  MasterpieceSection,
+  FeedbackSection,
+  LocationMapSection,
 } from '@/features/home/components';
 
 interface HomeScreenProps {
@@ -26,13 +27,13 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
       />
 
       {/* 02. Philosophy Section (4 Foundations) */}
-      <PhilosophySection />
+      <PhilosophySection language={language} />
 
-      {/* 03. Chef's Masterpiece Section */}
-      <MasterpieceSection
-        setCurrentView={setCurrentView}
-        language={language}
-      />
+      {/* 03. Voice of Guests / Verified Feedback */}
+      <FeedbackSection />
+
+      {/* 04. Atelier Location & Interactive Google Map */}
+      <LocationMapSection />
     </div>
   );
 };

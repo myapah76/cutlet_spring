@@ -45,10 +45,6 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentView, onOpenReservatio
               </li>
               <li className="flex items-start gap-1.5">
                 <span className="text-[#af101a]">•</span>
-                <span>Fresh batch preparation (15-20 min window)</span>
-              </li>
-              <li className="flex items-start gap-1.5">
-                <span className="text-[#af101a]">•</span>
                 <span>Takeout packaging retains crispness up to 30 mins</span>
               </li>
             </ul>
@@ -60,7 +56,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentView, onOpenReservatio
               Atelier Location
             </span>
             <p className="font-body-sm text-xs text-[#5b403d] leading-relaxed">
-              6A Đường số 9, Phường Thảo Điền,<br />
+              2C Đường số 9, Phường Thảo Điền,<br />
               TP. Thủ Đức, TP. Hồ Chí Minh
             </p>
           </div>
@@ -73,10 +69,6 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentView, onOpenReservatio
             <p className="font-body-sm text-xs text-[#5b403d] flex items-center gap-1.5">
               <span className="material-symbols-outlined text-[15px] text-[#af101a]">phone</span>
               <span>Direct Line: 039 376 2717</span>
-            </p>
-            <p className="font-body-sm text-xs text-[#5b403d] flex items-center gap-1.5">
-              <span className="material-symbols-outlined text-[15px] text-[#835500]">mail</span>
-              <span>Concierge: atelier@cutletspring.com</span>
             </p>
             <p className="font-body-sm text-xs text-[#5b403d] flex items-center gap-1.5">
               <span className="material-symbols-outlined text-[15px] text-[#585757]">schedule</span>

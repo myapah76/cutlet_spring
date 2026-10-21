@@ -1,3 +1,4 @@
 export * from './HeroSection';
 export * from './PhilosophySection';
-export * from './MasterpieceSection';
+export * from './FeedbackSection';
+export * from './LocationMapSection';

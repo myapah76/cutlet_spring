@@ -108,11 +108,11 @@ export const MenuSidebar: React.FC<MenuSidebarProps> = ({
                     : 'text-[#5b403d] hover:bg-[#eae8e5]/40 hover:text-[#1b1c1a]'
                 }`}
               >
-                <span className="font-menu-bar text-xs tracking-wider group-hover:translate-x-0.5 transition-transform">
+                <span className="font-menu-bar text-sm sm:text-base tracking-wider group-hover:translate-x-0.5 transition-transform">
                   {cat.label}
                 </span>
                 <span
-                  className={`font-price-numeral text-xs transition-colors ${
+                  className={`font-price-numeral text-xs sm:text-sm transition-colors ${
                     isActive
                       ? 'text-[#af101a] font-bold'
                       : 'text-[#8f6f6c] group-hover:text-[#1b1c1a]'
@@ -131,7 +131,7 @@ export const MenuSidebar: React.FC<MenuSidebarProps> = ({
         <div className="lg:sticky lg:top-28 pt-0 lg:pt-[76px] space-y-4">
           <div className="space-y-3">
             <div className="pb-1">
-              <span className="font-menu-bar text-xs sm:text-sm tracking-wider text-[#1b1c1a] uppercase font-bold">
+              <span className="font-menu-bar text-sm sm:text-base tracking-wider text-[#1b1c1a] uppercase font-bold">
                 Menu Sections
               </span>
             </div>
@@ -149,11 +149,11 @@ export const MenuSidebar: React.FC<MenuSidebarProps> = ({
                         : 'text-[#5b403d] hover:bg-[#eae8e5]/40 hover:text-[#1b1c1a]'
                     }`}
                   >
-                    <span className="font-menu-bar text-xs tracking-wider group-hover:translate-x-0.5 transition-transform">
+                    <span className="font-menu-bar text-sm tracking-wider group-hover:translate-x-0.5 transition-transform">
                       {cat.label}
                     </span>
                     <span
-                      className={`font-price-numeral text-xs transition-colors ${
+                      className={`font-price-numeral text-xs sm:text-sm transition-colors ${
                         isActive
                           ? 'text-[#af101a] font-bold'
                           : 'text-[#8f6f6c] group-hover:text-[#1b1c1a]'

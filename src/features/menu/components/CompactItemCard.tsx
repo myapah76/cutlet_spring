@@ -59,24 +59,24 @@ export const CompactItemCard: React.FC<CompactItemCardProps> = ({ item }) => {
         )}
 
         {/* Multilingual Titles */}
-        <div className="space-y-0.5">
+        <div className="space-y-1">
           {item.nameKr && (
-            <h4 className="font-kr-serif text-sm sm:text-base text-[#1b1c1a] font-bold tracking-tight leading-snug group-hover:text-[#af101a] transition-colors">
+            <h4 className="font-kr-serif text-base sm:text-lg text-[#1b1c1a] font-bold tracking-tight leading-snug group-hover:text-[#af101a] transition-colors">
               {item.nameKr}
             </h4>
           )}
           {item.nameEn && (
-            <div className="font-menu-title text-[11px] sm:text-xs text-[#1b1c1a] font-bold uppercase tracking-tight">
+            <div className="font-menu-title text-xs sm:text-sm text-[#1b1c1a] font-bold uppercase tracking-tight">
               {item.nameEn}
             </div>
           )}
           {item.nameVi && (
-            <div className="font-body-md text-[10px] sm:text-xs text-[#8f6f6c] italic">
+            <div className="font-body-md text-[11px] sm:text-xs text-[#8f6f6c] italic">
               {item.nameVi}
             </div>
           )}
           {item.nameJp && (
-            <div className="font-jp-serif text-[10px] sm:text-xs text-[#585757]">
+            <div className="font-jp-serif text-[11px] sm:text-xs text-[#585757]">
               {item.nameJp}
             </div>
           )}
@@ -86,7 +86,7 @@ export const CompactItemCard: React.FC<CompactItemCardProps> = ({ item }) => {
       {/* Card Footer: Price */}
       <div className="pt-2 mt-2 flex items-baseline justify-end border-t border-[#eae8e5]/60">
         <div className="text-right">
-          <span className="font-price-numeral text-lg sm:text-2xl text-[#af101a] font-black leading-none">
+          <span className="font-price-numeral text-xl sm:text-2xl text-[#af101a] font-black leading-none">
             {item.price}.
           </span>
         </div>

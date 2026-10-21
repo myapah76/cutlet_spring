@@ -71,7 +71,7 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
             <div className="p-3 bg-[#f5f3f0] rounded-xl text-xs text-[#585757] space-y-1 text-left border border-[#eae8e5]">
               <div>Guest: <strong className="text-[#1b1c1a]">{guestName}</strong></div>
               <div>Phone: <strong className="text-[#1b1c1a]">{phoneNumber}</strong></div>
-              <div>Address: <strong className="text-[#1b1c1a]">6A Đường số 9, Thảo Điền, TP. Thủ Đức</strong></div>
+              <div>Address: <strong className="text-[#1b1c1a]">2C Đường số 9, Thảo Điền, TP. Thủ Đức</strong></div>
             </div>
             <button
               onClick={() => {

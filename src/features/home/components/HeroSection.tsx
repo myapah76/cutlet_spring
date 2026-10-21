@@ -68,7 +68,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
 
             {/* Quick Highlight Metrics / Bento Bar */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-[#f5f3f0] p-4 rounded-xl shadow-xs border border-[#eae8e5]">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 bg-[#f5f3f0] p-4 rounded-xl shadow-xs border border-[#eae8e5]">
               <div className="flex flex-col">
                 <span className="font-price-numeral text-2xl text-[#af101a] font-extrabold">120h</span>
                 <span className="font-body-sm text-xs text-[#585757]">Wet-Aged Chilled Pork</span>
@@ -80,10 +80,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <div className="flex flex-col">
                 <span className="font-price-numeral text-2xl text-[#835500] font-extrabold">Daily</span>
                 <span className="font-body-sm text-xs text-[#585757]">Fresh Bakery Panko</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-price-numeral text-2xl text-[#1b1c1a] font-extrabold">75°C</span>
-                <span className="font-body-sm text-xs text-[#585757]">Precision Tender Core</span>
               </div>
             </div>
           </div>
@@ -154,10 +150,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     setCurrentView('menu');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className="font-label-md text-[#af101a] font-bold text-xs hover:underline cursor-pointer flex items-center gap-1"
+                  className="font-label-md text-[#af101a] font-bold text-xs hover:underline cursor-pointer flex items-center gap-1 group"
                 >
-                  <span>200.000 VND</span>
-                  <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
+                  <span>Explore Full Menu</span>
+                  <span className="material-symbols-outlined text-[14px] transition-transform group-hover:translate-x-0.5">arrow_forward</span>
                 </button>
               </div>
             </div>

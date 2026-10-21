@@ -35,16 +35,17 @@ export const Header: React.FC<HeaderProps> = ({
         </button>
 
         {/* Center: Navigation Tabs (Home & Menu) */}
-        <nav className="absolute left-1/2 -translate-x-1/2 flex items-center gap-4 sm:gap-8 md:gap-10 z-10">
+        <nav className="absolute left-1/2 -translate-x-1/2 flex items-center gap-6 sm:gap-10 md:gap-12 z-10">
           <button
             onClick={() => {
               setCurrentView('home');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className={`font-menu-bar text-xs sm:text-sm uppercase tracking-wider transition-all cursor-pointer ${currentView === 'home'
-              ? 'text-[#af101a] font-bold border-b-2 border-[#af101a] pb-0.5 sm:pb-1'
-              : 'text-[#5b403d] hover:text-[#1b1c1a]'
-              }`}
+            className={`font-menu-bar text-sm sm:text-base md:text-lg uppercase tracking-wider transition-all cursor-pointer ${
+              currentView === 'home'
+                ? 'text-[#af101a] font-bold border-b-2 border-[#af101a] pb-1'
+                : 'text-[#5b403d] hover:text-[#1b1c1a]'
+            }`}
           >
             Home
           </button>
@@ -53,10 +54,11 @@ export const Header: React.FC<HeaderProps> = ({
               setCurrentView('menu');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className={`font-menu-bar text-xs sm:text-sm uppercase tracking-wider transition-all cursor-pointer ${currentView === 'menu'
-              ? 'text-[#af101a] font-bold border-b-2 border-[#af101a] pb-0.5 sm:pb-1'
-              : 'text-[#5b403d] hover:text-[#1b1c1a]'
-              }`}
+            className={`font-menu-bar text-sm sm:text-base md:text-lg uppercase tracking-wider transition-all cursor-pointer ${
+              currentView === 'menu'
+                ? 'text-[#af101a] font-bold border-b-2 border-[#af101a] pb-1'
+                : 'text-[#5b403d] hover:text-[#1b1c1a]'
+            }`}
           >
             Menu
           </button>
@@ -67,10 +69,10 @@ export const Header: React.FC<HeaderProps> = ({
           <a
             href="tel:0393762717"
             aria-label="Call 039 376 2717"
-            className="flex items-center gap-1.5 px-2.5 py-1.5 sm:px-3.5 sm:py-2 border border-[#eae8e5] bg-[#f5f3f0] hover:bg-[#eae8e5] text-[#1b1c1a] hover:text-[#af101a] rounded-none transition-colors font-label-md text-xs tracking-wider font-bold"
+            className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2.5 border border-[#eae8e5] bg-[#f5f3f0] hover:bg-[#eae8e5] text-[#1b1c1a] hover:text-[#af101a] rounded-lg transition-colors font-label-md tracking-wider font-bold shadow-2xs"
           >
-            <span className="material-symbols-outlined text-[15px] sm:text-[17px] text-[#af101a]">call</span>
-            <span className="font-price-numeral tracking-tight text-[11px] sm:text-xs">
+            <span className="material-symbols-outlined text-[18px] sm:text-[21px] text-[#af101a]">call</span>
+            <span className="font-price-numeral tracking-tight text-xs sm:text-sm md:text-[15px] font-bold">
               039 376 2717
             </span>
           </a>
