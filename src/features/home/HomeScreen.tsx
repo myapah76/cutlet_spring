@@ -30,7 +30,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
       <PhilosophySection language={language} />
 
       {/* 03. Voice of Guests / Verified Feedback */}
-      <FeedbackSection />
+      <FeedbackSection language={language} />
 
       {/* 04. Atelier Location & Interactive Google Map */}
       <LocationMapSection />
