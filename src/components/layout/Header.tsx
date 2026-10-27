@@ -30,12 +30,12 @@ export const Header: React.FC<HeaderProps> = ({
           <img
             src="/images/common/1-removebg-preview.png"
             alt="봄돈까스 CUTLET SPRING"
-            className="h-16 sm:h-24 w-auto object-contain"
+            className="h-14 sm:h-20 md:h-24 w-auto object-contain"
           />
         </button>
 
         {/* Center: Navigation Tabs (Home & Menu) */}
-        <nav className="absolute left-1/2 -translate-x-1/2 flex items-center gap-6 sm:gap-10 md:gap-12 z-10">
+        <nav className="absolute left-1/2 -translate-x-1/2 flex items-center gap-5 sm:gap-10 md:gap-12 z-10">
           <button
             onClick={() => {
               setCurrentView('home');
@@ -64,15 +64,16 @@ export const Header: React.FC<HeaderProps> = ({
           </button>
         </nav>
 
-        {/* Right Info: Phone Number strictly aligned to the right */}
+        {/* Right Info: Phone Number strictly aligned to the right (Icon-only on mobile, full number on sm+) */}
         <div className="flex items-center justify-end shrink-0 z-10">
           <a
             href="tel:0393762717"
             aria-label="Call 039 376 2717"
-            className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2.5 border border-[#eae8e5] bg-[#f5f3f0] hover:bg-[#eae8e5] text-[#1b1c1a] hover:text-[#af101a] rounded-lg transition-colors font-label-md tracking-wider font-bold shadow-2xs"
+            title="039 376 2717"
+            className="flex items-center justify-center gap-2 p-2 sm:px-4 sm:py-2.5 border border-[#eae8e5] bg-[#f5f3f0] hover:bg-[#eae8e5] text-[#1b1c1a] hover:text-[#af101a] rounded-lg transition-colors font-label-md tracking-wider font-bold shadow-2xs"
           >
-            <span className="material-symbols-outlined text-[18px] sm:text-[21px] text-[#af101a]">call</span>
-            <span className="font-price-numeral tracking-tight text-xs sm:text-sm md:text-[15px] font-bold">
+            <span className="material-symbols-outlined text-[19px] sm:text-[21px] text-[#af101a]">call</span>
+            <span className="hidden sm:inline font-price-numeral tracking-tight text-xs sm:text-sm md:text-[15px] font-bold whitespace-nowrap">
               039 376 2717
             </span>
           </a>
