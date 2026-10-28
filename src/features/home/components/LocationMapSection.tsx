@@ -2,7 +2,7 @@ import React from 'react';
 
 export const LocationMapSection: React.FC = () => {
   const storeName = '봄돈까스 - Cutlet Spring';
-  const storeAddress = '2C Street No. 9, Thao Dien Ward, Thu Duc City, Ho Chi Minh City';
+  const storeAddress = '6A Street No. 9, Thao Dien Ward, Thu Duc City, Ho Chi Minh City';
   const googleMapsPlaceUrl =
     'https://www.google.com/maps/place/%EB%B4%84%EB%8F%88%EA%B9%8C%EC%8A%A4+-+Cutlet+Spring/@10.8037915,106.7400647,17z/data=!3m1!4b1!4m6!3m5!1s0x3175271d5aaa7cd9:0xb1108e646ddecb55!8m2!3d10.8037915!4d106.7449356!16s%2Fg%2F11vd_ltq6h';
   const googleMapsDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destination=10.8037915,106.7449356`;
@@ -43,6 +43,10 @@ export const LocationMapSection: React.FC = () => {
                     Cutlet Spring Thao Dien
                   </span>
                 </div>
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#af101a]/10 text-[#af101a] text-[11px] font-bold uppercase tracking-wider">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#af101a]"></span>
+                  Walk-in Only
+                </span>
               </div>
 
               {/* Address */}
@@ -55,7 +59,7 @@ export const LocationMapSection: React.FC = () => {
                     Store Address
                   </h4>
                   <p className="font-body-md text-xs sm:text-sm text-[#5b403d] mt-0.5 font-medium leading-relaxed">
-                    2C Street 9, Thao Dien Ward,<br />
+                    6A Street 9, Thao Dien Ward,<br />
                     Thu Duc City, Ho Chi Minh City
                   </p>
                 </div>
@@ -70,13 +74,38 @@ export const LocationMapSection: React.FC = () => {
                   <h4 className="font-title-md text-xs uppercase tracking-wider font-bold text-[#1b1c1a]">
                     Opening Hours
                   </h4>
-                  <p className="font-body-md text-xs sm:text-sm text-[#5b403d] mt-0.5 font-medium">
+                  <p className="font-body-md text-xs sm:text-sm text-[#5b403d] mt-0.5 font-medium leading-relaxed">
                     Lunch: 11:00 - 15:00 <br />
-                    Dinner: 17:00 - 21:00
+                    Dinner: 17:00 - 21:00 <br />
+                    <span className="text-xs font-semibold text-[#af101a]">
+                      Last Order: 20:30 (8:30 PM)
+                    </span>
                   </p>
                   <span className="text-[11px] text-[#786659] block mt-1">
                     (Open Daily from Monday to Sunday)
                   </span>
+                </div>
+              </div>
+
+              {/* Dining Policy: Walk-in Only */}
+              <div className="flex items-start gap-3.5">
+                <div className="w-9 h-9 rounded-xl bg-[#af101a]/10 flex items-center justify-center shrink-0 mt-0.5 text-[#af101a]">
+                  <span className="material-symbols-outlined text-[20px]">directions_walk</span>
+                </div>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h4 className="font-title-md text-xs uppercase tracking-wider font-bold text-[#1b1c1a]">
+                      Service Policy
+                    </h4>
+                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#af101a] text-white uppercase tracking-wider">
+                      Walk-in Only
+                    </span>
+                  </div>
+                  <p className="font-body-md text-xs sm:text-sm text-[#5b403d] mt-0.5 font-medium leading-relaxed">
+                    First-come, first-served.<br />
+                    No advance table reservation required.<br />
+                    Last order: 20:30 (8:30 PM).
+                  </p>
                 </div>
               </div>
 
@@ -87,7 +116,7 @@ export const LocationMapSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-title-md text-xs uppercase tracking-wider font-bold text-[#1b1c1a]">
-                    Hotline &amp; Reservations
+                    Hotline &amp; Inquiries
                   </h4>
                   <a
                     href="tel:0393762717"
@@ -125,7 +154,7 @@ export const LocationMapSection: React.FC = () => {
           <div className="lg:col-span-7 relative min-h-[380px] sm:min-h-[460px] rounded-2xl overflow-hidden border border-[#eae8e5] shadow-xs bg-[#efeeeb] group">
             {/* Live Interactive Google Map */}
             <iframe
-              title="Cutlet Spring Thảo Điền Google Map"
+              title="Cutlet Spring Thao Dien Google Map"
               src={embedMapUrl}
               width="100%"
               height="100%"
@@ -144,7 +173,7 @@ export const LocationMapSection: React.FC = () => {
                   {storeName}
                 </span>
                 <span className="font-body-sm text-[10px] text-[#786659]">
-                  2C Street 9, Thao Dien
+                  6A Street 9, Thao Dien • Walk-in Only
                 </span>
               </div>
             </div>

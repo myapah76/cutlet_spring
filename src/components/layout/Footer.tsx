@@ -56,7 +56,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentView, onOpenReservatio
               Atelier Location
             </span>
             <p className="font-body-sm text-xs text-[#5b403d] leading-relaxed">
-              2C Đường số 9, Phường Thảo Điền,<br />
+              6A Đường số 9, Phường Thảo Điền,<br />
               TP. Thủ Đức, TP. Hồ Chí Minh
             </p>
           </div>
@@ -72,7 +72,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentView, onOpenReservatio
             </p>
             <p className="font-body-sm text-xs text-[#5b403d] flex items-center gap-1.5">
               <span className="material-symbols-outlined text-[15px] text-[#585757]">schedule</span>
-              <span>Service Hours: 11:00 - 15:00 | 17:00 - 21:00</span>
+              <span>Service Hours: 11:00 - 15:00 | 17:00 - 21:00 (Last Order: 20:30)</span>
             </p>
           </div>
         </div>
